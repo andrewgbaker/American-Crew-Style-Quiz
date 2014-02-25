@@ -1,0 +1,224 @@
+.results
+  .logo
+    background: url(../img/ac_logo.jpg) no-repeat center center
+    position: fixed
+    top: 0
+    right: 0
+    left: auto
+    width: 114px
+    height: 114px
+    background-size: 114px 114px
+  h6
+    margin-top: 20px
+    font-family: 'Oswald' sans-serif
+    text-transform: uppercase
+  a.nav_icon
+    padding: 10px
+    border: 1px solid $crew_orange
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    margin: 0 auto
+    background: #efefef
+    font-family: 'Volkhorn'
+    text-decoration: none
+    color: $dark_gray
+    margin-left: 15px
+  .share
+    position: absolute
+    bottom: 0
+    right: 20px
+    border-bottom: 0
+    background: #efefef
+    a
+      color: $crew_orange
+      font-size: 14px
+header
+  background: url(../img/tweed2.jpg) repeat center center
+  width: 100%
+  height: 240px
+  position: absolute
+  top: 0
+  z-index: 999999999
+  @include transition (top .3s ease)
+  article
+    width: 80%
+    max-width: 500px
+    color: #fff
+    margin: 60px auto
+    text-align: center
+    h1
+      margin-bottom: 10px
+      font-weight: 400
+.header_up
+  top: -240px
+.expand
+  width: 32px
+  height: 24px
+  background: $dark_gray
+  position: absolute
+  left: 50%
+  bottom: -24px
+  margin-left: -15px
+  z-index: 999999
+  cursor: pointer
+  &:before
+    content: '\2b'
+    color: #fff
+    line-height: 24px
+    margin: 0 auto
+    font-size: 26px
+    font-weight: bold
+    margin-left: 8px
+    
+#superContainer
+  height: 100%
+  position: relative
+  -ms-touch-action: none
+
+.section
+  position: relative
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  @include transition (padding .3s ease)
+
+.look_down
+  padding-top: 240px
+
+.slide
+  float: left
+  display: block
+  article, .look_img
+    width: 50%
+    margin: 0 auto
+    padding: 0
+    float: left
+    text-align: center
+    .look_wrap
+      padding: 8% 5%
+      width: 90%
+      h5
+        text-transform: uppercase
+        letter-spacing: 2px
+      h2
+        font-size: 20px
+        letter-spacing: 2px
+        font-weight: 400
+      .quote
+        margin-top: 20px
+        color: #707070
+        font-size: 14px
+      .product
+        height: 220px
+        .wrap
+          float: left
+          width: 50%
+          img
+            display: block
+            width: 100%
+            max-width: 220px
+        .cta
+          width: 40%
+          float: left
+          padding-top: 60px
+          .start_btn
+            a
+              font-size: 14px
+              color: $crew_orange
+          .primary
+            background: $crew_orange
+            a
+              color: #fff
+              &:hover, &:active
+                color: $crew_orange
+  .look_img
+    background: url(../img/style_img1.jpg) top center no-repeat
+    width: 50%
+    height: 100%
+  .two
+    background: url(../img/3.jpg) top center no-repeat
+    width: 50%
+    height: 100%
+
+.slidesContainer
+  height: 100%
+  display: block
+
+.slides
+  height: 100%
+  overflow: hidden
+  position: relative
+  -webkit-transition: all 0.3s ease-out
+  -moz-transition: all 0.3s ease-out
+  -o-transition: all 0.3s ease-out
+  transition: all 0.3s ease-out
+
+.section.table, .slide.table
+  display: table
+  width: 100%
+
+.tableCell
+  display: table-cell
+  vertical-align: middle
+  width: 100%
+  height: 100%
+
+.slidesContainer
+  float: left
+  position: relative
+
+.controlArrow
+  position: absolute
+  top: 50%
+  cursor: pointer
+  width: 0
+  height: 0
+  margin-top: -38px
+  border-style: solid
+  width: 130px
+  p
+    opacity: 0
+    cursor: pointer
+    width: 130px
+    line-height: 76px
+    position: absolute
+    font-family: 'Oswald' sans-serif
+    top: -38px
+    padding: 0
+    margin: 0
+    font-weight: 700
+    color: $crew_orange
+    text-transform: uppercase
+    text-align: center
+    @include transition (opacity .3s ease .2s)
+  &.prev
+    left: -120px
+    padding-left: 0
+    border-width: 38.5px 34px 38.5px 0
+    border-color: #fff transparent #fff #fff
+    text-align: left
+    @include transition (left .3s ease)
+    &:hover
+      left: 0px
+      p
+        opacity: 1
+  &.next
+    right: -120px
+    padding-right: 0
+    border-width: 38.5px 0 38.5px 34px
+    border-color: #fff #fff #fff transparent
+    @include transition (right .3s ease)
+    &:hover
+      right: 0
+      p
+        opacity: 1
+
+.scrollable
+  overflow: scroll
+
+.easing
+  -webkit-transition: all 0.7s ease-out
+  -moz-transition: all 0.7s ease-out
+  -o-transition: all 0.7s ease-out
+  transition: all 0.7s ease-out

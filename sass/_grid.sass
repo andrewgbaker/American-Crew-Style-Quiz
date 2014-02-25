@@ -1,0 +1,27 @@
+.container
+	width: 90%
+	max-width: 1170px
+	margin: 0 auto
+	position: relative
+	.grid3, .grid4, .grid6, .grid8, .grid9
+		float: left
+		margin: 0
+		padding: 0
+		position: relative
+	.grid3
+		width: 25%
+	.grid4
+		width: 33%
+	.grid6
+		width: 50%
+	.grid8
+		width: 66%
+	.grid9
+		width: 75%
+	@media only screen and (min-width: 320px) and (max-width: 767px)
+		.grid3, .grid4, .grid6, .grid8, .grid9
+			width: 100%
+		.grid3
+			width: 50%
+			@media only screen and (max-width: 500px)
+				width: 100%

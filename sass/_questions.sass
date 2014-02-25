@@ -1,0 +1,221 @@
+.grid
+  height: 100%
+  width: 100%
+  section
+    float: left
+    width: 33.333333333333336%
+    height: 50%
+    position: relative
+    background: $dark_gray
+    display: block
+    text-align: center
+    @include bgCover
+    background-repeat: no-repeat
+    .answer
+      padding: 0
+      width: 100%
+      height: 100%
+      @include transition(background .3s ease)
+      div
+        height: 100%
+        img
+          width: 100%
+          max-width: 250px
+          margin: 0 auto
+          padding: 15% 0
+      p
+        color: #fff
+        padding: 5px 20px
+        text-align: center
+        height: 20%
+      &:hover
+        background: rgba(0,0,0,.4)
+    @media screen and (max-width: 860px)
+      height: 33.333333333333336%
+      width: 50%
+    @media screen and (max-width: 600px)
+      width: 100%
+      height: 300px
+      .answer
+        div
+          img
+            padding: 10% 0
+  .question
+    background: #efefef
+    display: inline-block
+    @media screen and (max-width: 600px)
+      height: 340px
+    .q_logo
+      background: url(../img/ac_logo.jpg) no-repeat center center
+      display: block
+      margin: 0 auto
+      width: 109px
+      height: 109px
+    h3
+      font-family: 'Vollkorn', serif
+      text-align: center
+      margin: 30px auto 0
+      font-size: 34px
+      font-weight: 100
+      vertical-align: middle
+      width: 300px
+    nav
+      width: 300px
+      position: relative
+      margin: 15px auto 
+      text-align: center
+      height: 44px
+      margin-bottom: 30px
+      a
+        width: 16%
+        margin: 0 auto
+        padding: 0
+        float: left
+        position: relative
+        z-index: 20
+        margin: 0
+        color: $dark_gray
+        text-decoration: none
+        .progress
+          width: 70%
+          margin: 0 15%
+          background: #efefef
+          span
+            width: 8px 
+            height: 8px
+            border-radius: 50%
+            background: $crew_orange
+            display: block
+            margin: 16px auto
+        p
+          display: none
+          padding: 10px
+          border: 1px solid $crew_orange
+          width: 20px
+          height: 20px
+          border-radius: 50%
+          margin: 0 auto
+          background: #efefef
+          @include transition (all .3 ease)
+        &:hover
+          .progress
+            display: none
+          p
+            display: block
+            @include animation(scale_q .2s ease-in)
+      .empty
+        .progress
+          span
+            background: transparent
+            border: 1px solid $dark_gray
+            width: 6px
+            height: 6px
+      .active
+        .progress
+          display: none
+        p
+          display: block
+        &:hover
+          p
+            @include animation(none)
+      &:after
+        width: 80%
+        height: 2px
+        background: $crew_orange
+        position: absolute
+        top: 19px
+        margin: 0 10%
+        z-index: 5
+
+.flip-container
+  background: #000
+  cursor: pointer
+  -webkit-perspective: 1000
+  -moz-perspective: 1000
+  perspective: 1000
+  @include transition (opacity .3s ease)
+  .flipper
+    position: relative
+    height: 100%
+    .front, .back
+      left: 0
+      position: absolute
+      top: 0
+      width: 100%
+      height: 100%
+      background-color: #E0E0E0
+      -webkit-backface-visibility: hidden
+      -moz-backface-visibility: hidden
+      backface-visibility: hidden
+      -webkit-transform: perspective(1000px) rotateY(180deg)
+      -moz-transform: perspective(1000px) rotateY(180deg)
+      -o-transform: perspective(1000px) rotateY(180deg)
+      transform: perspective(1000px) rotateY(180deg)
+      -webkit-transition: 0.4s
+      -moz-transition: 0.4s
+      -o-transition: 0.4s
+      transition: 0.4s
+    .front
+      z-index: 2
+      position: relative
+      -webkit-transform: perspective(1000px) rotateY(0)
+      -moz-transform: perspective(1000px) rotateY(0)
+      -o-transform: perspective(1000px) rotateY(0)
+      transform: perspective(1000px) rotateY(0)
+    .back
+      display: table
+      div
+        width: 100%
+        display: table-cell
+        text-align: center
+        vertical-align: middle
+        p
+          color: $dark_gray
+          position: relative
+          font-size: 17px
+          line-height: 24px
+          padding: 10px 30px 0
+          &:after
+            content: ''
+            width: 10%
+            height: 2px
+            background: $crew_orange
+            bottom: -25px
+            position: absolute
+            left: 45%
+        h5
+          font-family: 'Oswald'
+          text-transform: uppercase
+          letter-spacing: 3px
+          font-weight: 400
+          color: $crew_orange
+          width: 100%
+          font-size: 18px
+  &:hover .flipper
+    .front
+      -webkit-transform: perspective(1000px) rotateY(-179.9deg)
+      -moz-transform: perspective(1000px) rotateY(-179.9deg)
+      -o-transform: perspective(1000px) rotateY(-179.9deg)
+      transform: perspective(1000px) rotateY(-179.9deg)
+    .back
+      -webkit-transform: perspective(1000px) rotateY(0)
+      -moz-transform: perspective(1000px) rotateY(0)
+      -o-transform: perspective(1000px) rotateY(0)
+      transform: perspective(1000px) rotateY(0)
+
+ 
+.ie .flip-container .flipper .front, .no-csstransforms3d .flip-container .flipper .front
+  display: block
+
+.ie .flip-container .flipper, .no-csstransforms3d .flip-container .flipper
+  &:hover
+    .front
+      display: none
+    .back
+      display: block
+
+.ie .flip-container .flipper .back, .no-csstransforms3d .flip-container .flipper .back
+  display: none
+  &:hover
+    display: block
+          

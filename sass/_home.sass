@@ -1,0 +1,73 @@
+.home
+  background: url(../img/home_bg.jpg) no-repeat #474747
+  @include bgCover
+  .logo
+    background: url(../img/logo_home.png) center center no-repeat
+    width: 114px
+    height: 114px
+    background-size: 114px 114px
+    left: 0
+    position: absolute
+    top: 15%
+  main
+    display: table
+    width: 100%
+    height: 100%
+    .wrap
+      display: table-cell
+      vertical-align: middle
+      height: 100%
+      color: $white
+      width: 50%
+      max-width: 600px
+      .home_content
+        width: 50%
+        max-width: 600px
+        margin: 0 auto
+        padding:
+          left: 200px
+        p
+          font-size: 16px
+          line-height: 1.5em
+          margin: 0 auto
+          margin-bottom: 30px
+        section
+          position: relative
+          display: block
+          margin: 25px auto
+          .quote
+            float: left
+            width: 75%
+            text-align: right
+            p
+              margin: 0 auto
+            span
+              font-family: 'Oswald' sans-serif
+              text-transform: none
+              font-weight: 400
+              font-size: 14px
+          div
+            width: 20%
+            float: right
+            img
+              border: 5px solid transparent
+              border-radius: 15px
+              width: 100%
+              max-width: 100%
+        @media (max-width: 769px)
+          width: 50%
+          max-width: 400px
+          margin: 0 auto
+          padding:
+            left: 250px
+  @media (max-width: 769px) 
+    .logo
+      top: 0
+    main
+      .wrap
+        vertical-align: top
+        padding-top: 120px
+        .home_content
+          padding: 5%
+          width: 90%
+          background: rgba(0,0,0,.6)
