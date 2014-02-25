@@ -394,12 +394,16 @@ blockquote {
 .results .share {
   position: absolute;
   bottom: 0;
-  right: 20px;
-  border-bottom: 0;
+  right: 0;
+  border: 0;
   background: #efefef; }
   .results .share a {
-    color: #a53e1f;
-    font-size: 14px; }
+    color: #999999;
+    font-family: "Oswald" serif;
+    font-weight: 700;
+    font-size: 14px;
+    font-style: normal;
+    text-transform: uppercase; }
 
 header {
   background: url(../img/tweed2.jpg) repeat center center;
@@ -564,9 +568,9 @@ header {
     color: #a53e1f;
     text-transform: uppercase;
     text-align: center;
-    -webkit-transition: opacity 0.3s ease 0.2s;
-    -moz-transition: opacity 0.3s ease 0.2s;
-    transition: opacity 0.3s ease 0.2s; }
+    -webkit-transition: opacity 0.3s ease 0.1s;
+    -moz-transition: opacity 0.3s ease 0.1s;
+    transition: opacity 0.3s ease 0.1s; }
   .controlArrow.prev {
     left: -120px;
     padding-left: 0;

@@ -27,37 +27,8 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	
 	<script type="text/javascript" src="js/libs/jquery.fullPage.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$.fn.fullpage({
-		        verticalCentered: true,
-		        resize : true,
-		        anchors:['firstSlide', 'secondSlide'],
-		        scrollingSpeed: 700,
-		        easing: 'easeInQuart',
-		        menu: false,
-		        navigation: false,
-		        navigationPosition: 'right',
-		        navigationTooltips: ['firstSlide', 'secondSlide'],
-		        slidesNavigation: true,
-		        slidesNavPosition: 'bottom',
-        		css3: true,
-        		fixedElements: "#demosMenu"
-			});
-			
-			setTimeout(function() {
-				if ($('#section1').hasClass('look_down')) {
-					$('#section1').toggleClass('look_down');
-					$('header').toggleClass('header_up');
-				}
-			}, 7000);
-			
-			$('.expand').on( "click", function() {
-				$('#section1').toggleClass('look_down');
-				$('header').toggleClass('header_up');
-			});
-		});
-	</script>
+	<script type="text/javascript" src="js/app.js"></script>
+
 
 </head>
 <body class="results">
