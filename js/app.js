@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	$.fn.fullpage({
         verticalCentered: true,
-        resize : true,
+        resize : false,
         anchors:['firstSlide', 'secondSlide'],
         scrollingSpeed: 700,
         easing: 'easeInQuart',
@@ -12,7 +12,7 @@ $(document).ready(function() {
         slidesNavigation: true,
         slidesNavPosition: 'bottom',
 		css3: true,
-		fixedElements: "#demosMenu"
+		autoScrolling: true
 	});
 	
 	$(window).bind('mousewheel', function(event, delta) {

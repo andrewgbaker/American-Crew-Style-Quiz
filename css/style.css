@@ -509,10 +509,16 @@ header {
               color: white; }
               .slide article .look_wrap .product .cta .primary a:hover, .slide article .look_wrap .product .cta .primary a:active, .slide .look_img .look_wrap .product .cta .primary a:hover, .slide .look_img .look_wrap .product .cta .primary a:active {
                 color: #a53e1f; }
+    @media screen and (max-width: 860px) {
+      .slide article, .slide .look_img {
+        width: 100%; } }
   .slide .look_img {
     background: url(../img/style_img1.jpg) top center no-repeat;
     width: 50%;
     height: 100%; }
+    @media screen and (max-width: 860px) {
+      .slide .look_img {
+        display: none; } }
   .slide .two {
     background: url(../img/3.jpg) top center no-repeat;
     width: 50%;
