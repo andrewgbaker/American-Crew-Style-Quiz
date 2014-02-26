@@ -46,11 +46,10 @@
     @media screen and (max-width: 600px)
       height: 340px
     .q_logo
-      background: url(../img/ac_logo.jpg) no-repeat center center
       display: block
+      position: relative
       margin: 0 auto
-      width: 109px
-      height: 109px
+      left: auto
     h3
       font-family: 'Vollkorn', serif
       text-align: center
@@ -158,12 +157,14 @@
     .front
       z-index: 2
       position: relative
+      @include bgCover
       -webkit-transform: perspective(1000px) rotateY(0)
       -moz-transform: perspective(1000px) rotateY(0)
       -o-transform: perspective(1000px) rotateY(0)
       transform: perspective(1000px) rotateY(0)
     .back
       display: table
+      text-decoration: none
       div
         width: 100%
         display: table-cell

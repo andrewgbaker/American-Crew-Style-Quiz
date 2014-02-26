@@ -11,17 +11,25 @@ $(document).ready(function() {
         navigationTooltips: ['firstSlide', 'secondSlide'],
         slidesNavigation: true,
         slidesNavPosition: 'bottom',
-		css3: true,
-		autoScrolling: true
+		css3: true
 	});
 	
 	$(window).bind('mousewheel', function(event, delta) {
-		console.log('scroll');
 		if ($('#section1').hasClass('look_down')) {
 			$('#section1').toggleClass('look_down');
 			$('header').toggleClass('header_up');
 		}
 		return false;
+	});
+	
+	$('html').on({ 'touchmove' : function(){
+		if ($('#section1').hasClass('look_down')) {
+			$('#section1').toggleClass('look_down');
+			$('header').toggleClass('header_up');
+		}
+		$('html').unbind('touchmove');
+		return false;
+		}
 	});
 	
 	$('.expand').on( "click", function() {

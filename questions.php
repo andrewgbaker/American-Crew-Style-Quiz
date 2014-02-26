@@ -20,11 +20,11 @@
 
 </head>
 
-	<body class="home">
+	<body>
 				
 		<div class="grid clearfix">
 			<section class="question">
-				<a class="q_logo"></a>
+				<a class="logo q_logo"></a>
 				<h3>What are you drinking?</h3>
 				<nav class="clearfix">
 					<a href="#">
@@ -79,7 +79,7 @@
 							</div>
 						</div>
 					</div>
-					<a class="back" href="recommend.php">
+					<a class="back" href="recommend.php#firstSlide/slide2">
 						<div>
 							<p>When it comes to your conversations and your cocktails, you’d rather people give it to you straight.</p>
 						</div>

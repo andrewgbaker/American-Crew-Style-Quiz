@@ -1,13 +1,4 @@
 .results
-  .logo
-    background: url(../img/ac_logo.jpg) no-repeat center center
-    position: fixed
-    top: 0
-    right: 0
-    left: auto
-    width: 114px
-    height: 114px
-    background-size: 114px 114px
   h6
     margin-top: 20px
     font-family: 'Oswald' sans-serif
@@ -20,24 +11,18 @@
     border-radius: 50%
     margin: 0 auto
     background: #efefef
-    font-family: 'Volkhorn'
+    font-family: 'Vollkhorn'
     text-decoration: none
     color: $dark_gray
     margin-left: 15px
-  .share
-    position: absolute
-    bottom: 0
-    right: 0
-    border: 0
-    background: #efefef
-    a
-      color: $light_gray
-      font-family: 'Oswald' serif
-      font-weight: 700
-      font-size: 14px
-      font-style: normal
-      text-transform: uppercase
-      
+  .mobile_look_img
+    display: none
+    @media screen and (max-width: 600px)
+      display: block
+      margin: 20px auto
+      img
+        width: 100%
+        max-width: 100%
 header
   background: url(../img/tweed2.jpg) repeat center center
   width: 100%
@@ -45,18 +30,49 @@ header
   position: absolute
   top: 0
   z-index: 999999999
+  display: table
   @include transition (top .3s ease)
+  .logo
+    position: fixed
+    top: 0
+    right: 20px
+    left: auto
   article
-    width: 80%
+    width: 500px
     max-width: 500px
     color: #fff
-    margin: 60px auto
     text-align: center
+    display: table-cell
+    vertical-align: middle
     h1
       margin-bottom: 10px
       font-weight: 400
+    p
+      line-height: 22px
+    .share
+      font-family: 'Playfair Display' serif
+      font-weight: bold
+      font-style: italic
+      color: #fff
+      text-decoration: none
+      padding-left: 10px
+      font-size: 16px
+      line-height: 22px
+  @media screen and (max-width: 600px)
+    height: 360px
+    .logo
+      position: absolute
+      left: 50%
+      margin-left: -55px
+    article
+      padding-top: 110px
+      width: 290px
+      h1
+        font-size: 28px
 .header_up
   top: -240px
+  @media screen and (max-width: 600px)
+    top: -360px
 .expand
   width: 32px
   height: 24px
@@ -90,6 +106,8 @@ header
 
 .look_down
   padding-top: 240px
+  @media screen and (max-width: 600px)
+    padding-top: 360px
 
 .slide
   float: left
@@ -111,9 +129,21 @@ header
         letter-spacing: 2px
         font-weight: 400
       .quote
-        margin-top: 20px
+        margin-top: 32px
         color: #707070
         font-size: 14px
+        position: relative
+        &:before
+          content: ""
+          width: 6%
+          height: 2px
+          background: $dark_gray
+          top: -20px
+          position: absolute
+          left: 48%
+        span
+          font-size: 13px
+          font-style: normal
       .product
         height: 220px
         .wrap
@@ -126,8 +156,11 @@ header
         .cta
           width: 40%
           float: left
-          padding-top: 60px
+          padding-top: 55px
           .start_btn
+            width: 130px
+            display: block
+            margin: 10px auto
             a
               font-size: 14px
               color: $crew_orange
@@ -137,18 +170,26 @@ header
               color: #fff
               &:hover, &:active
                 color: $crew_orange
-    @media screen and (max-width: 860px)
+    @media screen and (max-width: 767px)
       width: 100%
+    @media screen and (max-width: 900px)
+      .look_wrap
+        .product
+          .cta
+            padding-top: 30px
   .look_img
     background: url(../img/style_img1.jpg) top center no-repeat
     width: 50%
     height: 100%
-    @media screen and (max-width: 860px)
+    @media screen and (max-width: 767px)
       display: none
   .two
     background: url(../img/3.jpg) top center no-repeat
     width: 50%
     height: 100%
+  article
+    vertical-align: middle
+    display: table
 
 .slidesContainer
   height: 100%

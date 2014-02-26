@@ -16,8 +16,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
   
 	<link rel="stylesheet" href="css/style.css" />
-   	
-
+	
 	<!--[if IE]>
 		<script type="text/javascript">
 			 var console = { log: function() {} };
@@ -26,23 +25,22 @@
 		
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	
+	<script type="text/javascript" src="js/libs/jquery.slimscroll.min.js"></script>
 	<script type="text/javascript" src="js/libs/jquery.fullPage.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
-
 
 </head>
 <body class="results">
 
 <header>
+	<a href="#" class="logo"></a>
 	<article>
 		<h1>You Are a Gentleman</h1>
-		<p>Your drinks are stiff and so is your upper lip. You give women hope that chivalry might not be dead after all. And you’re either dressed well or not at all. You need a look that has structure, order and plenty of confidence. </p>
+		<p>Your drinks are stiff and so is your upper lip. You give women hope that chivalry might not be dead after all. And you’re either dressed well or not at all. You need a look that has structure, order and plenty of confidence. <a href="#" class="share">Share +</a> </p>
 	</article>
 	<a href="#" class="logo"></a>
 	<div class="expand"></div>
 </header>
-<a href="#" class="logo"></a>
-<div class="share start_btn"><a href="#">Share +</a></div>
 
 <!-- SECTION 1
 <div class="section " id="section0">
@@ -55,10 +53,11 @@
 	<div class="slide clearfix" data-anchor="slide1">
 		<article>
 			<div class="look_wrap">
+				<div class="mobile_look_img"><img src="img/single_malt_mobile.jpg" alt="the single malt" /> </div>
 				<h5>Your Looks</h5>
 				<h2>1/3. The Single Malt</h2>
 				<p>If you’re on your way out for a nice dinner, the Single Malt is a great choice. Its strong perimeter and ample texture show that your taste is especially refined.</p>
-				<p class="quote">“To give this look more texture, finish the style by combing your fingers through your hair.” – Paul Wilson, American Crew Artistic Director</p>
+				<p class="quote">“To give this look more texture, finish the style by combing your fingers through your hair.” – <span>Paul Wilson, American Crew Artistic Director</span></p>
 				<div class="product clearfix">
 					<div class="wrap">
 						<img src="img/product.jpg" />
@@ -69,7 +68,7 @@
 					</div>
 				</div>
 				<p>To create the Single Malt, you’ll need <a href="#">American Crew Forming Cream</a>, <a href="#">Daily Shampoo</a> and an <a href="#">American Crew stylist</a> to show you how. </p>
-				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz > </a><a href="#" class="nav_icon">Q1</a></h6>
+				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
 			</div>
 		</article>
 		<div class="look_img"></div>
@@ -96,6 +95,9 @@
 		<div class="look_img two"></div>
     </div>
     <div class="slide" data-anchor="slide3"> Slide 3 </div>
-    <div class="slide" data-anchor="slide4"> Slide 4 </div></div>
+    <div class="slide" data-anchor="slide4"> Slide 4 </div>
+    
+</div>
+
 </body>
 </html>
