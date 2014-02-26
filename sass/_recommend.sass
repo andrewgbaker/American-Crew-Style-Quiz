@@ -17,7 +17,7 @@
     margin-left: 15px
   .mobile_look_img
     display: none
-    @media screen and (max-width: 600px)
+    @media screen and (max-width: 767px)
       display: block
       margin: 20px auto
       img
@@ -75,18 +75,18 @@ header
     top: -360px
 .expand
   width: 32px
-  height: 24px
+  height: 32px
   background: $dark_gray
   position: absolute
   left: 50%
-  bottom: -24px
+  bottom: -32px
   margin-left: -15px
   z-index: 999999
   cursor: pointer
   &:before
     content: '\2b'
     color: #fff
-    line-height: 24px
+    line-height: 32px
     margin: 0 auto
     font-size: 26px
     font-weight: bold
@@ -177,10 +177,19 @@ header
         .product
           .cta
             padding-top: 30px
+    @media screen and (max-width: 600px)
+      .look_wrap
+        .product
+          .wrap, .cta
+            width: 100%
+            padding-top: 0
+          .cta
+            margin-bottom: 20px
   .look_img
     background: url(../img/style_img1.jpg) top center no-repeat
     width: 50%
     height: 100%
+    @include bgCover
     @media screen and (max-width: 767px)
       display: none
   .two
@@ -272,3 +281,7 @@ header
   -moz-transition: all 0.7s ease-out
   -o-transition: all 0.7s ease-out
   transition: all 0.7s ease-out
+
+.ie8 .slide .look_img, .ie8 .flip-container .flipper .front
+  background-size: cover
+  -ms-behavior: url(../backgroundsize.min.htc)

@@ -174,10 +174,10 @@ ul, ol {
   margin-left: 1.5em; }
 
 a {
-  color: #999999;
+  color: black;
   text-decoration: underline; }
   a:hover, a:active {
-    color: #333333;
+    color: #999999;
     text-decoration: none; }
   a img {
     border: none; }
@@ -387,7 +387,7 @@ blockquote {
   margin-left: 15px; }
 .results .mobile_look_img {
   display: none; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 767px) {
     .results .mobile_look_img {
       display: block;
       margin: 20px auto; }
@@ -453,18 +453,18 @@ header {
 
 .expand {
   width: 32px;
-  height: 24px;
+  height: 32px;
   background: #333333;
   position: absolute;
   left: 50%;
-  bottom: -24px;
+  bottom: -32px;
   margin-left: -15px;
   z-index: 999999;
   cursor: pointer; }
   .expand:before {
     content: "\2b";
     color: white;
-    line-height: 24px;
+    line-height: 32px;
     margin: 0 auto;
     font-size: 26px;
     font-weight: bold;
@@ -557,10 +557,20 @@ header {
     @media screen and (max-width: 900px) {
       .slide article .look_wrap .product .cta, .slide .look_img .look_wrap .product .cta {
         padding-top: 30px; } }
+    @media screen and (max-width: 600px) {
+      .slide article .look_wrap .product .wrap, .slide article .look_wrap .product .cta, .slide .look_img .look_wrap .product .wrap, .slide .look_img .look_wrap .product .cta {
+        width: 100%;
+        padding-top: 0; }
+      .slide article .look_wrap .product .cta, .slide .look_img .look_wrap .product .cta {
+        margin-bottom: 20px; } }
   .slide .look_img {
     background: url(../img/style_img1.jpg) top center no-repeat;
     width: 50%;
-    height: 100%; }
+    height: 100%;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important; }
     @media screen and (max-width: 767px) {
       .slide .look_img {
         display: none; } }
@@ -659,6 +669,10 @@ header {
   -moz-transition: all 0.7s ease-out;
   -o-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out; }
+
+.ie8 .slide .look_img, .ie8 .flip-container .flipper .front {
+  background-size: cover;
+  -ms-behavior: url(../backgroundsize.min.htc); }
 
 .grid {
   height: 100%;
