@@ -24,7 +24,7 @@
 	
 		<a href="#" class="logo"></a>
 		
-		<main>
+		<article>
 			<div class="wrap">
 				<div class="home_content">
 					<h1>What Hairstyle will <span>keep you on top?</span></h1>
@@ -42,7 +42,7 @@
 					</section>
 				</div>
 			</div>
-		</main>
+		</article>
 		
   
 	

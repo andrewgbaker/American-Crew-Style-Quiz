@@ -29,9 +29,12 @@ header
   height: 240px
   position: absolute
   top: 0
+  @include transform(translateY(0))
   z-index: 999999999
   display: table
-  @include transition (top .3s ease)
+  @include transition-property(transform)
+  @include transition-duration(.3s)
+  @include transition-timing-function(ease)
   .logo
     position: fixed
     top: 0
@@ -70,9 +73,18 @@ header
       h1
         font-size: 28px
 .header_up
+  @include transform(translateY(-240px))
+  @media screen and (max-width: 600px)
+    @include transform(translateY(-360px))
+
+.no-csstransforms3d header, .android header
+  top: 0
+  @include transition(top .3s ease)
+.no-csstransforms3d .header_up
   top: -240px
   @media screen and (max-width: 600px)
     top: -360px
+
 .expand
   width: 32px
   height: 32px
@@ -153,6 +165,7 @@ header
             display: block
             width: 100%
             max-width: 220px
+            max-height: 220px
         .cta
           width: 40%
           float: left
@@ -199,6 +212,11 @@ header
   article
     vertical-align: middle
     display: table
+
+.ie8 .slide article .look_wrap .product .cta .primary a, .ie8 .slide .look_img .look_wrap .product .cta .primary a
+  &:hover
+    color: #fff
+    text-decoration: underline
 
 .slidesContainer
   height: 100%
@@ -282,6 +300,6 @@ header
   -o-transition: all 0.7s ease-out
   transition: all 0.7s ease-out
 
-.ie8 .slide .look_img, .ie8 .flip-container .flipper .front
+.ie8 .slide .look_img, .ie8 .flip-container .flipper .front, .ie8 .home
   background-size: cover
   -ms-behavior: url(../backgroundsize.min.htc)
