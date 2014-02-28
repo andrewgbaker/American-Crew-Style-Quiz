@@ -81,7 +81,8 @@
 					</div>
 					<a class="back" href="recommend.php#firstSlide/slide2">
 						<div>
-							<p>When it comes to your conversations and your cocktails, you’d rather people give it to you straight.</p>
+							<h5>London Dry Gin</h5>
+							<p>You know that quality is important. And unless those bar nuts are imported Marcona almonds, you’ll pass.</p>
 						</div>
 					</a>
 				</div>
@@ -97,7 +98,8 @@
 					</div>
 					<a class="back" href="recommend.php">
 						<div>
-							<p>When it comes to your conversations and your cocktails, you’d rather people give it to you straight.</p>
+							<h5>Just give me a beer</h5>
+							<p>You’re not looking for fancy glassware or garnishes. But you could go for an order of wings.</p>
 						</div>
 					</a>
 				</div>
@@ -121,17 +123,17 @@
 			</section>
 			<section class="flip-container">
 				<div class="flipper">
-					<div style="background: url(img/manhattan_bg.jpg);" class="front">
+					<div style="background: url(img/newest_bg.jpg);" class="front">
 						<div class="answer">
 							<div>
-								<img src="img/manhattan.png" alt="bourbon" />
+								<img src="img/newest.png" alt="bourbon" />
 							</div>
 						</div>
 					</div>
 					<a class="back" href="recommend.php">
 						<div>
-							<h5>Single Barrel Bourbon</h5>
-							<p>Or at least that’s what you’ll order tonight. In your opinion, if a cocktail recipe is more than a few months old, it’s already gone stale.</p>
+							<h5>The newest thing on the menu</h5>
+							<p>You’re looking for a lot more than a buzz when you order a cocktail. And to you, expected is uninspiring.</p>
 						</div>
 					</a>
 				</div>

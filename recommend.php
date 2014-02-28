@@ -54,17 +54,27 @@
 		<article>
 			<div class="look_wrap">
 				<div class="mobile_look_img"><img src="img/single_malt_mobile.jpg" alt="the single malt" /> </div>
-				<h5>Your Looks</h5>
-				<h2>1/3. The Single Malt</h2>
-				<p>If you’re on your way out for a nice dinner, the Single Malt is a great choice. Its strong perimeter and ample texture show that your taste is especially refined.</p>
+				<h2>Gentleman - <span>The Looks</span></h2>
+				<nav class="looks_nav clearfix">
+					<a href="#" class="active_look">
+						<div class="progress"><span></span></div>
+					</a>
+					<a href="#">
+						<div class="progress"><span></span></div>
+					</a>
+					<a href="#">
+						<div class="progress"><span></span></div>
+					</a>
+				</nav>
+				<p>If you’re on your way out for a nice dinner, this style is a great choice. Its strong perimeter and ample texture show that your taste is especially refined.</p>
 				<p class="quote">“To give this look more texture, finish the style by combing your fingers through your hair.” – <span>Paul Wilson, American Crew Artistic Director</span></p>
 				<div class="product clearfix">
 					<div class="wrap">
 						<img src="img/product.jpg" />
 					</div>
 					<div class="cta">
-						<div class="start_btn"><a href="#">Find a Stylist</a></div>
-						<div class="start_btn primary"><a href="#">Buy Product</a></div>
+						<div class="start_btn secondary"><a href="#">Find a Stylist</a></div>
+						<div class="start_btn"><a href="#">Buy Product</a></div>
 					</div>
 				</div>
 				<p>To create the Single Malt, you’ll need <a href="#">American Crew Forming Cream</a>, <a href="#">Daily Shampoo</a> and an <a href="#">American Crew stylist</a> to show you how. </p>
@@ -73,29 +83,75 @@
 		</article>
 		<div class="look_img"></div>
 	</div>
+	<!-- END LOOK ONE -->
     <div class="slide" data-anchor="slide2"> 
     	<article>
 			<div class="look_wrap">
-				<h5>Your Look</h5>
-				<h2>The Single Malt</h2>
-				<p>If you’re on your way out for a nice dinner, the Single Malt is a great choice. Its strong perimeter and ample texture show that your taste is especially refined.</p>
-				<p class="quote">“To give this look more texture, finish the style by combing your fingers through your hair.” – Paul Wilson, American Crew Artistic Director</p>
+				<div class="mobile_look_img"><img src="img/single_malt_mobile.jpg" alt="the single malt" /> </div>
+				<h2>Gentleman - <span>The Looks</span></h2>
+				<nav class="looks_nav clearfix">
+					<a href="#">
+						<div class="progress"><span></span></div>
+					</a>
+					<a href="#" class="active_look">
+						<div class="progress"><span></span></div>
+					</a>
+					<a href="#">
+						<div class="progress"><span></span></div>
+					</a>
+				</nav>
+				<p>If you’re on your way out for a nice dinner, this style is a great choice. Its strong perimeter and ample texture show that your taste is especially refined.</p>
+				<p class="quote">“To give this look more texture, finish the style by combing your fingers through your hair.” – <span>Paul Wilson, American Crew Artistic Director</span></p>
 				<div class="product clearfix">
 					<div class="wrap">
 						<img src="img/product.jpg" />
 					</div>
 					<div class="cta">
-						<div class="start_btn"><a href="#">Find a Stylist</a></div>
-						<div class="start_btn primary"><a href="#">Buy Product</a></div>
+						<div class="start_btn secondary"><a href="#">Find a Stylist</a></div>
+						<div class="start_btn"><a href="#">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create the Single Malt, you’ll need American Crew Forming Cream, Daily Shampoo and an American Crew stylist to show you how. </p>
+				<p>To create the Single Malt, you’ll need <a href="#">American Crew Forming Cream</a>, <a href="#">Daily Shampoo</a> and an <a href="#">American Crew stylist</a> to show you how. </p>
+				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
 			</div>
 		</article>
 		<div class="look_img two"></div>
     </div>
-    <div class="slide" data-anchor="slide3"> Slide 3 </div>
-    <div class="slide" data-anchor="slide4"> Slide 4 </div>
+    <!-- END LOOK TWO -->
+    <div class="slide" data-anchor="slide3">
+    	<article>
+			<div class="look_wrap">
+				<div class="mobile_look_img"><img src="img/single_malt_mobile.jpg" alt="the single malt" /> </div>
+				<h2>Gentleman - <span>The Looks</span></h2>
+				<nav class="looks_nav clearfix">
+					<a href="#">
+						<div class="progress"><span></span></div>
+					</a>
+					<a href="#">
+						<div class="progress"><span></span></div>
+					</a>
+					<a href="#" class="active_look">
+						<div class="progress"><span></span></div>
+					</a>
+				</nav>
+				<p>If you’re on your way out for a nice dinner, this style is a great choice. Its strong perimeter and ample texture show that your taste is especially refined.</p>
+				<p class="quote">“To give this look more texture, finish the style by combing your fingers through your hair.” – <span>Paul Wilson, American Crew Artistic Director</span></p>
+				<div class="product clearfix">
+					<div class="wrap">
+						<img src="img/product.jpg" />
+					</div>
+					<div class="cta">
+						<div class="start_btn secondary"><a href="#">Find a Stylist</a></div>
+						<div class="start_btn"><a href="#">Buy Product</a></div>
+					</div>
+				</div>
+				<p>To create the Single Malt, you’ll need <a href="#">American Crew Forming Cream</a>, <a href="#">Daily Shampoo</a> and an <a href="#">American Crew stylist</a> to show you how. </p>
+				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
+			</div>
+		</article>
+		<div class="look_img three"></div>
+    </div>
+    <!-- END LOOK THREE -->
     
 </div>
 

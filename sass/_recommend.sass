@@ -133,26 +133,18 @@ header
     .look_wrap
       padding: 8% 5%
       width: 90%
-      h5
-        text-transform: uppercase
-        letter-spacing: 2px
       h2
         font-size: 20px
         letter-spacing: 2px
         font-weight: 400
+        span
+          font-family: 'Volkkhorn' serif
+          font-size: 16px
       .quote
         margin-top: 32px
         color: #707070
         font-size: 14px
         position: relative
-        &:before
-          content: ""
-          width: 6%
-          height: 2px
-          background: $dark_gray
-          top: -20px
-          position: absolute
-          left: 48%
         span
           font-size: 13px
           font-style: normal
@@ -176,11 +168,10 @@ header
             margin: 10px auto
             a
               font-size: 14px
-              color: $crew_orange
-          .primary
-            background: $crew_orange
+          .secondary
+            background: transparent
             a
-              color: #fff
+              color: $crew_orange
               &:hover, &:active
                 color: $crew_orange
     @media screen and (max-width: 767px)
@@ -206,7 +197,11 @@ header
     @media screen and (max-width: 767px)
       display: none
   .two
-    background: url(../img/3.jpg) top center no-repeat
+    background: url(../img/oldman.jpg) top center no-repeat
+    width: 50%
+    height: 100%
+  .three
+    background: url(../img/vestyboy.jpg) top center no-repeat
     width: 50%
     height: 100%
   article
@@ -299,6 +294,59 @@ header
   -moz-transition: all 0.7s ease-out
   -o-transition: all 0.7s ease-out
   transition: all 0.7s ease-out
+
+.looks_nav
+  width: 130px
+  position: relative
+  margin: 0 auto 
+  text-align: center
+  height: 44px
+  margin-bottom: 10px
+  a
+    width: 33.333333333333336%
+    margin: 0 auto
+    padding: 0
+    float: left
+    position: relative
+    z-index: 20
+    margin: 0
+    color: $dark_gray
+    text-decoration: none
+    .progress
+      width: 70%
+      margin: 0 15%
+      background: #efefef
+      span
+        border-radius: 50%
+        background: transparent
+        border: 1px solid $light_gray
+        width: 6px
+        height: 6px
+        display: block
+        margin: 16px auto
+    &:hover
+      .progress
+        display: block
+        span
+          background: $crew_orange
+          border: none
+          width: 8px
+          height: 8px
+  .active_look
+    .progress
+      span
+        background: $crew_orange
+        width: 8px
+        height: 8px
+        border: none
+  &:after
+    width: 80%
+    height: 2px
+    background: $light_gray
+    position: absolute
+    top: 19px
+    margin: 0 10%
+    z-index: 5
 
 .ie8 .slide .look_img, .ie8 .flip-container .flipper .front, .ie8 .home
   background-size: cover

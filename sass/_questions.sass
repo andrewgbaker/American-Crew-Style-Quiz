@@ -62,73 +62,75 @@
       font-weight: 100
       vertical-align: middle
       width: 300px
-    nav
-      width: 300px
-      position: relative
-      margin: 15px auto 
-      text-align: center
-      height: 44px
-      margin-bottom: 30px
-      a
-        width: 16%
-        margin: 0 auto
-        padding: 0
-        float: left
-        position: relative
-        z-index: 20
-        margin: 0
-        color: $dark_gray
-        text-decoration: none
-        .progress
-          width: 70%
-          margin: 0 15%
-          background: #efefef
-          span
-            width: 8px 
-            height: 8px
-            border-radius: 50%
-            background: $crew_orange
-            display: block
-            margin: 16px auto
-        p
-          display: none
-          padding: 10px
-          border: 1px solid $crew_orange
-          width: 20px
-          height: 20px
-          border-radius: 50%
-          margin: 0 auto
-          background: #efefef
-          @include transition (all .3 ease)
-        &:hover
-          .progress
-            display: none
-          p
-            display: block
-            @include animation(scale_q .2s ease-in)
-      .empty
-        .progress
-          span
-            background: transparent
-            border: 1px solid $dark_gray
-            width: 6px
-            height: 6px
-      .active
-        .progress
-          display: none
-        p
-          display: block
-        &:hover
-          p
-            @include animation(none)
-      &:after
-        width: 80%
-        height: 2px
+      
+nav
+  width: 300px
+  position: relative
+  margin: 15px auto 
+  text-align: center
+  height: 44px
+  margin-bottom: 30px
+  a
+    width: 16%
+    margin: 0 auto
+    padding: 0
+    float: left
+    position: relative
+    z-index: 20
+    margin: 0
+    color: $dark_gray
+    text-decoration: none
+    .progress
+      width: 70%
+      margin: 0 15%
+      background: #efefef
+      span
+        width: 8px 
+        height: 8px
+        border-radius: 50%
         background: $crew_orange
-        position: absolute
-        top: 19px
-        margin: 0 10%
-        z-index: 5
+        display: block
+        margin: 16px auto
+    p
+      display: none
+      padding: 10px
+      border: 1px solid $crew_orange
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      margin: 0 auto
+      background: #efefef
+      @include transition (all .3 ease)
+    &:hover
+      .progress
+        display: none
+      p
+        display: block
+        color: $dark_gray
+        @include animation(scale_q .2s ease-in)
+  .empty
+    .progress
+      span
+        background: transparent
+        border: 1px solid $dark_gray
+        width: 6px
+        height: 6px
+  .active
+    .progress
+      display: none
+    p
+      display: block
+    &:hover
+      p
+        @include animation(none)
+  &:after
+    width: 80%
+    height: 2px !important
+    background: $crew_orange
+    position: absolute
+    top: 19px
+    margin: 0 10%
+    z-index: 5
 
 .flip-container
   background: #000

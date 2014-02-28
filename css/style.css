@@ -232,7 +232,7 @@ blockquote {
   font-family: "Playfair Display", serif;
   font-weight: 900;
   font-style: italic;
-  background: transparent;
+  background: #a53e1f;
   display: inline-block;
   border: 3px solid #a53e1f;
   z-index: 1;
@@ -536,26 +536,18 @@ header {
     .slide article .look_wrap, .slide .look_img .look_wrap {
       padding: 8% 5%;
       width: 90%; }
-      .slide article .look_wrap h5, .slide .look_img .look_wrap h5 {
-        text-transform: uppercase;
-        letter-spacing: 2px; }
       .slide article .look_wrap h2, .slide .look_img .look_wrap h2 {
         font-size: 20px;
         letter-spacing: 2px;
         font-weight: 400; }
+        .slide article .look_wrap h2 span, .slide .look_img .look_wrap h2 span {
+          font-family: "Volkkhorn" serif;
+          font-size: 16px; }
       .slide article .look_wrap .quote, .slide .look_img .look_wrap .quote {
         margin-top: 32px;
         color: #707070;
         font-size: 14px;
         position: relative; }
-        .slide article .look_wrap .quote:before, .slide .look_img .look_wrap .quote:before {
-          content: "";
-          width: 6%;
-          height: 2px;
-          background: #333333;
-          top: -20px;
-          position: absolute;
-          left: 48%; }
         .slide article .look_wrap .quote span, .slide .look_img .look_wrap .quote span {
           font-size: 13px;
           font-style: normal; }
@@ -578,13 +570,12 @@ header {
             display: block;
             margin: 10px auto; }
             .slide article .look_wrap .product .cta .start_btn a, .slide .look_img .look_wrap .product .cta .start_btn a {
-              font-size: 14px;
+              font-size: 14px; }
+          .slide article .look_wrap .product .cta .secondary, .slide .look_img .look_wrap .product .cta .secondary {
+            background: transparent; }
+            .slide article .look_wrap .product .cta .secondary a, .slide .look_img .look_wrap .product .cta .secondary a {
               color: #a53e1f; }
-          .slide article .look_wrap .product .cta .primary, .slide .look_img .look_wrap .product .cta .primary {
-            background: #a53e1f; }
-            .slide article .look_wrap .product .cta .primary a, .slide .look_img .look_wrap .product .cta .primary a {
-              color: white; }
-              .slide article .look_wrap .product .cta .primary a:hover, .slide article .look_wrap .product .cta .primary a:active, .slide .look_img .look_wrap .product .cta .primary a:hover, .slide .look_img .look_wrap .product .cta .primary a:active {
+              .slide article .look_wrap .product .cta .secondary a:hover, .slide article .look_wrap .product .cta .secondary a:active, .slide .look_img .look_wrap .product .cta .secondary a:hover, .slide .look_img .look_wrap .product .cta .secondary a:active {
                 color: #a53e1f; }
     @media screen and (max-width: 767px) {
       .slide article, .slide .look_img {
@@ -610,7 +601,11 @@ header {
       .slide .look_img {
         display: none; } }
   .slide .two {
-    background: url(../img/3.jpg) top center no-repeat;
+    background: url(../img/oldman.jpg) top center no-repeat;
+    width: 50%;
+    height: 100%; }
+  .slide .three {
+    background: url(../img/vestyboy.jpg) top center no-repeat;
     width: 50%;
     height: 100%; }
   .slide article {
@@ -709,6 +704,56 @@ header {
   -o-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out; }
 
+.looks_nav {
+  width: 130px;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  height: 44px;
+  margin-bottom: 10px; }
+  .looks_nav a {
+    width: 33.33333%;
+    margin: 0 auto;
+    padding: 0;
+    float: left;
+    position: relative;
+    z-index: 20;
+    margin: 0;
+    color: #333333;
+    text-decoration: none; }
+    .looks_nav a .progress {
+      width: 70%;
+      margin: 0 15%;
+      background: #efefef; }
+      .looks_nav a .progress span {
+        border-radius: 50%;
+        background: transparent;
+        border: 1px solid #999999;
+        width: 6px;
+        height: 6px;
+        display: block;
+        margin: 16px auto; }
+    .looks_nav a:hover .progress {
+      display: block; }
+      .looks_nav a:hover .progress span {
+        background: #a53e1f;
+        border: none;
+        width: 8px;
+        height: 8px; }
+  .looks_nav .active_look .progress span {
+    background: #a53e1f;
+    width: 8px;
+    height: 8px;
+    border: none; }
+  .looks_nav:after {
+    width: 80%;
+    height: 2px;
+    background: #999999;
+    position: absolute;
+    top: 19px;
+    margin: 0 10%;
+    z-index: 5; }
+
 .ie8 .slide .look_img, .ie8 .flip-container .flipper .front, .ie8 .home {
   background-size: cover;
   -ms-behavior: url(../backgroundsize.min.htc); }
@@ -783,74 +828,76 @@ header {
       font-weight: 100;
       vertical-align: middle;
       width: 300px; }
-    .grid .question nav {
-      width: 300px;
-      position: relative;
-      margin: 15px auto;
-      text-align: center;
-      height: 44px;
-      margin-bottom: 30px; }
-      .grid .question nav a {
-        width: 16%;
-        margin: 0 auto;
-        padding: 0;
-        float: left;
-        position: relative;
-        z-index: 20;
-        margin: 0;
-        color: #333333;
-        text-decoration: none; }
-        .grid .question nav a .progress {
-          width: 70%;
-          margin: 0 15%;
-          background: #efefef; }
-          .grid .question nav a .progress span {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #a53e1f;
-            display: block;
-            margin: 16px auto; }
-        .grid .question nav a p {
-          display: none;
-          padding: 10px;
-          border: 1px solid #a53e1f;
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          margin: 0 auto;
-          background: #efefef;
-          -webkit-transition: all 0.3 ease;
-          -moz-transition: all 0.3 ease;
-          transition: all 0.3 ease; }
-        .grid .question nav a:hover .progress {
-          display: none; }
-        .grid .question nav a:hover p {
-          display: block;
-          -webkit-animation: scale_q 0.2s ease-in;
-          -moz-animation: scale_q 0.2s ease-in;
-          animation: scale_q 0.2s ease-in; }
-      .grid .question nav .empty .progress span {
-        background: transparent;
-        border: 1px solid #333333;
-        width: 6px;
-        height: 6px; }
-      .grid .question nav .active .progress {
-        display: none; }
-      .grid .question nav .active p {
-        display: block; }
-      .grid .question nav .active:hover p {
-        -webkit-animation: none;
-        -moz-animation: none;
-        animation: none; }
-      .grid .question nav:after {
-        width: 80%;
-        height: 2px;
+
+nav {
+  width: 300px;
+  position: relative;
+  margin: 15px auto;
+  text-align: center;
+  height: 44px;
+  margin-bottom: 30px; }
+  nav a {
+    width: 16%;
+    margin: 0 auto;
+    padding: 0;
+    float: left;
+    position: relative;
+    z-index: 20;
+    margin: 0;
+    color: #333333;
+    text-decoration: none; }
+    nav a .progress {
+      width: 70%;
+      margin: 0 15%;
+      background: #efefef; }
+      nav a .progress span {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
         background: #a53e1f;
-        position: absolute;
-        top: 19px;
-        margin: 0 10%;
-        z-index: 5; }
+        display: block;
+        margin: 16px auto; }
+    nav a p {
+      display: none;
+      padding: 10px;
+      border: 1px solid #a53e1f;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin: 0 auto;
+      background: #efefef;
+      -webkit-transition: all 0.3 ease;
+      -moz-transition: all 0.3 ease;
+      transition: all 0.3 ease; }
+    nav a:hover .progress {
+      display: none; }
+    nav a:hover p {
+      display: block;
+      color: #333333;
+      -webkit-animation: scale_q 0.2s ease-in;
+      -moz-animation: scale_q 0.2s ease-in;
+      animation: scale_q 0.2s ease-in; }
+  nav .empty .progress span {
+    background: transparent;
+    border: 1px solid #333333;
+    width: 6px;
+    height: 6px; }
+  nav .active .progress {
+    display: none; }
+  nav .active p {
+    display: block; }
+  nav .active:hover p {
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none; }
+  nav:after {
+    width: 80%;
+    height: 2px !important;
+    background: #a53e1f;
+    position: absolute;
+    top: 19px;
+    margin: 0 10%;
+    z-index: 5; }
 
 .flip-container {
   background: black;
