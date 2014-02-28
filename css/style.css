@@ -969,8 +969,8 @@ nav {
           letter-spacing: 3px;
           font-weight: 400;
           color: #a53e1f;
-          width: 100%;
-          font-size: 18px; }
+          font-size: 18px;
+          padding: 0 30px; }
   .flip-container:hover .flipper .front {
     -webkit-transform: perspective(1000px) rotateY(-179.9deg);
     -moz-transform: perspective(1000px) rotateY(-179.9deg);
