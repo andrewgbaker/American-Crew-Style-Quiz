@@ -899,7 +899,8 @@ header {
 
 .grid {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  background: black; }
   .grid section {
     float: left;
     width: 33.33333%;
