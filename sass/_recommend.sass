@@ -95,14 +95,112 @@ header
   margin-left: -15px
   z-index: 999999
   cursor: pointer
+    
+.expand div
+  cursor: pointer
+  position: absolute
+  bottom: 8px
+  right: 6px
+  width: 20px
+  height: 15px
+  &:after
+    content: ""
+    width: 15px
+    height: 15px
+    border-top: 2px solid white
+    position: absolute
+    top: 7px
+    right: -2px
+    @include transition-property (transform)
+    @include transition-duration(.3s)
+    @include transition-timing-function(ease-in)
+    -webkit-transform: rotate(-45deg)
+    -moz-transform: rotate(-45deg)
+    -ms-transform: rotate(-45deg)
+    -o-transform: rotate(-45deg)
+    transform: rotate(-45deg)
+    @include transform-origin(center top)
   &:before
-    content: '\2b'
-    color: #fff
-    line-height: 32px
-    margin: 0 auto
-    font-size: 26px
-    font-weight: bold
-    margin-left: 8px
+    content: ""
+    width: 15px
+    height: 15px
+    border-top: 2px solid white
+    position: absolute
+    top: 7px
+    right: 6px
+    @include transition-property (transform)
+    @include transition-duration(.3s)
+    @include transition-timing-function(ease-in)
+    -webkit-transform: rotate(45deg)
+    -moz-transform: rotate(45deg)
+    -ms-transform: rotate(45deg)
+    -o-transform: rotate(45deg)
+    transform: rotate(45deg)
+    @include transform-origin(center top)
+
+.expand .open
+  cursor: pointer
+  position: absolute
+  bottom: 12px
+  right: 6px
+  width: 20px
+  height: 15px
+  &:after
+    content: ""
+    width: 15px
+    height: 15px
+    border-top: 2px solid white
+    position: absolute
+    top: 7px
+    right: -3px
+    -webkit-transform: rotate(45deg)
+    -moz-transform: rotate(45deg)
+    -ms-transform: rotate(45deg)
+    -o-transform: rotate(45deg)
+    transform: rotate(45deg)
+  &:before
+    content: ""
+    width: 15px
+    height: 15px
+    border-top: 2px solid white
+    position: absolute
+    top: 7px
+    right: 8px
+    -webkit-transform: rotate(-45deg)
+    -moz-transform: rotate(-45deg)
+    -ms-transform: rotate(-45deg)
+    -o-transform: rotate(-45deg)
+    transform: rotate(-45deg)
+
+.no-csstransforms3d .expand div
+  &:after
+    content: "\25be"  
+    border: 0
+    color: white
+    font-family: 'Helvetica', sans-serif
+    font-size: 30px
+    top: 0
+    left: 0
+    line-height: 12px
+    @include transform(none)
+  &:before
+    content: ""  
+    border: 0
+    
+.no-csstransforms3d .expand .open
+  &:after
+    content: "\25b4"  
+    border: 0
+    color: white
+    font-family: 'Helvetica', sans-serif
+    font-size: 30px
+    top: 0
+    left: 0
+    line-height: 12px
+    @include transform(none)
+  &:before
+    content: ""  
+    border: 0
     
 #superContainer
   height: 100%
@@ -255,7 +353,7 @@ header
     width: 130px
     line-height: 76px
     position: absolute
-    font-family: 'Oswald' sans-serif
+    font-family: 'Oswald', sans-serif
     top: -38px
     padding: 0
     margin: 0
@@ -347,6 +445,18 @@ header
     top: 19px
     margin: 0 10%
     z-index: 5
+
+.looks_logo
+  top: 0
+  right: 20px
+  z-index: 999
+  left: auto
+  @include transition(top .3s ease .5s)
+  @media screen and (max-width: 767px)
+    display: none
+
+.hidden
+  top: -115px
 
 .ie8 .slide .look_img, .ie8 .flip-container .flipper .front, .ie8 .home
   background-size: cover

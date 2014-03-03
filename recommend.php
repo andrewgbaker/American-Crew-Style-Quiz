@@ -39,8 +39,10 @@
 		<p>Your drinks are stiff and so is your upper lip. You give women hope that chivalry might not be dead after all. And you’re either dressed well or not at all. You need a look that has structure, order and plenty of confidence. <a href="#" class="share">Share +</a> </p>
 	</article>
 	<a href="#" class="logo"></a>
-	<div class="expand"></div>
+	<div class="expand"><div></div></div>
 </header>
+
+<div class="logo looks_logo hidden"></div>
 
 <!-- SECTION 1
 <div class="section " id="section0">
@@ -77,7 +79,7 @@
 						<div class="start_btn"><a href="#">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create the Single Malt, you’ll need <a href="#">American Crew Forming Cream</a>, <a href="#">Daily Shampoo</a> and an <a href="#">American Crew stylist</a> to show you how. </p>
+				<p>To create the Single Malt, you’ll need <a href="#">American Crew Forming Cream</a>, <a href="#">Daily Shampoo</a> and an <a href="#">American Crew stylist</a> to show you how. <a href="img/gentleman_1_guide.jpg" target="_blank">Download this look.</a></p>
 				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
 			</div>
 		</article>

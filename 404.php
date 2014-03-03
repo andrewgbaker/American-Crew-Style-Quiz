@@ -1,20 +1,44 @@
-<?php 
-	$pageTitle = '404 error page - Arrow Electronics';
-	$pageDescription="Page not found. But mistakes are paramount to innovation.Return to our homepage.";
-	$headerTitle = "Error Page";
-	$thisPage = "error";
-	include("includes/header.php"); 
-?>
+<!DOCTYPE html>
+<!--[if lte IE 9 ]>    <html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class='no-js' lang='en'>
+  <!--<![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>404 Error - American Crew Style Select</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Karsh Hagan">  	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-  	<header class="clearfix header_wrap">
-  		<img src="/img/BI_Web_Header.jpg" class="header_img" alt="Business Intelligence Header Texture" />
-  	</header>
+	<script type="text/javascript" src="js/libs/modernizr.js"></script>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
   
-	<section class="content_width container clearfix" style="max-width: 700px; margin: 0 auto; min-height: 200px; text-align: center;">
-		<h1>Page not found.<br />But mistakes are paramount to innovation.</h1>
-			<p><a href="/">Return</a> to our homepage.</p>
-	</section>
+	<link rel="stylesheet" href="css/style.css" />
+  
+
+</head>
+
+	<body class="home">
+	
+		<a href="#" class="logo"></a>
 		
-				
-	</section> <!-- #content -->
- <?php 	include("includes/footer.php"); ?>
+		<article>
+			<div class="wrap">
+				<div class="home_content">
+					<h1>404 Error <span> Page</span></h1>
+					<p>Lorem Ipsum.</p>
+				 	<div class="start_btn"><a href="questions.php">Get Back to the Start</a></div>
+				 	
+				</div>
+			</div>
+		</article>
+		
+  
+	
+	
+	<!-- jQuery if needed -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    </body>
+</html>

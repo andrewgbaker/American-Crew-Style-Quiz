@@ -495,14 +495,138 @@ header {
   margin-left: -15px;
   z-index: 999999;
   cursor: pointer; }
-  .expand:before {
-    content: "\2b";
-    color: white;
-    line-height: 32px;
-    margin: 0 auto;
-    font-size: 26px;
-    font-weight: bold;
-    margin-left: 8px; }
+
+.expand div {
+  cursor: pointer;
+  position: absolute;
+  bottom: 8px;
+  right: 6px;
+  width: 20px;
+  height: 15px; }
+  .expand div:after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid white;
+    position: absolute;
+    top: 7px;
+    right: -2px;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-in;
+    -moz-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: center top;
+    -moz-transform-origin: center top;
+    -ms-transform-origin: center top;
+    -o-transform-origin: center top;
+    transform-origin: center top; }
+  .expand div:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid white;
+    position: absolute;
+    top: 7px;
+    right: 6px;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-in;
+    -moz-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: center top;
+    -moz-transform-origin: center top;
+    -ms-transform-origin: center top;
+    -o-transform-origin: center top;
+    transform-origin: center top; }
+
+.expand .open {
+  cursor: pointer;
+  position: absolute;
+  bottom: 12px;
+  right: 6px;
+  width: 20px;
+  height: 15px; }
+  .expand .open:after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid white;
+    position: absolute;
+    top: 7px;
+    right: -3px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .expand .open:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid white;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+
+.no-csstransforms3d .expand div:after {
+  content: "\25be";
+  border: 0;
+  color: white;
+  font-family: "Helvetica", sans-serif;
+  font-size: 30px;
+  top: 0;
+  left: 0;
+  line-height: 12px;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none; }
+.no-csstransforms3d .expand div:before {
+  content: "";
+  border: 0; }
+
+.no-csstransforms3d .expand .open:after {
+  content: "\25b4";
+  border: 0;
+  color: white;
+  font-family: "Helvetica", sans-serif;
+  font-size: 30px;
+  top: 0;
+  left: 0;
+  line-height: 12px;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none; }
+.no-csstransforms3d .expand .open:before {
+  content: "";
+  border: 0; }
 
 #superContainer {
   height: 100%;
@@ -658,7 +782,7 @@ header {
     width: 130px;
     line-height: 76px;
     position: absolute;
-    font-family: "Oswald" sans-serif;
+    font-family: "Oswald", sans-serif;
     top: -38px;
     padding: 0;
     margin: 0;
@@ -753,6 +877,21 @@ header {
     top: 19px;
     margin: 0 10%;
     z-index: 5; }
+
+.looks_logo {
+  top: 0;
+  right: 20px;
+  z-index: 999;
+  left: auto;
+  -webkit-transition: top 0.3s ease 0.5s;
+  -moz-transition: top 0.3s ease 0.5s;
+  transition: top 0.3s ease 0.5s; }
+  @media screen and (max-width: 767px) {
+    .looks_logo {
+      display: none; } }
+
+.hidden {
+  top: -115px; }
 
 .ie8 .slide .look_img, .ie8 .flip-container .flipper .front, .ie8 .home {
   background-size: cover;

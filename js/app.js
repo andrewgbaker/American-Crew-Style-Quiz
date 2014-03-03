@@ -14,10 +14,14 @@ $(document).ready(function() {
 		css3: true
 	});
 	
-	$(window).bind('mousewheel', function(event, delta) {
+	$(window).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event, delta) {
 		if ($('#section1').hasClass('look_down')) {
 			$('#section1').toggleClass('look_down');
 			$('header').toggleClass('header_up');
+			setTimeout(function() {
+				$('.expand div').toggleClass('open');
+				$('.looks_logo').toggleClass('hidden');
+			}, 500);
 		}
 		return false;
 	});
@@ -35,5 +39,9 @@ $(document).ready(function() {
 	$('.expand').on( "click", function() {
 		$('#section1').toggleClass('look_down');
 		$('header').toggleClass('header_up');
+		setTimeout(function() {
+				$('.expand div').toggleClass('open');
+				$('.looks_logo').toggleClass('hidden');
+		}, 500);
 	});
 });
