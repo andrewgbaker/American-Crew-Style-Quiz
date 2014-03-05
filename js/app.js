@@ -10,8 +10,7 @@ $(document).ready(function() {
         navigationPosition: 'right',
         navigationTooltips: ['firstSlide', 'secondSlide'],
         slidesNavigation: true,
-        slidesNavPosition: 'bottom',
-		css3: true
+        slidesNavPosition: 'bottom'
 	});
 	
 	$(window).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event, delta) {

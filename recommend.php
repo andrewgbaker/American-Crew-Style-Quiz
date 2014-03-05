@@ -56,7 +56,7 @@
 		<article>
 			<div class="look_wrap">
 				<div class="mobile_look_img"><img src="img/single_malt_mobile.jpg" alt="the single malt" /> </div>
-				<h2>Gentleman - <span>The Looks</span></h2>
+				<h2>The Gentleman Series</h2>
 				<nav class="looks_nav clearfix">
 					<a href="#" class="active_look">
 						<div class="progress"><span></span></div>
@@ -79,7 +79,7 @@
 						<div class="start_btn"><a href="#">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create the Single Malt, you’ll need <a href="#">American Crew Forming Cream</a>, <a href="#">Daily Shampoo</a> and an <a href="#">American Crew stylist</a> to show you how. <a href="img/gentleman_1_guide.jpg" target="_blank">Download this look.</a></p>
+				<p>To create the Single Malt, you’ll need <a href="#">American Crew Forming Cream</a>, <a href="#">Daily Shampoo</a> and to <a href="img/gentleman_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
 			</div>
 		</article>

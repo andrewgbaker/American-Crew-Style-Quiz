@@ -20,21 +20,20 @@
 
 </head>
 
-	<body class="home">
+	<body>
 	
-		<a href="#" class="logo"></a>
-		
-		<article>
-			<div class="wrap">
-				<div class="home_content">
-					<h1>Error 404</h1>
-					<p>Unlike your sense of style, this page does not exist. <a href="questions.php">Restart</a> your style quiz or peruse<a href="http://americancrew.com">americancrew.com</a></p>
-				 	
-				</div>
+		<section class="load_wrap">
+	
+			<div class="logo loader">
+			  <span class="b1"></span>
+			  <span class="b2"></span>
+			  <span class="b3"></span>
+			  <span class="b4"></span>
 			</div>
-		</article>
 		
-  
+			<p>Fetching<br />your<br />style<br /><span class="dot_three">.&nbsp;</span><span class="dot_two">.&nbsp;</span><span class="dot_one">.&nbsp;</span></p>
+			
+  		</section>
 	
 	
 	<!-- jQuery if needed -->
