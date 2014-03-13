@@ -15,14 +15,14 @@
 	
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
   
-	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="/css/style.css" />
   
 
 </head>
 
 	<body class="home">
 	
-	<img class="bg_load" src="img/home_bg.jpg" alt="home_bg"/>
+	<img class="bg_load" src="/img/home_bg.jpg" alt="home_bg"/>
 	<div class="home_bg" style="opacity: 0"></div>
 	
 		<a href="#" class="logo"></a>
@@ -32,7 +32,7 @@
 				<div class="home_content">
 					<h1>What Hairstyle will <span>keep you on top?</span></h1>
 					<p>From the world of business to the realm of women, the most successful men are the ones who know who they are and look the part. Answer a few questions about the things you like, and American Crew expert, Paul Wilson, will show you the hairstyles you should be sporting and give you tips for creating them.</p>
-				 	<div class="start_btn"><a href="questions.php">Define Your Style</a></div>
+				 	<div class="start_btn"><a href="questions">Define Your Style</a></div>
 				 	
 				 	<section class="clearfix">
 						<aside class="quote">
@@ -40,7 +40,7 @@
 							<span>–Paul Wilson,  American Crew Artistic Director & world–renowned stylist</span>
 						</aside>
 						<div>
-							<img src="img/paul_wilson.jpg" alt="paul wilson" />
+							<img src="/img/paul_wilson.jpg" alt="paul wilson" />
 						</div>
 					</section>
 				</div>
@@ -52,7 +52,7 @@
 	
 	<!-- jQuery if needed -->
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <script type="text/javascript" src="js/libs/imagesloaded.min.js"></script>
+        <script type="text/javascript" src="/js/libs/imagesloaded.min.js"></script>
         
         <script>
         	imagesLoaded( '.bg_load', function() {
