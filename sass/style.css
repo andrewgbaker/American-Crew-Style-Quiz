@@ -1168,7 +1168,9 @@ header {
   width: 100%;
   height: 100%;
   position: absolute;
-  background: #333333; }
+  background: #333333;
+  z-index: 999999999;
+  opacity: 1; }
   .load_wrap p {
     position: absolute;
     width: 300px;
@@ -1303,7 +1305,7 @@ header {
     width: 33.33333%;
     height: 50%;
     position: relative;
-    background: #333333;
+    background: #181818;
     display: block;
     text-align: center;
     -webkit-background-size: cover !important;
