@@ -461,3 +461,91 @@ header
 .ie8 .slide .look_img, .ie8 .flip-container .flipper .front, .ie8 .home
   background-size: cover
   -ms-behavior: url(../backgroundsize.min.htc)
+
+.load_wrap
+  width: 100%
+  height: 100%
+  position: absolute
+  background: $dark_gray
+  p
+    position: absolute
+    width: 300px
+    color: #fff
+    left: 50%
+    margin-left: -150px
+    text-align: center
+    top: 55%
+    font-size: 20px
+    font-family: 'Oswald', sans-serif
+    text-transform: uppercase
+    font-weight: 400
+    letter-spacing: 1px
+    line-height: 24px
+  
+.loader
+  display: block
+  width: 130px
+  height: 130px
+  position: absolute
+  top: 40%
+  left: 50%
+  margin: -65px auto auto -65px
+  @media screen and (max-width: 600px)
+    top: 30%
+
+.b1, .b2, .b3, .b4
+  position: absolute
+  background: transparent
+  width: 0px
+  height: 0px
+  @include animation-duration(2s)
+  @include animation-timing-function(ease-in-out)
+  @include animation-fill-mode(forwards)
+  @include animation-iteration-count(infinite)
+
+.b1
+  left: 0
+  top: 0
+  height: 200px
+  width: 2px
+  @include animation-name(b1)
+  @include animation-delay(1s)
+
+.b2
+  top: 0
+  left: 0
+  width: 200px
+  height: 2px
+  @include animation-name(b2)
+  @include animation-delay(1s)
+
+.b3
+  right: 0
+  bottom: 0
+  height: 200px
+  width: 2px
+  @include animation-name(b3)
+  @include animation-delay(0s)
+
+.b4
+  bottom: 0
+  right: 0
+  width: 200px
+  height: 2px
+  @include animation-name(b4)
+  @include animation-delay(0s)
+
+.dot_one, .dot_two, .dot_three
+  @include animation-name(dot)
+  @include animation-duration(1.3s)
+  @include animation-iteration-count(infinite)
+
+.dot_one
+  opacity: 0
+  @include animation-delay(0s)
+.dot_two
+  opacity: 0
+  @include animation-delay(.2s)
+.dot_one
+  opacity: 0
+  @include animation-delay(.3s)

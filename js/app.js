@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	// $.fn.fullpage({
+// $.fn.fullpage({
  //        verticalCentered: true,
  //        resize : false,
  //        anchors:['firstSlide', 'secondSlide'],

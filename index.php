@@ -22,6 +22,9 @@
 
 	<body class="home">
 	
+	<img class="bg_load" src="img/home_bg.jpg" alt="home_bg"/>
+	<div class="home_bg" style="opacity: 0"></div>
+	
 		<a href="#" class="logo"></a>
 		
 		<article>
@@ -49,5 +52,13 @@
 	
 	<!-- jQuery if needed -->
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/libs/imagesloaded.min.js"></script>
+        
+        <script>
+        	imagesLoaded( '.bg_load', function() {
+        		$('.home_bg').css('opacity', '1');
+        	});
+      	</script>
+        
     </body>
 </html>
