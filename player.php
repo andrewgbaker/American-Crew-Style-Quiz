@@ -26,7 +26,7 @@
 	<div class="slide clearfix" data-anchor="one">
 		<article>
 			<div class="look_wrap">
-				<div class="mobile_look_img"><img src="/img/player1_mobile.jpg" alt="the single malt" /> </div>
+				<div class="mobile_look_img"><img src="/img/looks/player1_mobile.jpg" alt="the single malt" /> </div>
 				<h2>Player - <span>The Looks</span></h2>
 				<nav class="looks_nav clearfix">
 					<a href="#" class="active_look">
@@ -61,7 +61,7 @@
     <div class="slide" data-anchor="two"> 
     	<article>
 			<div class="look_wrap">
-				<div class="mobile_look_img"><img src="/img/player2_mobile.jpg" alt="the single malt" /> </div>
+				<div class="mobile_look_img"><img src="/img/looks/player2_mobile.jpg" alt="the single malt" /> </div>
 				<h2>Player - <span>The Looks</span></h2>
 				<nav class="looks_nav clearfix">
 					<a href="#">
@@ -96,7 +96,7 @@
     <div class="slide" data-anchor="three">
     	<article>
 			<div class="look_wrap">
-				<div class="mobile_look_img"><img src="/img/player3_mobile.jpg" alt="the single malt" /> </div>
+				<div class="mobile_look_img"><img src="/img/looks/player3_mobile.jpg" alt="the single malt" /> </div>
 				<h2>Player - <span>The Looks</span></h2>
 				<nav class="looks_nav clearfix">
 					<a href="#">

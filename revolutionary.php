@@ -26,7 +26,7 @@
 	<div class="slide clearfix" data-anchor="one">
 		<article>
 			<div class="look_wrap">
-				<div class="mobile_look_img"><img src="/img/revolutionary1_mobile.jpg" alt="the single malt" /> </div>
+				<div class="mobile_look_img"><img src="/img/looks/revolutionary1_mobile.jpg" alt="the single malt" /> </div>
 				<h2>Revolutionary - <span>The Looks</span></h2>
 				<nav class="looks_nav clearfix">
 					<a href="#" class="active_look">
@@ -61,7 +61,7 @@
     <div class="slide" data-anchor="two"> 
     	<article>
 			<div class="look_wrap">
-				<div class="mobile_look_img"><img src="/img/revolutionary2_mobile.jpg" alt="the single malt" /> </div>
+				<div class="mobile_look_img"><img src="/img/looks/revolutionary2_mobile.jpg" alt="the single malt" /> </div>
 				<h2>Player - <span>The Looks</span></h2>
 				<nav class="looks_nav clearfix">
 					<a href="#">
@@ -96,7 +96,7 @@
     <div class="slide" data-anchor="three">
     	<article>
 			<div class="look_wrap">
-				<div class="mobile_look_img"><img src="/img/revolutionary3_mobile.jpg" alt="the single malt" /> </div>
+				<div class="mobile_look_img"><img src="/img/looks/revolutionary3_mobile.jpg" alt="Revolutionary Look 3" /> </div>
 				<h2>Player - <span>The Looks</span></h2>
 				<nav class="looks_nav clearfix">
 					<a href="#">
@@ -114,7 +114,7 @@
 				<p>- Paul Wilson, American Crew Artistic Director</p>
 				<div class="product clearfix">
 					<div class="wrap">
-						<img src="/img/product/definingpaste.jpg" />
+						<img src="/img/product/definingpaste.jpg" alt="Defining Paste" />
 					</div>
 					<div class="cta">
 						<div class="start_btn secondary"><a href="http://www.americancrew.com/salon-locator">Find a Stylist</a></div>

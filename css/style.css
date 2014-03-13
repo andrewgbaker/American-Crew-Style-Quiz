@@ -1054,7 +1054,7 @@ header {
   .controlArrow.prev {
     left: -120px;
     padding-left: 0;
-    border-width: 38.5px 34px 38.5px 0;
+    border-width: 38.5px 37px 38.5px 0;
     border-color: white transparent white white;
     text-align: left;
     -webkit-transition: left 0.3s ease;
@@ -1067,7 +1067,7 @@ header {
   .controlArrow.next {
     right: -120px;
     padding-right: 0;
-    border-width: 38.5px 0 38.5px 34px;
+    border-width: 38.5px 0 38.5px 37px;
     border-color: white white white transparent;
     -webkit-transition: right 0.3s ease;
     -moz-transition: right 0.3s ease;
