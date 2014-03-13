@@ -1,23 +1,3 @@
-<?php
-// $answers_arr = array();
-// $answers_arr['clothes'] = 0;
-// $answers_arr['music'] = 0;
-// $answers_arr['friday_plans'] = 0;
-// $answers_arr['drinking'] = 0;
-// $answers_arr['girl'] = 0;
-// $answers_arr['hair'] = 0;
-// $post_fields = array('clothes','music','friday_plans','drinking','girl','hair');
-// $values_string = '';
-// $i = 0;
-
-// foreach ($post_fields as $field) {
-// 	//echo array_key_exists($field,$_REQUEST);
-// 	if(array_key_exists($field,$_REQUEST)) {
-// 		$answers_arr[$field] = $_REQUEST[$field];
-// 	}
-// 	$i++;
-// }
-?>
 <!DOCTYPE html>
 <!--[if lte IE 9 ]>    <html lang="en" class="no-js ie ie8"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
