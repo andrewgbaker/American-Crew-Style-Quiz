@@ -7,6 +7,7 @@ $.CustomEvents =
 	HEADER_TOGGLE: "HEADER_TOGGLE"
 	TOUCH_MOVE: "touchmove"
 	ANSWER_CLICK: "ANSWER_CLICK"
+	QUESTION_NAV_CLICKED: "QUESTION_NAV_CLICKED"
 
 $.PageName = ''
 $.MobileSize = false
@@ -43,7 +44,8 @@ $ ->
 			$me = $(this)
 
 			_initialize_plugins = () ->
-				$.fn.fullpage(config.full_page_opts);
+				if $.fn.fullpage
+					$.fn.fullpage(config.full_page_opts);
 				# if $.Body.hasClass("")
 				$.Window.swipe( {
 			    swipe:_on_swipe,
@@ -98,6 +100,51 @@ $ ->
 						
 			_init()
 
+	$.fn.QuestionNav = (objectName,@settings) ->
+		$parent = $(this)
+	
+		if not config? then config = {}
+		config.myName = objectName
+		if @settings? then jQuery.extend(config, @settings)
+	
+		this.each (index) ->
+	  	$me = $(this)
+	  	_index = index
+	  	_anchors = $me.find("a")
+
+	  	_question_was_answered = (evt,data) ->
+	  		question_number = data.question_index + 1
+	  		answer_number = data.which
+	  		debug "_question_was_answered:"+question_number
+	  		# _anchors.each =>
+	  		$me.find(".active").removeClass("active")
+	  		_anchors.each (index,anchor) =>
+		  		if question_number > index
+		  			$(anchor).removeClass("empty")
+		  		if question_number < index
+		  			$(anchor).addClass("empty")
+
+		  	_anchors.eq(question_number).addClass("active")
+
+		  
+
+		  _on_anchor_click = (evt) ->
+		  	evt.preventDefault()
+		  	answer_obj = 
+					which: 0
+					question_index: $(this).data("anchornum")
+					announce $.Events.QUESTION_NAV_CLICKED, answer_obj
+	
+	  	_init = () ->
+	  		listen_to $.Events.ANSWER_CLICK, config.myName, _question_was_answered
+	  		listen_to $.Events.CLICK, config.myName, _on_anchor_click, _anchors
+	  		debug "QuestionNav:"+_index
+	  		_anchors.eq(0).addClass("active")
+	  		_anchors.each (index,anchor) =>
+	  			$(anchor).attr("data-anchornum",index-1)
+	
+	  	_init()
+
 	$.fn.QuizTracker = (objectName,@settings) ->
 		$parent = $(this)
 	
@@ -107,7 +154,7 @@ $ ->
 	
 		this.each (index) ->
 	  	$me = $(this)
-	  	_quiz_anwers =
+	  	_quiz_answers =
 	  		clothes: 0
 	  		music: 0
 	  		friday_plans: 0
@@ -117,9 +164,10 @@ $ ->
 	  	_form = $me.find("form")
 
 	  	_question_was_answered = (data) ->
-	  		question_number = data.question_number
-	  		answer_number - data.answer_number
+	  		question_number = data.question_index
+	  		answer_number = data.which
 	  		quiz_completed = true
+
 	  		for quiz_question,quiz_answer of _quiz_answers
 	  			$("#"+quiz_question).val(quiz_answer)
 	  			if quiz_answer is 0
@@ -142,7 +190,7 @@ $ ->
 				# $.ajax(_ajax_opts)
 	
 	  	_init = () ->
-	  		listen_to $.Events.QUESTION_ANSWERED, config.myName, _question_was_answered
+	  		listen_to $.Events.ANSWER_CLICK, config.myName, _question_was_answered
 	  		
 	
 	  	_init()
@@ -160,6 +208,8 @@ $ ->
 			_scroll_to_question = (which) ->
 				debug "scrolling to question:" + which
 				_next_question_top = $(".question-group").eq(which).offset().top
+				debug $(".question-group")
+				debug $(".question-group").eq(which)
 				TweenLite.to(window,config.question_scroll_duration,{ease:Quint.easeInOut,scrollTo:{y:_next_question_top,ease:Quint.easeInOut}})
 
 			_on_address_change = (evt) ->
@@ -181,7 +231,8 @@ $ ->
 					# _next_question_top = $(".question-group").eq(question_index_clicked+1).offset().top
 					# TweenLite.to(window,config.question_scroll_duration,{ease:Quint.easeInOut,scrollTo:{y:_next_question_top,ease:Quint.easeInOut}})
 					next_question_number = parseInt(question_index_clicked)+1
-					$.address.value("question-"+next_question_number)
+					_scroll_to_question next_question_number
+					# $.address.value("question-"+next_question_number)
 
 			_enable_tile_backs = () ->
 				$("#your-closet section .back").css("display","table")
@@ -200,14 +251,16 @@ $ ->
 				timeline.resume()
 	
 			_init = () -> 
-				$.address.change _on_address_change
+				# $.address.change _on_address_change
 				$.Body.animate({scrollTop:0})
 				listen_to $.Events.ANSWER_CLICK, config.myName, _on_answer_click
+				listen_to $.Events.QUESTION_NAV_CLICKED, config.myName, _on_answer_click
 				$(".question-group").Question("Question",config)
 				# _animate_in_tiles
 				# setTimeout _animate_in_tiles, 3000
-				# _animate_in_tiles
-				imagesLoaded _animate_in_tiles
+				_animate_in_tiles
+				$me.find("nav").QuestionNav('QuestionNav',config)
+				# imagesLoaded _animate_in_tiles
 
 			_init()
 

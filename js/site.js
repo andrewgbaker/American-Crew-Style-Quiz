@@ -299,7 +299,8 @@
     MOUSE_WHEEL: "mousewheel",
     HEADER_TOGGLE: "HEADER_TOGGLE",
     TOUCH_MOVE: "touchmove",
-    ANSWER_CLICK: "ANSWER_CLICK"
+    ANSWER_CLICK: "ANSWER_CLICK",
+    QUESTION_NAV_CLICKED: "QUESTION_NAV_CLICKED"
   };
 
   $.PageName = '';
@@ -345,7 +346,9 @@
         var $me, _init, _initialize_plugins, _on_scroll, _on_swipe, _resize;
         $me = $(this);
         _initialize_plugins = function() {
-          $.fn.fullpage(config.full_page_opts);
+          if ($.fn.fullpage) {
+            $.fn.fullpage(config.full_page_opts);
+          }
           return $.Window.swipe({
             swipe: _on_swipe,
             threshold: 0,
@@ -388,6 +391,61 @@
         return _init();
       });
     };
+    $.fn.QuestionNav = function(objectName, settings) {
+      var $parent, config;
+      this.settings = settings;
+      $parent = $(this);
+      if (typeof config === "undefined" || config === null) {
+        config = {};
+      }
+      config.myName = objectName;
+      if (this.settings != null) {
+        jQuery.extend(config, this.settings);
+      }
+      return this.each(function(index) {
+        var $me, _anchors, _index, _init, _on_anchor_click, _question_was_answered;
+        $me = $(this);
+        _index = index;
+        _anchors = $me.find("a");
+        _question_was_answered = function(evt, data) {
+          var answer_number, question_number,
+            _this = this;
+          question_number = data.question_index + 1;
+          answer_number = data.which;
+          debug("_question_was_answered:" + question_number);
+          $me.find(".active").removeClass("active");
+          _anchors.each(function(index, anchor) {
+            if (question_number > index) {
+              $(anchor).removeClass("empty");
+            }
+            if (question_number < index) {
+              return $(anchor).addClass("empty");
+            }
+          });
+          return _anchors.eq(question_number).addClass("active");
+        };
+        _on_anchor_click = function(evt) {
+          var answer_obj;
+          evt.preventDefault();
+          answer_obj = {
+            which: 0,
+            question_index: $(this).data("anchornum")
+          };
+          return announce($.Events.QUESTION_NAV_CLICKED, answer_obj);
+        };
+        _init = function() {
+          var _this = this;
+          listen_to($.Events.ANSWER_CLICK, config.myName, _question_was_answered);
+          listen_to($.Events.CLICK, config.myName, _on_anchor_click, _anchors);
+          debug("QuestionNav:" + _index);
+          _anchors.eq(0).addClass("active");
+          return _anchors.each(function(index, anchor) {
+            return $(anchor).attr("data-anchornum", index - 1);
+          });
+        };
+        return _init();
+      });
+    };
     $.fn.QuizTracker = function(objectName, settings) {
       var $parent, config;
       this.settings = settings;
@@ -400,9 +458,9 @@
         jQuery.extend(config, this.settings);
       }
       return this.each(function(index) {
-        var $me, _form, _init, _question_was_answered, _quiz_anwers, _send_quiz_answers;
+        var $me, _form, _init, _question_was_answered, _quiz_answers, _send_quiz_answers;
         $me = $(this);
-        _quiz_anwers = {
+        _quiz_answers = {
           clothes: 0,
           music: 0,
           friday_plans: 0,
@@ -412,9 +470,9 @@
         };
         _form = $me.find("form");
         _question_was_answered = function(data) {
-          var question_number, quiz_answer, quiz_completed, quiz_question;
-          question_number = data.question_number;
-          answer_number - data.answer_number;
+          var answer_number, question_number, quiz_answer, quiz_completed, quiz_question;
+          question_number = data.question_index;
+          answer_number = data.which;
           quiz_completed = true;
           for (quiz_question in _quiz_answers) {
             quiz_answer = _quiz_answers[quiz_question];
@@ -431,7 +489,7 @@
           return _form.get(0).submit();
         };
         _init = function() {
-          return listen_to($.Events.QUESTION_ANSWERED, config.myName, _question_was_answered);
+          return listen_to($.Events.ANSWER_CLICK, config.myName, _question_was_answered);
         };
         return _init();
       });
@@ -454,6 +512,8 @@
           var _next_question_top;
           debug("scrolling to question:" + which);
           _next_question_top = $(".question-group").eq(which).offset().top;
+          debug($(".question-group"));
+          debug($(".question-group").eq(which));
           return TweenLite.to(window, config.question_scroll_duration, {
             ease: Quint.easeInOut,
             scrollTo: {
@@ -481,7 +541,7 @@
           if (question_index_clicked < $(".question-group").length) {
             debug("question clicked");
             next_question_number = parseInt(question_index_clicked) + 1;
-            return $.address.value("question-" + next_question_number);
+            return _scroll_to_question(next_question_number);
           }
         };
         _enable_tile_backs = function() {
@@ -509,13 +569,14 @@
           return timeline.resume();
         };
         _init = function() {
-          $.address.change(_on_address_change);
           $.Body.animate({
             scrollTop: 0
           });
           listen_to($.Events.ANSWER_CLICK, config.myName, _on_answer_click);
+          listen_to($.Events.QUESTION_NAV_CLICKED, config.myName, _on_answer_click);
           $(".question-group").Question("Question", config);
-          return imagesLoaded(_animate_in_tiles);
+          _animate_in_tiles;
+          return $me.find("nav").QuestionNav('QuestionNav', config);
         };
         return _init();
       });
