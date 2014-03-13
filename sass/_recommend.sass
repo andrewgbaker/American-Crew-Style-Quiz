@@ -239,13 +239,16 @@ header
           font-family: 'Volkkhorn' serif
           font-size: 16px
       .quote
-        margin-top: 32px
-        color: #707070
-        font-size: 14px
+        margin: 18px 30px 5px
+        font-size: 12px
         position: relative
-        span
-          font-size: 13px
-          font-style: normal
+        &:before, &:after
+          content: '\201C'
+          font-size: 26px
+          color: $crew_orange
+          line-height: 20px
+        &:after
+          content: '\201D'
       .product
         height: 220px
         .wrap
@@ -288,20 +291,11 @@ header
           .cta
             margin-bottom: 20px
   .look_img
-    background: url(../img/style_img1.jpg) top center no-repeat
     width: 50%
     height: 100%
     @include bgCover
     @media screen and (max-width: 767px)
       display: none
-  .two
-    background: url(../img/oldman.jpg) top center no-repeat
-    width: 50%
-    height: 100%
-  .three
-    background: url(../img/vestyboy.jpg) top center no-repeat
-    width: 50%
-    height: 100%
   article
     vertical-align: middle
     display: table

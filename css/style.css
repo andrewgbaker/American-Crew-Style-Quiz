@@ -539,9 +539,6 @@ blockquote {
   opacity: 1; }
 
 .quote {
-  font-family: "Playfair Display" serif;
-  font-size: 16px;
-  font-weight: 900;
   font-style: italic; }
 
 .home {
@@ -935,13 +932,16 @@ header {
           font-family: "Volkkhorn" serif;
           font-size: 16px; }
       .slide article .look_wrap .quote, .slide .look_img .look_wrap .quote {
-        margin-top: 32px;
-        color: #707070;
-        font-size: 14px;
+        margin: 18px 30px 5px;
+        font-size: 12px;
         position: relative; }
-        .slide article .look_wrap .quote span, .slide .look_img .look_wrap .quote span {
-          font-size: 13px;
-          font-style: normal; }
+        .slide article .look_wrap .quote:before, .slide article .look_wrap .quote:after, .slide .look_img .look_wrap .quote:before, .slide .look_img .look_wrap .quote:after {
+          content: "\201C";
+          font-size: 26px;
+          color: #a53e1f;
+          line-height: 20px; }
+        .slide article .look_wrap .quote:after, .slide .look_img .look_wrap .quote:after {
+          content: "\201D"; }
       .slide article .look_wrap .product, .slide .look_img .look_wrap .product {
         height: 220px; }
         .slide article .look_wrap .product .wrap, .slide .look_img .look_wrap .product .wrap {
@@ -981,7 +981,6 @@ header {
       .slide article .look_wrap .product .cta, .slide .look_img .look_wrap .product .cta {
         margin-bottom: 20px; } }
   .slide .look_img {
-    background: url(../img/style_img1.jpg) top center no-repeat;
     width: 50%;
     height: 100%;
     -webkit-background-size: cover !important;
@@ -991,14 +990,6 @@ header {
     @media screen and (max-width: 767px) {
       .slide .look_img {
         display: none; } }
-  .slide .two {
-    background: url(../img/oldman.jpg) top center no-repeat;
-    width: 50%;
-    height: 100%; }
-  .slide .three {
-    background: url(../img/vestyboy.jpg) top center no-repeat;
-    width: 50%;
-    height: 100%; }
   .slide article {
     vertical-align: middle;
     display: table; }
