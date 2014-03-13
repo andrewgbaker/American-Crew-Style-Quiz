@@ -57,7 +57,7 @@
 	<div class="slide clearfix" data-anchor="one">
 		<article>
 			<div class="look_wrap">
-				<div class="mobile_look_img"><img src="img/gentleman1_mobile.jpg" alt="the single malt" /> </div>
+				<div class="mobile_look_img"><img src="/img/player1_mobile.jpg" alt="the single malt" /> </div>
 				<h2>Player - <span>The Looks</span></h2>
 				<nav class="looks_nav clearfix">
 					<a href="#" class="active_look">
@@ -75,24 +75,24 @@
 				<p>-Paul Wilson, American Crew Artistic Director</p>
 				<div class="product clearfix">
 					<div class="wrap">
-						<img src="img/product/boostpowder.jpg" />
+						<img src="/img/product/boostpowder.jpg" />
 					</div>
 					<div class="cta">
 						<div class="start_btn secondary"><a href="#">Find a Stylist</a></div>
 						<div class="start_btn"><a href="#">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="#">Ultramatte</a>, <a href="#">Boost Powder</a> and to <a href="img/gentleman_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<p>To create this style, you'll need <a href="#">Ultramatte</a>, <a href="#">Boost Powder</a> and to <a href="img/player_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
 			</div>
 		</article>
-		<div class="look_img" style="background: url(img/looks/gentleman1.jpg) no-repeat top center"></div>
+		<div class="look_img" style="background: url(/img/looks/player1.jpg) no-repeat top center"></div>
 	</div>
 	<!-- END LOOK ONE -->
     <div class="slide" data-anchor="two"> 
     	<article>
 			<div class="look_wrap">
-				<div class="mobile_look_img"><img src="img/single_malt_mobile.jpg" alt="the single malt" /> </div>
+				<div class="mobile_look_img"><img src="/img/player2_mobile.jpg" alt="the single malt" /> </div>
 				<h2>Player - <span>The Looks</span></h2>
 				<nav class="looks_nav clearfix">
 					<a href="#">
@@ -110,24 +110,24 @@
 				<p>-Paul Wilson, American Crew Artistic Director</p>
 				<div class="product clearfix">
 					<div class="wrap">
-						<img src="img/product/alternator.jpg" />
+						<img src="/img/product/alternator.jpg" />
 					</div>
 					<div class="cta">
 						<div class="start_btn secondary"><a href="#">Find a Stylist</a></div>
 						<div class="start_btn"><a href="#">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="#">Alternator</a>, <a href="#">Daily Shampoo</a> and to <a href="img/gentleman_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<p>To create this style, you'll need <a href="#">Alternator</a>, <a href="#">Daily Shampoo</a> and to <a href="img/player_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
 			</div>
 		</article>
-		<div class="look_img" style="background: url(img/looks/gentleman1.jpg) no-repeat top center"></div>
+		<div class="look_img" style="background: url(/img/looks/player2.jpg) no-repeat top center"></div>
     </div>
     <!-- END LOOK TWO -->
     <div class="slide" data-anchor="three">
     	<article>
 			<div class="look_wrap">
-				<div class="mobile_look_img"><img src="img/single_malt_mobile.jpg" alt="the single malt" /> </div>
+				<div class="mobile_look_img"><img src="/img/player3_mobile.jpg" alt="the single malt" /> </div>
 				<h2>Player - <span>The Looks</span></h2>
 				<nav class="looks_nav clearfix">
 					<a href="#">
@@ -145,18 +145,18 @@
 				<p>- Paul Wilson, American Crew Artistic Director</p>
 				<div class="product clearfix">
 					<div class="wrap">
-						<img src="img/product/pomade.jpg" />
+						<img src="/img/product/pomade.jpg" />
 					</div>
 					<div class="cta">
 						<div class="start_btn secondary"><a href="#">Find a Stylist</a></div>
 						<div class="start_btn"><a href="#">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="#">Pomade</a>, <a href="#">Daily Shampoo</a> and to <a href="img/gentleman_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<p>To create this style, you'll need <a href="#">Pomade</a>, <a href="#">Daily Shampoo</a> and to <a href="img/player_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
 			</div>
 		</article>
-		<div class="look_img" style="background: url(img/looks/gentleman1.jpg) no-repeat top center"></div>
+		<div class="look_img" style="background: url(/img/looks/player3.jpg) no-repeat top center"></div>
     </div>
     <!-- END LOOK THREE -->
     

@@ -635,7 +635,7 @@
               look_slide = 'three';
             }
           }
-          $me.attr("action", highest_category + "#" + "looks/" + look_slide);
+          $me.attr("action", highest_category + "/#" + "looks/" + look_slide);
           return $me.get(0).submit();
         };
         _init = function() {
