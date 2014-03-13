@@ -83,7 +83,6 @@ $ ->
 				$.Window.swipe("destroy")
 			
 			_init = () ->
-				debug "INIT SITE!"
 				listen_to $.Events.RESIZE, config.myName, _resize
 				listen_to $.Events.MOUSE_WHEEL, config.myName, _on_scroll
 				listen_to $.Events.TOUCH_MOVE, config.myName, _on_swipe
@@ -136,11 +135,18 @@ $ ->
 					$('.expand div').toggleClass('open')
 					$('.looks_logo').toggleClass('hidden')
 				setTimeout timeout_function, 500
+
+			_set_for_mobile = () ->
+				debug "setting for mobile"
+				$('body').css("overflow-y","visible")
+				$(".section").attr("style","")
 	
 			_init = () ->
 				$(window).bind 'mousewheel DOMMouseScroll MozMousePixelScroll', _on_mouse_wheel
 				$('html').on 'touchmove', _on_touch_move
 				$('.expand').on "click", _on_expand_click
+				if $.Window.windowWidth < 767
+					_set_for_mobile()
 	
 			_init()
 
@@ -331,11 +337,12 @@ $ ->
 				# 	debug "random int:"+randInt
 				# 	highest_category = tied_categories[randInt]
 				# 	debug "highest_category:"+highest_category
-				# 	
-				if _quiz_answers.hair == 2
+				debug "hair type:"+_quiz_answers.hair
+				if _quiz_answers.hair < 3
 					look_slide = 'two'
 				else
-					randInt = (Math.floor(Math.random() * (1)));
+					randInt = (Math.floor(Math.random() * (2)))
+					
 					if randInt == 0
 						look_slide = 'one'
 					else

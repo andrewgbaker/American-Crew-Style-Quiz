@@ -370,7 +370,6 @@
           return $.Window.swipe("destroy");
         };
         _init = function() {
-          debug("INIT SITE!");
           listen_to($.Events.RESIZE, config.myName, _resize);
           listen_to($.Events.MOUSE_WHEEL, config.myName, _on_scroll);
           listen_to($.Events.TOUCH_MOVE, config.myName, _on_swipe);
@@ -405,7 +404,7 @@
         jQuery.extend(config, this.settings);
       }
       return this.each(function(index) {
-        var $me, _init, _on_expand_click, _on_mouse_wheel, _on_touch_move;
+        var $me, _init, _on_expand_click, _on_mouse_wheel, _on_touch_move, _set_for_mobile;
         $me = $(this);
         _on_mouse_wheel = function(event, delta) {
           var timeout_function;
@@ -434,10 +433,18 @@
           };
           return setTimeout(timeout_function, 500);
         };
+        _set_for_mobile = function() {
+          debug("setting for mobile");
+          $('body').css("overflow-y", "visible");
+          return $(".section").attr("style", "");
+        };
         _init = function() {
           $(window).bind('mousewheel DOMMouseScroll MozMousePixelScroll', _on_mouse_wheel);
           $('html').on('touchmove', _on_touch_move);
-          return $('.expand').on("click", _on_expand_click);
+          $('.expand').on("click", _on_expand_click);
+          if ($.Window.windowWidth < 767) {
+            return _set_for_mobile();
+          }
         };
         return _init();
       });
@@ -617,10 +624,11 @@
               highest_category = 'wildcard';
             }
           }
-          if (_quiz_answers.hair === 2) {
+          debug("hair type:" + _quiz_answers.hair);
+          if (_quiz_answers.hair < 3) {
             look_slide = 'two';
           } else {
-            randInt = Math.floor(Math.random() * 1.);
+            randInt = Math.floor(Math.random() * 2.);
             if (randInt === 0) {
               look_slide = 'one';
             } else {
