@@ -504,7 +504,7 @@
           return _points_matrix[answer] = parseInt(parseInt(_points_matrix[answer]) + 1);
         };
         _determine_type_and_look = function() {
-          var answer, highest_category, max_points, tied_categories, type;
+          var answer, highest_category, look_slide, max_points, randInt, tied_categories, type;
           _points_matrix['hipster'] = 0;
           _points_matrix['player'] = 0;
           _points_matrix['gentleman'] = 0;
@@ -563,10 +563,20 @@
             }
             if (answer === max_points) {
               tied_categories.push(type);
-              highest_category = 'renaissance.php';
+              highest_category = 'renaissance';
             }
           }
-          $me.attr("action", highest_category + ".php");
+          if (_quiz_answers.hair === 2) {
+            look_slide = 'two';
+          } else {
+            randInt = Math.floor(Math.random() * 1.);
+            if (randInt === 0) {
+              look_slide = 'one';
+            } else {
+              look_slide = 'three';
+            }
+          }
+          $me.attr("action", highest_category + ".php#" + "looks/" + look_slide);
           return $me.get(0).submit();
         };
         _init = function() {

@@ -276,7 +276,7 @@ $ ->
 
 					if answer == max_points
 						tied_categories.push type
-						highest_category = 'renaissance.php'
+						highest_category = 'renaissance'
 
 				# debug highest_category
 				# debug tied_categories
@@ -288,10 +288,17 @@ $ ->
 				# 	highest_category = tied_categories[randInt]
 				# 	debug "highest_category:"+highest_category
 				# 	
-				
+				if _quiz_answers.hair == 2
+					look_slide = 'two'
+				else
+					randInt = (Math.floor(Math.random() * (1)));
+					if randInt == 0
+						look_slide = 'one'
+					else
+						look_slide = 'three'
 
 				# points_matrix
-				$me.attr("action",highest_category+".php")
+				$me.attr("action",highest_category+".php#"+"looks/"+look_slide)
 				$me.get(0).submit()
 
 	
