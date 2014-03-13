@@ -1,14 +1,23 @@
 <?php
-// $answers_arr = array('','','','','','');
-// $post_fields = array('clothes','music','friday_plans','drinking','girl','hair');
-// $values_string = '';
-// $i = 0;
-// foreach ($field as $post_fields) {
-// 	if($_POST[$field]) {
-// 		// $answers_arr[$i] = $_POST[$field];
-// 	}
-// 	$i++;
-// }
+$answers_arr = array();
+$answers_arr['clothes'] = 0;
+$answers_arr['music'] = 0;
+$answers_arr['friday_plans'] = 0;
+$answers_arr['drinking'] = 0;
+$answers_arr['girl'] = 0;
+$answers_arr['hair'] = 0;
+$post_fields = array('clothes','music','friday_plans','drinking','girl','hair');
+$values_string = '';
+$i = 0;
+foreach ($post_fields as $field) {
+	echo $field;
+	if(array_key_exists($field,$_POST)) {
+		$answers_arr[$i] = $_POST[$field];
+	}
+	$i++;
+}
+// var_dump($answers_arr);
+var_dump($_REQUEST);
 ?>
 <!DOCTYPE html>
 <!--[if lte IE 9 ]>    <html lang="en" class="no-js ie ie8"> <![endif]-->

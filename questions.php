@@ -566,16 +566,14 @@
 			</div><!-- END: Question 6 -->
 			<!-- OTHER QUESTIONS GO HERE -->
 	  </div>
-	  <div class="quiz-tracker" data-script="QuizTracker">
-	  	<form action="/quiz_controller.php" method="post">
-	  		<input type="hidden" name="clothes" id="clothes" value="">
-	  		<input type="hidden" name="music" id="music" value="">
-	  		<input type="hidden" name="friday_plans" id="friday_plans" value="">
-	  		<input type="hidden" name="drinking" id="drinking" value="">
-	  		<input type="hidden" name="girl" id="girl" value="">
-	  		<input type="hidden" name="hair" id="hair" value="">
-	  	</form>
-	  </div>
+  	<form action="/recommend.php" method="POST" data-script="QuizTracker">
+  		<input type="hidden" name="clothes" id="value-clothes" value="">
+  		<input type="hidden" name="music" id="value-music" value="">
+  		<input type="hidden" name="friday_plans" id="value-friday_plans" value="">
+  		<input type="hidden" name="drinking" id="value-drinking" value="">
+  		<input type="hidden" name="girl" id="value-girl" value="">
+  		<input type="hidden" name="hair" id="value-hair" value="">
+  	</form>
 
         <!-- // <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> -->
         <script type="text/javascript" src="/js/libs/jquery-1.8.3.min.js"></script>

@@ -140,20 +140,21 @@ $ ->
 
 			_on_anchor_click = (evt) ->
 				evt.preventDefault()
-				answer_obj =
-					which: 0
-					question_index: $(this).data("anchornum")
-					# question_index: 1
-					
-				announce $.Events.QUESTION_NAV_CLICKED, answer_obj
+				unless $(this).hasClass("empty")
+					answer_obj =
+						which: 0
+						question_index: $(this).data("anchornum")
+						# question_index: 1
+						
+					announce $.Events.QUESTION_NAV_CLICKED, answer_obj
 
-				debug "setting anchors"
-				_set_anchors $(this).data("anchornum")+1
+					debug "setting anchors"
+					_set_anchors $(this).data("anchornum")+1
 	
 			_init = () ->
 				listen_to $.Events.ANSWER_CLICK, config.myName, _question_was_answered
 				listen_to $.Events.CLICK, config.myName, _on_anchor_click, $("nav a")
-				_anchors.eq(0).addClass("active")
+				_anchors.eq(0).addClass("active").removeClass("empty")
 				_anchors.each (index,anchor) =>
 					$(anchor).attr("data-anchornum",index-1)
 	
@@ -175,25 +176,29 @@ $ ->
 				drinking: 0
 				girl: 0
 				hair: 0
-			_form = $me.find("form")
+			# _form = $me.find("form")
+			# 
+			_send_quiz_answers = () ->
+				debug "_send_quiz_answers"
+				debug $me
+				debug $me.get(0)
+				$me.get(0).submit()
 
 			_question_was_answered = (evt,data) ->
 				question_number = data.question_index
 				answer_number = data.which
 				quiz_completed = true
-				debug "QuizTracker"
-				debug evt
+				question_group = $(".question-group").eq(question_number)
+				question_id = question_group.attr("id")
+				_quiz_answers[question_id] = answer_number
+				$("#value-"+question_id).val(answer_number)
 
 				for quiz_question,quiz_answer of _quiz_answers
-					$("#"+quiz_question).val(quiz_answer)
 					if quiz_answer is 0
 						quiz_completed = false
 
 				if quiz_completed
-					_send_quiz_answers
-
-			_send_quiz_answers = () ->
-				_form.get(0).submit()
+					_send_quiz_answers()
 
 			# 	data_obj = _form.serialize
 			# 	_ajax_opts = 

@@ -430,19 +430,21 @@
         _on_anchor_click = function(evt) {
           var answer_obj;
           evt.preventDefault();
-          answer_obj = {
-            which: 0,
-            question_index: $(this).data("anchornum")
-          };
-          announce($.Events.QUESTION_NAV_CLICKED, answer_obj);
-          debug("setting anchors");
-          return _set_anchors($(this).data("anchornum") + 1);
+          if (!$(this).hasClass("empty")) {
+            answer_obj = {
+              which: 0,
+              question_index: $(this).data("anchornum")
+            };
+            announce($.Events.QUESTION_NAV_CLICKED, answer_obj);
+            debug("setting anchors");
+            return _set_anchors($(this).data("anchornum") + 1);
+          }
         };
         _init = function() {
           var _this = this;
           listen_to($.Events.ANSWER_CLICK, config.myName, _question_was_answered);
           listen_to($.Events.CLICK, config.myName, _on_anchor_click, $("nav a"));
-          _anchors.eq(0).addClass("active");
+          _anchors.eq(0).addClass("active").removeClass("empty");
           return _anchors.each(function(index, anchor) {
             return $(anchor).attr("data-anchornum", index - 1);
           });
@@ -462,7 +464,7 @@
         jQuery.extend(config, this.settings);
       }
       return this.each(function(index) {
-        var $me, _form, _init, _question_was_answered, _quiz_answers, _send_quiz_answers;
+        var $me, _init, _question_was_answered, _quiz_answers, _send_quiz_answers;
         $me = $(this);
         _quiz_answers = {
           clothes: 0,
@@ -472,27 +474,30 @@
           girl: 0,
           hair: 0
         };
-        _form = $me.find("form");
+        _send_quiz_answers = function() {
+          debug("_send_quiz_answers");
+          debug($me);
+          debug($me.get(0));
+          return $me.get(0).submit();
+        };
         _question_was_answered = function(evt, data) {
-          var answer_number, question_number, quiz_answer, quiz_completed, quiz_question;
+          var answer_number, question_group, question_id, question_number, quiz_answer, quiz_completed, quiz_question;
           question_number = data.question_index;
           answer_number = data.which;
           quiz_completed = true;
-          debug("QuizTracker");
-          debug(evt);
+          question_group = $(".question-group").eq(question_number);
+          question_id = question_group.attr("id");
+          _quiz_answers[question_id] = answer_number;
+          $("#value-" + question_id).val(answer_number);
           for (quiz_question in _quiz_answers) {
             quiz_answer = _quiz_answers[quiz_question];
-            $("#" + quiz_question).val(quiz_answer);
             if (quiz_answer === 0) {
               quiz_completed = false;
             }
           }
           if (quiz_completed) {
-            return _send_quiz_answers;
+            return _send_quiz_answers();
           }
-        };
-        _send_quiz_answers = function() {
-          return _form.get(0).submit();
         };
         _init = function() {
           return listen_to($.Events.ANSWER_CLICK, config.myName, _question_was_answered);
