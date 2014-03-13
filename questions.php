@@ -38,10 +38,17 @@
 		<div class="question-page" data-script="QuestionPage">
 			<!-- BEGIN: Question 1 -->
 			<div class="grid clearfix question-group" id="clothes">
+				<div class="bgLoad">
+					<img src="img/questions/skinnyjeans_bg.jpg" alt="skinny jeans" />
+					<img src="img/questions/polo_bg.jpg" alt="skinny jeans" />
+					<img src="img/questions/suit_bg.jpg" alt="skinny jeans" />
+					<img src="img/questions/leather_bg.jpg" alt="skinny jeans" />
+					<img src="img/questions/basict_bg.jpg" alt="skinny jeans" />
+				</div>
 				<section class="question">
 					<a class="logo q_logo"></a>
 					<h3>Walk into your closet. What's the first thing you see?</h3>
-					<?php include('question_nav.php'); ?>
+					<?php include('includes/question_nav.php'); ?>
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
@@ -134,7 +141,7 @@
 				<section class="question">
 					<a class="logo q_logo"></a>
 					<h3>What’s your favorite type of music?</h3>
-					<?php include('question_nav.php'); ?>
+					<?php include('includes/question_nav.php'); ?>
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
@@ -189,10 +196,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/questions/haventHeard_bg.jpg);" class="front">
+						<div style="background: url(img/questions/havent_heard_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/questions/haventHeard.png" alt="bourbon" />
+									<img src="img/questions/havent_heard.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -227,7 +234,7 @@
 				<section class="question">
 					<a class="logo q_logo"></a>
 					<h3>It's Friday night. What are your plans?</h3>
-					<?php include('question_nav.php'); ?>
+					<?php include('includes/question_nav.php'); ?>
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
@@ -320,7 +327,7 @@
 				<section class="question">
 					<a class="logo q_logo"></a>
 					<h3>What are you drinking?</h3>
-					<?php include('question_nav.php'); ?>
+					<?php include('includes/question_nav.php'); ?>
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
@@ -413,7 +420,7 @@
 				<section class="question">
 					<a class="logo q_logo"></a>
 					<h3>What are you looking for in a girl?</h3>
-					<?php include('question_nav.php'); ?>
+					<?php include('includes/question_nav.php'); ?>
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
@@ -506,7 +513,7 @@
 				<section class="question">
 					<a class="logo q_logo"></a>
 					<h3>Finally, tell us a little bit about your hair.</h3>
-					<?php include('question_nav.php'); ?>
+					<?php include('includes/question_nav.php'); ?>
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
@@ -576,18 +583,18 @@
   	</form>
 
         <!-- // <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> -->
-        <script type="text/javascript" src="/js/libs/jquery-1.8.3.min.js"></script>
-        <script type="text/javascript" src="/js/libs/tweenlite/TweenLite.min.js"></script>
-        <script type="text/javascript" src="/js/libs/tweenlite/TimelineLite.min.js"></script>
-        <script type="text/javascript" src="/js/libs/tweenlite/easing/EasePack.min.js"></script>
-        <script type="text/javascript" src="/js/libs/tweenlite/plugins/ScrollToPlugin.min.js"></script>
-        <script type="text/javascript" src="/js/libs/tweenlite/plugins/CSSPlugin.min.js"></script>
-        <script type="text/javascript" src="/js/plugins.js"></script>
-        <script type="text/javascript" src="/js/site.js"></script>
+        <script type="text/javascript" src="js/libs/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="js/libs/tweenlite/TweenLite.min.js"></script>
+        <script type="text/javascript" src="js/libs/tweenlite/TimelineLite.min.js"></script>
+        <script type="text/javascript" src="js/libs/tweenlite/easing/EasePack.min.js"></script>
+        <script type="text/javascript" src="js/libs/tweenlite/plugins/ScrollToPlugin.min.js"></script>
+        <script type="text/javascript" src="js/libs/tweenlite/plugins/CSSPlugin.min.js"></script>
+        <script type="text/javascript" src="js/plugins.js"></script>
+        <script type="text/javascript" src="js/site.js"></script>
         
         <script>
         	imagesLoaded( '#clothes', function() {
-        		$('.load_wrap').css('opacity', '0');
+        		$('.load_wrap').addClass('hideloader');
         	});
         </script>
     </body>
