@@ -1,6 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Vollkorn);
-@import url(http://fonts.googleapis.com/css?family=Playfair+Display:900italic);
-@import url(http://fonts.googleapis.com/css?family=Oswald);
 /* colors */
 /* media queries */
 /* fonts */
@@ -90,6 +87,9 @@ strong {
   to {
     transform: scale(1); } }
 
+/* @import url(http://fonts.googleapis.com/css?family=Vollkorn) */
+/* @import url(http://fonts.googleapis.com/css?family=Playfair+Display:900italic) */
+/* @import url(http://fonts.googleapis.com/css?family=Oswald) */
 @font-face {
   font-family: "social";
   src: url("fonts/icomoon.eot");
@@ -896,6 +896,9 @@ header {
 .ie8 .slide .look_img, .ie8 .flip-container .flipper .front, .ie8 .home {
   background-size: cover;
   -ms-behavior: url(../backgroundsize.min.htc); }
+
+.question-page {
+  height: 100%; }
 
 .grid {
   height: 100%;
