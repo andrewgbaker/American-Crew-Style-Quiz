@@ -43,8 +43,8 @@
 <header>
 	<a href="#" class="logo"></a>
 	<article>
-		<h1>You Are a Gentleman</h1>
-		<p>Your drinks are stiff and so is your upper lip. You give women hope that chivalry might not be dead after all. And you're either dressed well or not at all. You need a look that has structure, order and plenty of confidence. <a href="#" class="share">Share +</a> </p>
+		<h1>You are a man's man.</h1>
+		<p>Your wardrobe is simple. Your drinks are uncomplicated. And you’ll take a decent burger over foie gras any day. You don’t want to spend a lot of time on your hair, and you want the time you do spend to pay off. You need a look that’s as straightforward as you are. <a href="#" class="share">Share +</a> </p>
 	</article>
 	<a href="#" class="logo"></a>
 	<div class="expand"><div></div></div>
@@ -58,7 +58,7 @@
 		<article>
 			<div class="look_wrap">
 				<div class="mobile_look_img"><img src="img/gentleman1_mobile.jpg" alt="the single malt" /> </div>
-				<h2>Gentleman - <span>The Looks</span></h2>
+				<h2>Man's Man - <span>The Looks</span></h2>
 				<nav class="looks_nav clearfix">
 					<a href="#" class="active_look">
 						<div class="progress"><span></span></div>
@@ -70,19 +70,19 @@
 						<div class="progress"><span></span></div>
 					</a>
 				</nav>
-				<p>If you’re on your way out for a nice dinner, this style is a great choice. Its strong perimeter and ample texture show that your taste is especially refined.</p>
-				<p class="quote">Apply Light Hold Styling gel first, and use Boost Powder to exaggerate your hair's fullness and finish the style. Let the natural texture of your hair dictate the final look.</p>
+				<p>For the days when an impression is just one of the things you need to make, this is a look that will get the job done. With a short length and a loose texture, this style won’t get in the way.</p>
+				<p class="quote">Apply a generous amount of Fiber to your towel dried hair. Finger comb the front of your style off  your face and smooth the sides with the palm to maintain the natural imperfections that give this style its attitude.</p>
 				<p>-Paul Wilson, American Crew Artistic Director</p>
 				<div class="product clearfix">
 					<div class="wrap">
-						<img src="img/product/boostpowder.jpg" />
+						<img src="img/product/fiber.jpg" />
 					</div>
 					<div class="cta">
-						<div class="start_btn secondary"><a href="#">Find a Stylist</a></div>
+						<div class="start_btn secondary"><a href="http://www.americancrew.com/salon-locator">Find a Stylist</a></div>
 						<div class="start_btn"><a href="#">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="#">American Crew Light Hold Styling Gel</a>, <a href="#">Boost Powder</a> and to <a href="img/gentleman_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<p>To create this style, you'll need <a href="#">American Crew Fiber</a>, <a href="#">Daily Shampoo</a> and to <a href="img/gentleman_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
 			</div>
 		</article>
@@ -93,7 +93,7 @@
     	<article>
 			<div class="look_wrap">
 				<div class="mobile_look_img"><img src="img/single_malt_mobile.jpg" alt="the single malt" /> </div>
-				<h2>Gentleman - <span>The Looks</span></h2>
+				<h2>Man's Man - <span>The Looks</span></h2>
 				<nav class="looks_nav clearfix">
 					<a href="#">
 						<div class="progress"><span></span></div>
@@ -105,19 +105,19 @@
 						<div class="progress"><span></span></div>
 					</a>
 				</nav>
-				<p>If you want a great look for a leisurely Sunday afternoon, this style has a structure that lets loose without losing class.</p>
-				<p class="quote">To create this style, apply Forming Cream throughout your hair, then brush the product through to create the final shape.</p>
+				<p>When you’ve got places to be, this is a look that will get you there faster. With a relaxed texture, this style doesn’t take itself too seriously.</p>
+				<p class="quote">Comb the hair off the face and let it dry. Finish with Molding Clay, and use your fingers to style your hair into a parting. Allow the natural texture to create definition throughout the style.</p>
 				<p>-Paul Wilson, American Crew Artistic Director</p>
 				<div class="product clearfix">
 					<div class="wrap">
-						<img src="img/product/formingcream.jpg" />
+						<img src="img/product/moldingclay.jpg" />
 					</div>
 					<div class="cta">
-						<div class="start_btn secondary"><a href="#">Find a Stylist</a></div>
+						<div class="start_btn secondary"><a href="http://www.americancrew.com/salon-locator">Find a Stylist</a></div>
 						<div class="start_btn"><a href="#">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="#">Light Hold Texture Lotion</a>, <a href="#">Forming Cream</a> and to <a href="img/gentleman_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<p>To create this style, you'll need <a href="#">American Crew Medium Hold Spray Gel</a>, <a href="#">Molding Cream</a> and to <a href="img/gentleman_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
 			</div>
 		</article>
@@ -128,7 +128,7 @@
     	<article>
 			<div class="look_wrap">
 				<div class="mobile_look_img"><img src="img/single_malt_mobile.jpg" alt="the single malt" /> </div>
-				<h2>Gentleman - <span>The Looks</span></h2>
+				<h2>Man's Man - <span>The Looks</span></h2>
 				<nav class="looks_nav clearfix">
 					<a href="#">
 						<div class="progress"><span></span></div>
@@ -140,19 +140,19 @@
 						<div class="progress"><span></span></div>
 					</a>
 				</nav>
-				<p>When you’re looking to close a deal, this style—with its strong side part and controlled texture—gets the job done every time.</p>
-				<p class="quote">“To create this look, towel dry your hair, apply Pomade and use a brush to shape your style.</p>
+				<p>When you’ve got a lot on the line and you need to make your impression count, this is a look that will give you the upper hand. It’s got just enough structure to show the world that you’re in control.</p>
+				<p class="quote">Apply a generous amount of Grooming Cream throughout. Comb the hair off your face and flatten the hair at your crown for a modern shape with classic vintage appeal.</p>
 				<p>- Paul Wilson, American Crew Artistic Director</p>
 				<div class="product clearfix">
 					<div class="wrap">
-						<img src="img/product/pomade.jpg" />
+						<img src="img/product/groomingcream.jpg" />
 					</div>
 					<div class="cta">
-						<div class="start_btn secondary"><a href="#">Find a Stylist</a></div>
+						<div class="start_btn secondary"><a href="http://www.americancrew.com/salon-locator">Find a Stylist</a></div>
 						<div class="start_btn"><a href="#">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="#">Light Hold Styling Gel</a>, <a href="#">Pomade</a> and to <a href="img/gentleman_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<p>To create this style, you'll need <a href="#">American Crew Firm Hold Styling Gel</a>, <a href="#">Grooming Cream</a> and to <a href="img/gentleman_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
 			</div>
 		</article>
