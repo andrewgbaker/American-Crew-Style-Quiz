@@ -254,10 +254,10 @@ $ ->
 				_points_matrix[answer] = parseInt(parseInt(_points_matrix[answer]) + 1)
 
 			_determine_type_and_look = () ->
-				_points_matrix['hipster'] = 0
+				_points_matrix['revolutionary'] = 0
 				_points_matrix['player'] = 0
 				_points_matrix['gentleman'] = 0
-				_points_matrix['rebel'] = 0
+				_points_matrix['maverick'] = 0
 				_points_matrix['mansman'] = 0
 
 				_quiz_answer_matrix.clothes = new Array
@@ -268,42 +268,42 @@ $ ->
 
 				# Clothes Points
 				_quiz_answer_matrix.clothes[0] = ""
-				_quiz_answer_matrix.clothes[1] = "hipster"
+				_quiz_answer_matrix.clothes[1] = "revolutionary"
 				_quiz_answer_matrix.clothes[2] = "player"
 				_quiz_answer_matrix.clothes[3] = "gentleman"
-				_quiz_answer_matrix.clothes[4] = "rebel"
+				_quiz_answer_matrix.clothes[4] = "maverick"
 				_quiz_answer_matrix.clothes[5] = "mansman"
 
 				# Music Points
 				_quiz_answer_matrix.music[0] = ""
 				_quiz_answer_matrix.music[1] = "gentleman"
-				_quiz_answer_matrix.music[2] = "rebel"
+				_quiz_answer_matrix.music[2] = "maverick"
 				_quiz_answer_matrix.music[3] = "mansman"
-				_quiz_answer_matrix.music[4] = "hipster"
+				_quiz_answer_matrix.music[4] = "revolutionary"
 				_quiz_answer_matrix.music[5] = "player"
 
 				# Friday Plans Points
 				_quiz_answer_matrix.friday_plans[0] = ""
-				_quiz_answer_matrix.friday_plans[1] = "rebel"
+				_quiz_answer_matrix.friday_plans[1] = "maverick"
 				_quiz_answer_matrix.friday_plans[2] = "gentleman"
-				_quiz_answer_matrix.friday_plans[3] = "hipster"
+				_quiz_answer_matrix.friday_plans[3] = "revolutionary"
 				_quiz_answer_matrix.friday_plans[4] = "mansman"
 				_quiz_answer_matrix.friday_plans[5] = "player"
 
 				# Drinking Points
 				_quiz_answer_matrix.drinking[0] = ""
-				_quiz_answer_matrix.drinking[1] = "rebel"
+				_quiz_answer_matrix.drinking[1] = "maverick"
 				_quiz_answer_matrix.drinking[2] = "gentleman"
 				_quiz_answer_matrix.drinking[3] = "player"
-				_quiz_answer_matrix.drinking[4] = "hipster"
+				_quiz_answer_matrix.drinking[4] = "revolutionary"
 				_quiz_answer_matrix.drinking[5] = "mansman"
 
 				# Girl Points
 				_quiz_answer_matrix.girl[0] = ""
 				_quiz_answer_matrix.girl[1] = "gentleman"
 				_quiz_answer_matrix.girl[2] = "mansman"
-				_quiz_answer_matrix.girl[3] = "hipster"
-				_quiz_answer_matrix.girl[4] = "rebel"
+				_quiz_answer_matrix.girl[3] = "revolutionary"
+				_quiz_answer_matrix.girl[4] = "maverick"
 				_quiz_answer_matrix.girl[5] = "player"
 
 				_set_category_points 'clothes'
@@ -328,16 +328,6 @@ $ ->
 						tied_categories.push type
 						highest_category = 'wildcard'
 
-				# debug highest_category
-				# debug tied_categories
-
-				# if highest_category == 'tied'
-
-				# 	randInt = (Math.floor(Math.random() * (tied_categories.length)));
-				# 	debug "random int:"+randInt
-				# 	highest_category = tied_categories[randInt]
-				# 	debug "highest_category:"+highest_category
-				debug "hair type:"+_quiz_answers.hair
 				if _quiz_answers.hair < 3
 					look_slide = 'two'
 				else

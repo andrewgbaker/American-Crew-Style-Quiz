@@ -4,39 +4,8 @@
 <html class='no-js' lang='en'>
   <!--<![endif]-->
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>American Crew Style Select</title>
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<meta name="author" content="Karsh Hagan">  	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-
-	<script type="text/javascript" src="js/libs/modernizr.js"></script>
-	
-	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-  
-	<link rel="stylesheet" href="css/style.css" />
-	
-	<!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
-		
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script>
-	if (!window.jQuery) {
-	    document.write('<script src="/js/jquery-1.8.3.min.js"><\/script>');
-	}
-	</script>
-
-	<script type="text/javascript" src="js/plugins.js"></script>
-	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script> -->
-	
-	<script type="text/javascript" src="js/libs/jquery.fullPage.min.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
-	<script type="text/javascript" src="js/site.js"></script>
-
+	<?php include('includes/standard_meta.php'); ?>
+	<?php include('includes/header_scripts.php') ?>
 </head>
 <body class="results">
 
@@ -161,6 +130,6 @@
     <!-- END LOOK THREE -->
     
 </div>
-
+<?php include('includes/footer_scripts.php'); ?>
 </body>
 </html>
