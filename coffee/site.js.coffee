@@ -83,6 +83,7 @@ $ ->
 				$.Window.swipe("destroy")
 			
 			_init = () ->
+				debug "INIT SITE!"
 				listen_to $.Events.RESIZE, config.myName, _resize
 				listen_to $.Events.MOUSE_WHEEL, config.myName, _on_scroll
 				listen_to $.Events.TOUCH_MOVE, config.myName, _on_swipe
@@ -91,6 +92,8 @@ $ ->
 				announce $.Events.SITE_INITIALIZED
 				_initialize_plugins()
 
+				$(".results").ResultsPage('ResultsPage',config)
+
 			_resize = () ->
 				if $.Window.windowWidth < 480
 					if $("#interior-feature p").length > 0
@@ -98,6 +101,47 @@ $ ->
 					if $(".features p").length > 0
 						$(".features p").html($(".features p").html().replace(/<br>/g," ").replace(/<br\/>/g," "))
 						
+			_init()
+
+	$.fn.ResultsPage = (objectName,@settings) ->
+		$parent = $(this)
+	
+		if not config? then config = {}
+		config.myName = objectName
+		if @settings? then jQuery.extend(config, @settings)
+	
+		this.each (index) ->
+			$me = $(this)
+
+			_on_mouse_wheel = (event,delta) ->
+				if($('#section1').hasClass('look_down'))
+					$('#section1').toggleClass('look_down')
+					$('header').toggleClass('header_up')
+
+					timeout_function = () ->
+						$('.expand div').toggleClass('open')
+						$('.looks_logo').toggleClass('hidden')
+
+					setTimeout timeout_function, 500
+
+			_on_touch_move = () ->
+				if($('#section1').hasClass('look_down'))
+					$('#section1').toggleClass('look_down')
+					$('header').toggleClass('header_up')
+
+				$('html').unbind('touchmove');
+
+			_on_expand_click = (evt) ->
+				timeout_function = () ->
+					$('.expand div').toggleClass('open')
+					$('.looks_logo').toggleClass('hidden')
+				setTimeout timeout_function, 500
+	
+			_init = () ->
+				$(window).bind 'mousewheel DOMMouseScroll MozMousePixelScroll', _on_mouse_wheel
+				$('html').on 'touchmove', _on_touch_move
+				$('.expand').on "click", _on_expand_click
+	
 			_init()
 
 	$.fn.QuestionNav = (objectName,@settings) ->
@@ -276,7 +320,7 @@ $ ->
 
 					if answer == max_points
 						tied_categories.push type
-						highest_category = 'renaissance'
+						highest_category = 'wildcard'
 
 				# debug highest_category
 				# debug tied_categories
@@ -298,7 +342,7 @@ $ ->
 						look_slide = 'three'
 
 				# points_matrix
-				$me.attr("action",highest_category+".php#"+"looks/"+look_slide)
+				$me.attr("action",highest_category+"#"+"looks/"+look_slide)
 				$me.get(0).submit()
 
 	
@@ -360,15 +404,16 @@ $ ->
 
 			_init = () -> 
 				# $.address.change _on_address_change
+				debug "init question page"
 				$.Body.animate({scrollTop:0})
 				listen_to $.Events.ANSWER_CLICK, config.myName, _on_answer_click
 				listen_to $.Events.QUESTION_NAV_CLICKED, config.myName, _on_answer_click
 				$(".question-group").Question("Question",config)
 				# _animate_in_tiles
 				# setTimeout _animate_in_tiles, 3000
-				_animate_in_tiles
+				# _animate_in_tiles
 				$me.find("nav").QuestionNav('QuestionNav',config)
-				
+				puts "images load checking"
 				imagesLoaded( '#clothes', _hide_loader)
 
 			_init()
@@ -506,7 +551,7 @@ _docReady = (evt) ->
 	if $.CustomMessages? then jQuery.extend($.Messages, $.CustomMessages)
 	if window.custom_defaults? then jQuery.extend(window.defaults, window.custom_defaults)
 
-	framework = $('body').Framework("TFPAdmin",defaults) 
-	site = $('body').Site("TFPAdmin",defaults)
+	framework = $('body').Framework("AmericanCrew",defaults) 
+	site = $('body').Site("AmericanCrew",defaults)
 
 $(document).ready(_docReady)

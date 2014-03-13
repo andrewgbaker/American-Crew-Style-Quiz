@@ -370,13 +370,15 @@
           return $.Window.swipe("destroy");
         };
         _init = function() {
+          debug("INIT SITE!");
           listen_to($.Events.RESIZE, config.myName, _resize);
           listen_to($.Events.MOUSE_WHEEL, config.myName, _on_scroll);
           listen_to($.Events.TOUCH_MOVE, config.myName, _on_swipe);
           _resize();
           announce($.Events.INITIALIZE_DATASCRIPTS);
           announce($.Events.SITE_INITIALIZED);
-          return _initialize_plugins();
+          _initialize_plugins();
+          return $(".results").ResultsPage('ResultsPage', config);
         };
         _resize = function() {
           if ($.Window.windowWidth < 480) {
@@ -387,6 +389,55 @@
               return $(".features p").html($(".features p").html().replace(/<br>/g, " ").replace(/<br\/>/g, " "));
             }
           }
+        };
+        return _init();
+      });
+    };
+    $.fn.ResultsPage = function(objectName, settings) {
+      var $parent, config;
+      this.settings = settings;
+      $parent = $(this);
+      if (typeof config === "undefined" || config === null) {
+        config = {};
+      }
+      config.myName = objectName;
+      if (this.settings != null) {
+        jQuery.extend(config, this.settings);
+      }
+      return this.each(function(index) {
+        var $me, _init, _on_expand_click, _on_mouse_wheel, _on_touch_move;
+        $me = $(this);
+        _on_mouse_wheel = function(event, delta) {
+          var timeout_function;
+          if ($('#section1').hasClass('look_down')) {
+            $('#section1').toggleClass('look_down');
+            $('header').toggleClass('header_up');
+            timeout_function = function() {
+              $('.expand div').toggleClass('open');
+              return $('.looks_logo').toggleClass('hidden');
+            };
+            return setTimeout(timeout_function, 500);
+          }
+        };
+        _on_touch_move = function() {
+          if ($('#section1').hasClass('look_down')) {
+            $('#section1').toggleClass('look_down');
+            $('header').toggleClass('header_up');
+          }
+          return $('html').unbind('touchmove');
+        };
+        _on_expand_click = function(evt) {
+          var timeout_function;
+          timeout_function = function() {
+            $('.expand div').toggleClass('open');
+            return $('.looks_logo').toggleClass('hidden');
+          };
+          return setTimeout(timeout_function, 500);
+        };
+        _init = function() {
+          $(window).bind('mousewheel DOMMouseScroll MozMousePixelScroll', _on_mouse_wheel);
+          $('html').on('touchmove', _on_touch_move);
+          return $('.expand').on("click", _on_expand_click);
         };
         return _init();
       });
@@ -563,7 +614,7 @@
             }
             if (answer === max_points) {
               tied_categories.push(type);
-              highest_category = 'renaissance';
+              highest_category = 'wildcard';
             }
           }
           if (_quiz_answers.hair === 2) {
@@ -576,7 +627,7 @@
               look_slide = 'three';
             }
           }
-          $me.attr("action", highest_category + ".php#" + "looks/" + look_slide);
+          $me.attr("action", highest_category + "#" + "looks/" + look_slide);
           return $me.get(0).submit();
         };
         _init = function() {
@@ -656,14 +707,15 @@
           return $('.load_wrap').addClass('hideloader');
         };
         _init = function() {
+          debug("init question page");
           $.Body.animate({
             scrollTop: 0
           });
           listen_to($.Events.ANSWER_CLICK, config.myName, _on_answer_click);
           listen_to($.Events.QUESTION_NAV_CLICKED, config.myName, _on_answer_click);
           $(".question-group").Question("Question", config);
-          _animate_in_tiles;
           $me.find("nav").QuestionNav('QuestionNav', config);
+          puts("images load checking");
           return imagesLoaded('#clothes', _hide_loader);
         };
         return _init();
@@ -838,8 +890,8 @@
     if (window.custom_defaults != null) {
       jQuery.extend(window.defaults, window.custom_defaults);
     }
-    framework = $('body').Framework("TFPAdmin", defaults);
-    return site = $('body').Site("TFPAdmin", defaults);
+    framework = $('body').Framework("AmericanCrew", defaults);
+    return site = $('body').Site("AmericanCrew", defaults);
   };
 
   $(document).ready(_docReady);
