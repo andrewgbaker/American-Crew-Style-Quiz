@@ -19,9 +19,25 @@
 </head>
 
 	<body>
+	
+		<!-- BEGIN LOADING OVERLAY -->
+		<section class="load_wrap">
+	
+			<div class="logo loader">
+			  <span class="b1"></span>
+			  <span class="b2"></span>
+			  <span class="b3"></span>
+			  <span class="b4"></span>
+			</div>
+		
+			<p>Fetching<br />your<br />style<br /><span class="dot_three">.&nbsp;</span><span class="dot_two">.&nbsp;</span><span class="dot_one">.&nbsp;</span></p>
+			
+  		</section>
+  		<!-- END LOADING OVERLAY -->
+  		
 		<div class="question-page" data-script="QuestionPage">
 			<!-- BEGIN: Question 1 -->
-			<div class="grid clearfix question-group" id="your-closet">
+			<div class="grid clearfix question-group" id="clothes">
 				<section class="question">
 					<a class="logo q_logo"></a>
 					<h3>Walk into your closet. What's the first thing you see?</h3>
@@ -29,10 +45,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/bourbon_bg.jpg);" class="front">
+						<div style="background: url(img/questions/skinnyjeans_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/bourbon.png" alt="bourbon" />
+									<img src="img/questions/skinnyjeans.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -46,10 +62,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/gin_bg.jpg);" class="front">
+						<div style="background: url(img/questions/polo_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/gin.png" alt="bourbon" />
+									<img src="img/questions/polo.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -63,10 +79,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/beer_bg.jpg);" class="front">
+						<div style="background: url(img/questions/suit_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/beer.png" alt="bourbon" />
+									<img src="img/questions/suit.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -80,10 +96,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/tequila_bg.jpg);" class="front">
+						<div style="background: url(img/questions/leather_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/tequila.png" alt="bourbon" />
+									<img src="img/questions/leather.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -97,10 +113,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/newest_bg.jpg);" class="front">
+						<div style="background: url(img/questions/basict_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/newest.png" alt="bourbon" />
+									<img src="img/questions/basict.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -114,7 +130,7 @@
 				</section>
 			</div><!-- END: Question 1 -->
 			<!-- BEGIN: Question 2 -->
-			<div class="grid clearfix question-group" id="your-closet">
+			<div class="grid clearfix question-group" id="music">
 				<section class="question">
 					<a class="logo q_logo"></a>
 					<h3>What’s your favorite type of music?</h3>
@@ -122,10 +138,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/bourbon_bg.jpg);" class="front">
+						<div style="background: url(img/questions/jazz_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/bourbon.png" alt="bourbon" />
+									<img src="img/questions/jazz.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -139,10 +155,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/gin_bg.jpg);" class="front">
+						<div style="background: url(img/questions/punkrock_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/gin.png" alt="bourbon" />
+									<img src="img/questions/punkrock.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -156,10 +172,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/beer_bg.jpg);" class="front">
+						<div style="background: url(img/questions/classicRock_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/beer.png" alt="bourbon" />
+									<img src="img/questions/classicRock.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -173,10 +189,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/tequila_bg.jpg);" class="front">
+						<div style="background: url(img/questions/haventHeard_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/tequila.png" alt="bourbon" />
+									<img src="img/questions/haventHeard.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -190,10 +206,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/newest_bg.jpg);" class="front">
+						<div style="background: url(img/questions/beats_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/newest.png" alt="bourbon" />
+									<img src="img/questions/beats.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -207,7 +223,7 @@
 				</section>
 			</div><!-- END: Question 2 -->
 			<!-- BEGIN: Question 3 -->
-			<div class="grid clearfix question-group" id="your-closet">
+			<div class="grid clearfix question-group" id="friday_plans">
 				<section class="question">
 					<a class="logo q_logo"></a>
 					<h3>It's Friday night. What are your plans?</h3>
@@ -215,10 +231,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/bourbon_bg.jpg);" class="front">
+						<div style="background: url(img/questions/divebar_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/bourbon.png" alt="bourbon" />
+									<img src="img/questions/divebar.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -232,10 +248,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/gin_bg.jpg);" class="front">
+						<div style="background: url(img/questions/nicedinner_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/gin.png" alt="bourbon" />
+									<img src="img/questions/nicedinner.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -249,10 +265,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/beer_bg.jpg);" class="front">
+						<div style="background: url(img/questions/underground_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/beer.png" alt="bourbon" />
+									<img src="img/questions/underground.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -266,10 +282,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/tequila_bg.jpg);" class="front">
+						<div style="background: url(img/questions/goingtogame_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/tequila.png" alt="bourbon" />
+									<img src="img/questions/goingtogame.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -283,10 +299,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/newest_bg.jpg);" class="front">
+						<div style="background: url(img/questions/bottleservice_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/newest.png" alt="bourbon" />
+									<img src="img/questions/bottleservice.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -300,7 +316,7 @@
 				</section>
 			</div><!-- END: Question 3 -->
 			<!-- BEGIN: Question 4 -->
-			<div class="grid clearfix question-group" id="your-closet">
+			<div class="grid clearfix question-group" id="drinking">
 				<section class="question">
 					<a class="logo q_logo"></a>
 					<h3>What are you drinking?</h3>
@@ -308,10 +324,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/bourbon_bg.jpg);" class="front">
+						<div style="background: url(img/questions/bourbon_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/bourbon.png" alt="bourbon" />
+									<img src="img/questions/bourbon.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -325,10 +341,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/gin_bg.jpg);" class="front">
+						<div style="background: url(img/questions/gin_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/gin.png" alt="bourbon" />
+									<img src="img/questions/gin.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -342,10 +358,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/beer_bg.jpg);" class="front">
+						<div style="background: url(img/questions/tequila_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/beer.png" alt="bourbon" />
+									<img src="img/questions/tequila.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -359,10 +375,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/tequila_bg.jpg);" class="front">
+						<div style="background: url(img/questions/newest_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/tequila.png" alt="bourbon" />
+									<img src="img/questions/newest.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -376,10 +392,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/newest_bg.jpg);" class="front">
+						<div style="background: url(img/questions/beer_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/newest.png" alt="bourbon" />
+									<img src="img/questions/beer.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -393,7 +409,7 @@
 				</section>
 			</div><!-- END: Question 4 -->
 			<!-- BEGIN: Question 5 -->
-			<div class="grid clearfix question-group" id="your-closet">
+			<div class="grid clearfix question-group" id="girl">
 				<section class="question">
 					<a class="logo q_logo"></a>
 					<h3>What are you looking for in a girl?</h3>
@@ -401,10 +417,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/bourbon_bg.jpg);" class="front">
+						<div style="background: url(img/questions/smartissexy_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/bourbon.png" alt="bourbon" />
+									<img src="img/questions/smartissexy.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -418,10 +434,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/gin_bg.jpg);" class="front">
+						<div style="background: url(img/questions/senseofhumor_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/gin.png" alt="bourbon" />
+									<img src="img/questions/senseofhumor.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -435,10 +451,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/beer_bg.jpg);" class="front">
+						<div style="background: url(img/questions/taste_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/beer.png" alt="bourbon" />
+									<img src="img/questions/taste.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -452,10 +468,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/tequila_bg.jpg);" class="front">
+						<div style="background: url(img/questions/keepup_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/tequila.png" alt="bourbon" />
+									<img src="img/questions/keepup.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -469,10 +485,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/newest_bg.jpg);" class="front">
+						<div style="background: url(img/questions/dontcare_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/newest.png" alt="bourbon" />
+									<img src="img/questions/dontcare.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -486,7 +502,7 @@
 				</section>
 			</div><!-- END: Question 5 -->
 			<!-- BEGIN: Question 6 -->
-			<div class="grid clearfix question-group" id="your-closet">
+			<div class="grid clearfix question-group" id="hair">
 				<section class="question">
 					<a class="logo q_logo"></a>
 					<h3>Finally, tell us a little bit about your hair.</h3>
@@ -494,10 +510,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/bourbon_bg.jpg);" class="front">
+						<div style="background: url(img/questions/wavy_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/bourbon.png" alt="bourbon" />
+									<img src="img/questions/wavy.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -513,10 +529,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/beer_bg.jpg);" class="front">
+						<div style="background: url(img/questions/curly_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/beer.png" alt="bourbon" />
+									<img src="img/questions/curly.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -532,10 +548,10 @@
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
-						<div style="background: url(img/newest_bg.jpg);" class="front">
+						<div style="background: url(img/questions/straight_bg.jpg);" class="front">
 							<div class="answer">
 								<div>
-									<img src="img/newest.png" alt="bourbon" />
+									<img src="img/questions/straight.png" alt="bourbon" />
 								</div>
 							</div>
 						</div>
@@ -570,5 +586,11 @@
         <script type="text/javascript" src="/js/libs/tweenlite/plugins/CSSPlugin.min.js"></script>
         <script type="text/javascript" src="/js/plugins.js"></script>
         <script type="text/javascript" src="/js/site.js"></script>
+        
+        <script>
+        	imagesLoaded( '#clothes', function() {
+        		$('.load_wrap').css('opacity', '0');
+        	});
+        </script>
     </body>
 </html>
