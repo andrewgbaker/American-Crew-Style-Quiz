@@ -1,18 +1,18 @@
 $(document).ready(function() {
 // $.fn.fullpage({
- //        verticalCentered: true,
- //        resize : false,
- //        anchors:['firstSlide', 'secondSlide'],
- //        scrollingSpeed: 700,
- //        easing: 'easeInQuart',
- //        menu: false,
- //        navigation: false,
- //        navigationPosition: 'right',
- //        navigationTooltips: ['firstSlide', 'secondSlide'],
- //        slidesNavigation: true,
- //        slidesNavPosition: 'bottom',
-	// 	css3: true
-	// });
+//         verticalCentered: true,
+//         resize : false,
+//         anchors:['firstSlide', 'secondSlide'],
+//         scrollingSpeed: 700,
+//         easing: 'easeInQuart',
+//         menu: false,
+//         navigation: false,
+//         navigationPosition: 'right',
+//         navigationTooltips: ['firstSlide', 'secondSlide'],
+//         slidesNavigation: true,
+//         slidesNavPosition: 'bottom',
+// 		css3: true
+// 	});
 	
 	$(window).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event, delta) {
 		if ($('#section1').hasClass('look_down')) {

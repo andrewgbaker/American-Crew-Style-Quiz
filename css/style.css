@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Vollkorn);
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:900italic);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
 /* colors */
 /* media queries */
 /* fonts */
@@ -335,9 +338,6 @@ strong {
   100% {
     opacity: 1; } }
 
-/* @import url(http://fonts.googleapis.com/css?family=Vollkorn) */
-/* @import url(http://fonts.googleapis.com/css?family=Playfair+Display:900italic) */
-/* @import url(http://fonts.googleapis.com/css?family=Oswald) */
 @font-face {
   font-family: "social";
   src: url("fonts/icomoon.eot");

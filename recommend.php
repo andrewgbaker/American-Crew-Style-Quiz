@@ -1,3 +1,15 @@
+<?php
+// $answers_arr = array('','','','','','');
+// $post_fields = array('clothes','music','friday_plans','drinking','girl','hair');
+// $values_string = '';
+// $i = 0;
+// foreach ($field as $post_fields) {
+// 	if($_POST[$field]) {
+// 		// $answers_arr[$i] = $_POST[$field];
+// 	}
+// 	$i++;
+// }
+?>
 <!DOCTYPE html>
 <!--[if lte IE 9 ]>    <html lang="en" class="no-js ie ie8"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
@@ -34,7 +46,7 @@
 	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script> -->
 	
 	<script type="text/javascript" src="js/libs/jquery.fullPage.min.js"></script>
-	<!-- <script type="text/javascript" src="js/app.js"></script> -->
+	<script type="text/javascript" src="js/app.js"></script>
 	<script type="text/javascript" src="js/site.js"></script>
 
 </head>
