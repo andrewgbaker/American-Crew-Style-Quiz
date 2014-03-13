@@ -62,7 +62,7 @@
       font-family: 'Vollkorn', serif
       text-align: center
       margin: 30px auto 0
-      font-size: 34px
+      font-size: 26px
       font-weight: 100
       vertical-align: middle
       width: 300px
@@ -119,6 +119,12 @@ nav
         border: 1px solid $dark_gray
         width: 6px
         height: 6px
+    &:hover
+      .progress
+        display: block
+      p
+        display: none
+        @include animation(none)
   .active
     .progress
       display: none
@@ -126,6 +132,7 @@ nav
       display: block
     &:hover
       p
+        display: block
         @include animation(none)
   &:after
     width: 80%
