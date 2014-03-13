@@ -403,16 +403,13 @@
         jQuery.extend(config, this.settings);
       }
       return this.each(function(index) {
-        var $me, _anchors, _index, _init, _on_anchor_click, _question_was_answered;
+        var $me, _anchors, _index, _init, _on_anchor_click, _question_was_answered, _set_anchors;
         $me = $(this);
         _index = index;
         _anchors = $me.find("a");
-        _question_was_answered = function(evt, data) {
-          var answer_number, question_number,
-            _this = this;
-          question_number = data.question_index + 1;
-          answer_number = data.which;
-          debug("_question_was_answered:" + question_number);
+        _set_anchors = function(question_number) {
+          var _this = this;
+          debug("_set_anchor:" + question_number);
           $me.find(".active").removeClass("active");
           _anchors.each(function(index, anchor) {
             if (question_number > index) {
@@ -424,6 +421,12 @@
           });
           return _anchors.eq(question_number).addClass("active");
         };
+        _question_was_answered = function(evt, data) {
+          var answer_number, question_number;
+          question_number = data.question_index + 1;
+          answer_number = data.which;
+          return _set_anchors(question_number);
+        };
         _on_anchor_click = function(evt) {
           var answer_obj;
           evt.preventDefault();
@@ -431,13 +434,14 @@
             which: 0,
             question_index: $(this).data("anchornum")
           };
-          return announce($.Events.QUESTION_NAV_CLICKED, answer_obj);
+          announce($.Events.QUESTION_NAV_CLICKED, answer_obj);
+          debug("setting anchors");
+          return _set_anchors($(this).data("anchornum") + 1);
         };
         _init = function() {
           var _this = this;
           listen_to($.Events.ANSWER_CLICK, config.myName, _question_was_answered);
-          listen_to($.Events.CLICK, config.myName, _on_anchor_click, _anchors);
-          debug("QuestionNav:" + _index);
+          listen_to($.Events.CLICK, config.myName, _on_anchor_click, $("nav a"));
           _anchors.eq(0).addClass("active");
           return _anchors.each(function(index, anchor) {
             return $(anchor).attr("data-anchornum", index - 1);
@@ -469,11 +473,13 @@
           hair: 0
         };
         _form = $me.find("form");
-        _question_was_answered = function(data) {
+        _question_was_answered = function(evt, data) {
           var answer_number, question_number, quiz_answer, quiz_completed, quiz_question;
           question_number = data.question_index;
           answer_number = data.which;
           quiz_completed = true;
+          debug("QuizTracker");
+          debug(evt);
           for (quiz_question in _quiz_answers) {
             quiz_answer = _quiz_answers[quiz_question];
             $("#" + quiz_question).val(quiz_answer);
@@ -510,10 +516,7 @@
         $me = $(this);
         _scroll_to_question = function(which) {
           var _next_question_top;
-          debug("scrolling to question:" + which);
           _next_question_top = $(".question-group").eq(which).offset().top;
-          debug($(".question-group"));
-          debug($(".question-group").eq(which));
           return TweenLite.to(window, config.question_scroll_duration, {
             ease: Quint.easeInOut,
             scrollTo: {
@@ -524,8 +527,6 @@
         };
         _on_address_change = function(evt) {
           var question_number;
-          debug("Address Changed");
-          debug(evt);
           if (evt.value.indexOf("question-") > -1) {
             question_number = evt.value.replace("/question-", "");
             return _scroll_to_question(question_number);
@@ -533,15 +534,13 @@
         };
         _on_answer_click = function(evt, data) {
           var answer_clicked, next_question_number, question_index_clicked;
-          debug("_on_answer_click");
-          debug(evt);
-          debug(data);
           answer_clicked = data.which;
           question_index_clicked = data.question_index;
           if (question_index_clicked < $(".question-group").length) {
-            debug("question clicked");
             next_question_number = parseInt(question_index_clicked) + 1;
-            return _scroll_to_question(next_question_number);
+            if (next_question_number < 6) {
+              return _scroll_to_question(next_question_number);
+            }
           }
         };
         _enable_tile_backs = function() {
@@ -597,7 +596,6 @@
         $me = $(this);
         _index = index;
         _init = function() {
-          debug("my question index:" + _index);
           config.question_id = $me.attr("id");
           config.question_index = _index;
           return $me.find(".answer-tile").AnswerTile('AnswerTile', config);

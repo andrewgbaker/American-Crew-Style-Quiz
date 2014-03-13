@@ -48,10 +48,10 @@ $ ->
 					$.fn.fullpage(config.full_page_opts);
 				# if $.Body.hasClass("")
 				$.Window.swipe( {
-			    swipe:_on_swipe,
-			    threshold:0,
-			    fingers:'all'
-			  });
+					swipe:_on_swipe,
+					threshold:0,
+					fingers:'all'
+				});
 				# $.fn.fullpage({
 				# 	verticalCentered: true,
 				# 	resize : false,
@@ -108,42 +108,56 @@ $ ->
 		if @settings? then jQuery.extend(config, @settings)
 	
 		this.each (index) ->
-	  	$me = $(this)
-	  	_index = index
-	  	_anchors = $me.find("a")
+			$me = $(this)
+			_index = index
+			_anchors = $me.find("a")
 
-	  	_question_was_answered = (evt,data) ->
-	  		question_number = data.question_index + 1
-	  		answer_number = data.which
-	  		debug "_question_was_answered:"+question_number
-	  		# _anchors.each =>
-	  		$me.find(".active").removeClass("active")
-	  		_anchors.each (index,anchor) =>
-		  		if question_number > index
-		  			$(anchor).removeClass("empty")
-		  		if question_number < index
-		  			$(anchor).addClass("empty")
+			_set_anchors = (question_number) ->
+				debug "_set_anchor:"+question_number
+				$me.find(".active").removeClass("active")
+				_anchors.each (index,anchor) =>
+					if question_number > index
+						$(anchor).removeClass("empty")
+					if question_number < index
+						$(anchor).addClass("empty")
 
-		  	_anchors.eq(question_number).addClass("active")
+				_anchors.eq(question_number).addClass("active")
 
-		  
+			_question_was_answered = (evt,data) ->
+				question_number = data.question_index + 1
+				answer_number = data.which
+				# _anchors.each =>
+				# $me.find(".active").removeClass("active")
+				_set_anchors question_number
+				# _anchors.each (index,anchor) =>
+				# 	if question_number > index
+				# 		$(anchor).removeClass("empty")
+				# 	if question_number < index
+				# 		$(anchor).addClass("empty")
 
-		  _on_anchor_click = (evt) ->
-		  	evt.preventDefault()
-		  	answer_obj = 
+				# _anchors.eq(question_number).addClass("active")
+		
+
+			_on_anchor_click = (evt) ->
+				evt.preventDefault()
+				answer_obj =
 					which: 0
 					question_index: $(this).data("anchornum")
-					announce $.Events.QUESTION_NAV_CLICKED, answer_obj
+					# question_index: 1
+					
+				announce $.Events.QUESTION_NAV_CLICKED, answer_obj
+
+				debug "setting anchors"
+				_set_anchors $(this).data("anchornum")+1
 	
-	  	_init = () ->
-	  		listen_to $.Events.ANSWER_CLICK, config.myName, _question_was_answered
-	  		listen_to $.Events.CLICK, config.myName, _on_anchor_click, _anchors
-	  		debug "QuestionNav:"+_index
-	  		_anchors.eq(0).addClass("active")
-	  		_anchors.each (index,anchor) =>
-	  			$(anchor).attr("data-anchornum",index-1)
+			_init = () ->
+				listen_to $.Events.ANSWER_CLICK, config.myName, _question_was_answered
+				listen_to $.Events.CLICK, config.myName, _on_anchor_click, $("nav a")
+				_anchors.eq(0).addClass("active")
+				_anchors.each (index,anchor) =>
+					$(anchor).attr("data-anchornum",index-1)
 	
-	  	_init()
+			_init()
 
 	$.fn.QuizTracker = (objectName,@settings) ->
 		$parent = $(this)
@@ -153,34 +167,36 @@ $ ->
 		if @settings? then jQuery.extend(config, @settings)
 	
 		this.each (index) ->
-	  	$me = $(this)
-	  	_quiz_answers =
-	  		clothes: 0
-	  		music: 0
-	  		friday_plans: 0
-	  		drinking: 0
-	  		girl: 0
-	  		hair: 0
-	  	_form = $me.find("form")
+			$me = $(this)
+			_quiz_answers =
+				clothes: 0
+				music: 0
+				friday_plans: 0
+				drinking: 0
+				girl: 0
+				hair: 0
+			_form = $me.find("form")
 
-	  	_question_was_answered = (data) ->
-	  		question_number = data.question_index
-	  		answer_number = data.which
-	  		quiz_completed = true
+			_question_was_answered = (evt,data) ->
+				question_number = data.question_index
+				answer_number = data.which
+				quiz_completed = true
+				debug "QuizTracker"
+				debug evt
 
-	  		for quiz_question,quiz_answer of _quiz_answers
-	  			$("#"+quiz_question).val(quiz_answer)
-	  			if quiz_answer is 0
-	  				quiz_completed = false
+				for quiz_question,quiz_answer of _quiz_answers
+					$("#"+quiz_question).val(quiz_answer)
+					if quiz_answer is 0
+						quiz_completed = false
 
-	  		if quiz_completed
-	  			_send_quiz_answers
+				if quiz_completed
+					_send_quiz_answers
 
-	  	_send_quiz_answers = () ->
-	  		_form.get(0).submit()
+			_send_quiz_answers = () ->
+				_form.get(0).submit()
 
-	  	# 	data_obj = _form.serialize
-	  	# 	_ajax_opts = 
+			# 	data_obj = _form.serialize
+			# 	_ajax_opts = 
 				# 	type: "POST"
 				# 	data: data_obj
 				# 	url: _form.attr("action")
@@ -189,11 +205,11 @@ $ ->
 
 				# $.ajax(_ajax_opts)
 	
-	  	_init = () ->
-	  		listen_to $.Events.ANSWER_CLICK, config.myName, _question_was_answered
-	  		
+			_init = () ->
+				listen_to $.Events.ANSWER_CLICK, config.myName, _question_was_answered
+				
 	
-	  	_init()
+			_init()
 
 	$.fn.QuestionPage = (objectName,@settings) ->
 		$parent = $(this)
@@ -206,32 +222,24 @@ $ ->
 			$me = $(this)
 
 			_scroll_to_question = (which) ->
-				debug "scrolling to question:" + which
 				_next_question_top = $(".question-group").eq(which).offset().top
-				debug $(".question-group")
-				debug $(".question-group").eq(which)
 				TweenLite.to(window,config.question_scroll_duration,{ease:Quint.easeInOut,scrollTo:{y:_next_question_top,ease:Quint.easeInOut}})
 
 			_on_address_change = (evt) ->
-				debug "Address Changed"
-				debug evt
 				if evt.value.indexOf("question-") > -1
 					question_number = evt.value.replace("/question-","")
 					_scroll_to_question question_number
 
 			_on_answer_click = (evt,data) ->
-				debug "_on_answer_click"
-				debug evt
-				debug data
 				answer_clicked = data.which
 				question_index_clicked = data.question_index
 				if question_index_clicked < $(".question-group").length
-					debug "question clicked"
 					# debug "scrolling"
 					# _next_question_top = $(".question-group").eq(question_index_clicked+1).offset().top
 					# TweenLite.to(window,config.question_scroll_duration,{ease:Quint.easeInOut,scrollTo:{y:_next_question_top,ease:Quint.easeInOut}})
 					next_question_number = parseInt(question_index_clicked)+1
-					_scroll_to_question next_question_number
+					if next_question_number < 6
+						_scroll_to_question next_question_number
 					# $.address.value("question-"+next_question_number)
 
 			_enable_tile_backs = () ->
@@ -276,7 +284,6 @@ $ ->
 			_index = index
 	
 			_init = () ->
-				debug "my question index:"+_index
 				config.question_id = $me.attr("id")
 				config.question_index = _index
 				$me.find(".answer-tile").AnswerTile('AnswerTile',config)
