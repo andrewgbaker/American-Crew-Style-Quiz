@@ -4,18 +4,8 @@
 <html class='no-js' lang='en'>
   <!--<![endif]-->
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>American Crew Style Select</title>
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<meta name="author" content="Karsh Hagan">  	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-
-	<script type="text/javascript" src="js/libs/modernizr.js"></script>
-	
-	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-  
-	<link rel="stylesheet" href="css/style.css" />
+	<?php include('includes/standard_meta.php'); ?>
+	<?php include('includes/header_scripts.php') ?>	
 </head>
 
 	<body>
@@ -581,22 +571,6 @@
   		<input type="hidden" name="girl" id="value-girl" value="">
   		<input type="hidden" name="hair" id="value-hair" value="">
   	</form>
-
-        <!-- // <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> -->
-        <script type="text/javascript" src="js/libs/jquery-1.8.3.min.js"></script>
-        <script type="text/javascript" src="js/libs/tweenlite/TweenLite.min.js"></script>
-        <script type="text/javascript" src="js/libs/tweenlite/TimelineLite.min.js"></script>
-        <script type="text/javascript" src="js/libs/tweenlite/easing/EasePack.min.js"></script>
-        <script type="text/javascript" src="js/libs/tweenlite/plugins/ScrollToPlugin.min.js"></script>
-        <script type="text/javascript" src="js/libs/tweenlite/plugins/CSSPlugin.min.js"></script>
-        <script type="text/javascript" src="js/plugins.js"></script>
-        <script type="text/javascript" src="js/site.js"></script>
-        
-        <script>
-        	imagesLoaded( '#clothes', function() {
-        		console.log("imagesLoaded")
-        		$('.load_wrap').addClass('hideloader');
-        	});
-        </script>
+        <?php include('inclues/footer_scripts.php'); ?>
     </body>
 </html>

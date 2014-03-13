@@ -354,7 +354,10 @@ $ ->
 					puts delay_string
 					timeline.append(TweenLite.to(tile, 1, {autoAlpha:1}), delay_string)
 				timeline.resume()
-	
+			
+			_hide_loader = () ->
+				$('.load_wrap').addClass('hideloader');
+
 			_init = () -> 
 				# $.address.change _on_address_change
 				$.Body.animate({scrollTop:0})
@@ -365,7 +368,8 @@ $ ->
 				# setTimeout _animate_in_tiles, 3000
 				_animate_in_tiles
 				$me.find("nav").QuestionNav('QuestionNav',config)
-				# imagesLoaded _animate_in_tiles
+				
+				imagesLoaded( '#clothes', _hide_loader)
 
 			_init()
 

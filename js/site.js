@@ -597,7 +597,7 @@
         jQuery.extend(config, this.settings);
       }
       return this.each(function(index) {
-        var $me, _animate_in_tiles, _enable_tile_backs, _init, _on_address_change, _on_answer_click, _scroll_to_question;
+        var $me, _animate_in_tiles, _enable_tile_backs, _hide_loader, _init, _on_address_change, _on_answer_click, _scroll_to_question;
         $me = $(this);
         _scroll_to_question = function(which) {
           var _next_question_top;
@@ -652,6 +652,9 @@
           });
           return timeline.resume();
         };
+        _hide_loader = function() {
+          return $('.load_wrap').addClass('hideloader');
+        };
         _init = function() {
           $.Body.animate({
             scrollTop: 0
@@ -660,7 +663,8 @@
           listen_to($.Events.QUESTION_NAV_CLICKED, config.myName, _on_answer_click);
           $(".question-group").Question("Question", config);
           _animate_in_tiles;
-          return $me.find("nav").QuestionNav('QuestionNav', config);
+          $me.find("nav").QuestionNav('QuestionNav', config);
+          return imagesLoaded('#clothes', _hide_loader);
         };
         return _init();
       });
