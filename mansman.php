@@ -86,7 +86,7 @@
 				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
 			</div>
 		</article>
-		<div class="look_img" style="background: url(/img/looks/mansman1.jpg) no-repeat top center"></div>
+		<div class="look_img" style="background: url('/img/looks/mansman1.jpg') no-repeat top center"></div>
 	</div>
 	<!-- END LOOK ONE -->
     <div class="slide" data-anchor="two"> 
@@ -121,7 +121,7 @@
 				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
 			</div>
 		</article>
-		<div class="look_img" style="background: url(/img/looks/mansman2.jpg) no-repeat top center"></div>
+		<div class="look_img" style="background: url('/img/looks/mansman2.jpg') no-repeat top center"></div>
     </div>
     <!-- END LOOK TWO -->
     <div class="slide" data-anchor="three">
@@ -156,7 +156,7 @@
 				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
 			</div>
 		</article>
-		<div class="look_img" style="background: url(/img/looks/mansman3.jpg) no-repeat top center"></div>
+		<div class="look_img" style="background: url('/img/looks/mansman3.jpg') no-repeat top center"></div>
     </div>
     <!-- END LOOK THREE -->
     
