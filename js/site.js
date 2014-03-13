@@ -317,13 +317,13 @@
     full_page_opts: {
       verticalCentered: true,
       resize: false,
-      anchors: ['firstSlide', 'secondSlide'],
+      anchors: ['looks'],
       scrollingSpeed: 700,
       easing: 'easeInQuart',
       menu: false,
       navigation: false,
       navigationPosition: 'right',
-      navigationTooltips: ['firstSlide', 'secondSlide'],
+      navigationTooltips: ['looks'],
       slidesNavigation: true,
       slidesNavPosition: 'bottom',
       css3: true
@@ -464,8 +464,10 @@
         jQuery.extend(config, this.settings);
       }
       return this.each(function(index) {
-        var $me, _init, _question_was_answered, _quiz_answers, _send_quiz_answers;
+        var $me, _determine_type_and_look, _init, _points_matrix, _question_was_answered, _quiz_answer_matrix, _quiz_answers, _send_quiz_answers, _set_category_points;
         $me = $(this);
+        _points_matrix = new Array;
+        _quiz_answer_matrix = new Array;
         _quiz_answers = {
           clothes: 0,
           music: 0,
@@ -475,10 +477,7 @@
           hair: 0
         };
         _send_quiz_answers = function() {
-          debug("_send_quiz_answers");
-          debug($me);
-          debug($me.get(0));
-          return $me.get(0).submit();
+          return _determine_type_and_look();
         };
         _question_was_answered = function(evt, data) {
           var answer_number, question_group, question_id, question_number, quiz_answer, quiz_completed, quiz_question;
@@ -498,6 +497,77 @@
           if (quiz_completed) {
             return _send_quiz_answers();
           }
+        };
+        _set_category_points = function(category) {
+          var answer;
+          answer = _quiz_answer_matrix[category][_quiz_answers[category]];
+          return _points_matrix[answer] = parseInt(parseInt(_points_matrix[answer]) + 1);
+        };
+        _determine_type_and_look = function() {
+          var answer, highest_category, max_points, tied_categories, type;
+          _points_matrix['hipster'] = 0;
+          _points_matrix['player'] = 0;
+          _points_matrix['gentleman'] = 0;
+          _points_matrix['rebel'] = 0;
+          _points_matrix['mansman'] = 0;
+          _quiz_answer_matrix.clothes = new Array;
+          _quiz_answer_matrix.music = new Array;
+          _quiz_answer_matrix.friday_plans = new Array;
+          _quiz_answer_matrix.drinking = new Array;
+          _quiz_answer_matrix.girl = new Array;
+          _quiz_answer_matrix.clothes[0] = "";
+          _quiz_answer_matrix.clothes[1] = "hipster";
+          _quiz_answer_matrix.clothes[2] = "player";
+          _quiz_answer_matrix.clothes[3] = "gentleman";
+          _quiz_answer_matrix.clothes[4] = "rebel";
+          _quiz_answer_matrix.clothes[5] = "mansman";
+          _quiz_answer_matrix.music[0] = "";
+          _quiz_answer_matrix.music[1] = "gentleman";
+          _quiz_answer_matrix.music[2] = "rebel";
+          _quiz_answer_matrix.music[3] = "mansman";
+          _quiz_answer_matrix.music[4] = "hipster";
+          _quiz_answer_matrix.music[5] = "player";
+          _quiz_answer_matrix.friday_plans[0] = "";
+          _quiz_answer_matrix.friday_plans[1] = "rebel";
+          _quiz_answer_matrix.friday_plans[2] = "gentleman";
+          _quiz_answer_matrix.friday_plans[3] = "hipster";
+          _quiz_answer_matrix.friday_plans[4] = "mansman";
+          _quiz_answer_matrix.friday_plans[5] = "player";
+          _quiz_answer_matrix.drinking[0] = "";
+          _quiz_answer_matrix.drinking[1] = "rebel";
+          _quiz_answer_matrix.drinking[2] = "gentleman";
+          _quiz_answer_matrix.drinking[3] = "player";
+          _quiz_answer_matrix.drinking[4] = "hipster";
+          _quiz_answer_matrix.drinking[5] = "mansman";
+          _quiz_answer_matrix.girl[0] = "";
+          _quiz_answer_matrix.girl[1] = "gentleman";
+          _quiz_answer_matrix.girl[2] = "mansman";
+          _quiz_answer_matrix.girl[3] = "hipster";
+          _quiz_answer_matrix.girl[4] = "rebel";
+          _quiz_answer_matrix.girl[5] = "player";
+          _set_category_points('clothes');
+          _set_category_points('music');
+          _set_category_points('friday_plans');
+          _set_category_points('drinking');
+          _set_category_points('girl');
+          debug(_points_matrix);
+          max_points = 0;
+          highest_category = '';
+          tied_categories = new Array;
+          for (type in _points_matrix) {
+            answer = _points_matrix[type];
+            if (answer > max_points) {
+              highest_category = type;
+              tied_categories = new Array;
+              max_points = answer;
+            }
+            if (answer === max_points) {
+              tied_categories.push(type);
+              highest_category = 'renaissance.php';
+            }
+          }
+          $me.attr("action", highest_category + ".php");
+          return $me.get(0).submit();
         };
         _init = function() {
           return listen_to($.Events.ANSWER_CLICK, config.myName, _question_was_answered);
@@ -718,7 +788,7 @@
         return _init();
       });
     };
-    $.fn.Slide = function(objectName, settings) {
+    return $.fn.Slide = function(objectName, settings) {
       var $parent, config;
       this.settings = settings;
       $parent = $(this);
@@ -737,76 +807,6 @@
         };
         _init = function() {
           return listen_to($.Events.SLIDE_CHANGE, config.myName, _on_slide_change);
-        };
-        return _init();
-      });
-    };
-    return $.fn.BlogPostForm = function(objectName, settings) {
-      var $parent, config;
-      this.settings = settings;
-      $parent = $(this);
-      if (typeof config === "undefined" || config === null) {
-        config = {};
-      }
-      config.myName = objectName;
-      if (this.settings != null) {
-        jQuery.extend(config, this.settings);
-      }
-      return this.each(function(index) {
-        var $me, _add_new_post, _cancel_button, _init, _onSubmitError, _onSubmitSuccess, _on_cancel_click, _on_submit, _text_field, _unlock_badges;
-        $me = $(this);
-        _text_field = $me.find("textarea");
-        _cancel_button = $me.find(".cancel-button");
-        _init = function() {
-          listen_to($.Events.SUBMIT, config.myName, _on_submit, $me);
-          return listen_to($.Events.CLICK, config.myName, _on_cancel_click, _cancel_button);
-        };
-        _on_cancel_click = function(evt) {
-          evt.preventDefault();
-          return _text_field.val("");
-        };
-        _add_new_post = function(new_post) {
-          var el_to_add_to, new_node;
-          el_to_add_to = $(".posts");
-          new_node = $(".post.dom-template").clone();
-          new_node.removeClass("dom-template");
-          new_node.find(".post-content").html(new_post.response_text);
-          new_node.find("a").attr("href", new_node.find("a").attr("href").replace("student_response_id", new_post.id));
-          new_node.css("display", "none");
-          el_to_add_to.append(new_node);
-          _text_response_field.val("");
-          return new_node.fadeIn(200);
-        };
-        _onSubmitError = function() {
-          return debug("submit error");
-        };
-        _unlock_badges = function(badges) {};
-        _onSubmitSuccess = function(data) {
-          var reply;
-          debug(data);
-          if (data !== "false") {
-            reply = $.parseJSON(data);
-            debug(reply.response);
-            debug(reply.badges);
-            announce($.Events.BADGES_RECEIVED, reply.badges);
-            return _add_new_post(reply.response);
-          } else {
-            return debug("there was a problem saving the response");
-          }
-        };
-        _on_submit = function(evt) {
-          var data_obj, _ajax_opts;
-          evt.preventDefault();
-          data_obj = $me.serialize();
-          debug(data_obj);
-          _ajax_opts = {
-            type: "POST",
-            data: data_obj,
-            url: $me.attr("action"),
-            success: _onSubmitSuccess,
-            error: _onSubmitError
-          };
-          return $.ajax(_ajax_opts);
         };
         return _init();
       });

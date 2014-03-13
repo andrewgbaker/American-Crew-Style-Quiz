@@ -21,13 +21,13 @@ window.custom_defaults =
 	full_page_opts:
 		verticalCentered: true
 		resize: false
-		anchors:['firstSlide', 'secondSlide']
+		anchors:['looks']
 		scrollingSpeed: 700
 		easing: 'easeInQuart'
 		menu: false
 		navigation: false
 		navigationPosition: 'right'
-		navigationTooltips: ['firstSlide', 'secondSlide']
+		navigationTooltips: ['looks']
 		slidesNavigation: true
 		slidesNavPosition: 'bottom'
 		css3: true
@@ -169,6 +169,8 @@ $ ->
 	
 		this.each (index) ->
 			$me = $(this)
+			_points_matrix = new Array
+			_quiz_answer_matrix = new Array
 			_quiz_answers =
 				clothes: 0
 				music: 0
@@ -179,10 +181,7 @@ $ ->
 			# _form = $me.find("form")
 			# 
 			_send_quiz_answers = () ->
-				debug "_send_quiz_answers"
-				debug $me
-				debug $me.get(0)
-				$me.get(0).submit()
+				_determine_type_and_look()
 
 			_question_was_answered = (evt,data) ->
 				question_number = data.question_index
@@ -200,15 +199,101 @@ $ ->
 				if quiz_completed
 					_send_quiz_answers()
 
-			# 	data_obj = _form.serialize
-			# 	_ajax_opts = 
-				# 	type: "POST"
-				# 	data: data_obj
-				# 	url: _form.attr("action")
-				# 	success: _on_submit_success
-				# 	error: _on_submit_error
+			_set_category_points = (category) ->
+				answer = _quiz_answer_matrix[category][_quiz_answers[category]]
+				_points_matrix[answer] = parseInt(parseInt(_points_matrix[answer]) + 1)
 
-				# $.ajax(_ajax_opts)
+			_determine_type_and_look = () ->
+				_points_matrix['hipster'] = 0
+				_points_matrix['player'] = 0
+				_points_matrix['gentleman'] = 0
+				_points_matrix['rebel'] = 0
+				_points_matrix['mansman'] = 0
+
+				_quiz_answer_matrix.clothes = new Array
+				_quiz_answer_matrix.music = new Array
+				_quiz_answer_matrix.friday_plans = new Array
+				_quiz_answer_matrix.drinking = new Array
+				_quiz_answer_matrix.girl = new Array
+
+				# Clothes Points
+				_quiz_answer_matrix.clothes[0] = ""
+				_quiz_answer_matrix.clothes[1] = "hipster"
+				_quiz_answer_matrix.clothes[2] = "player"
+				_quiz_answer_matrix.clothes[3] = "gentleman"
+				_quiz_answer_matrix.clothes[4] = "rebel"
+				_quiz_answer_matrix.clothes[5] = "mansman"
+
+				# Music Points
+				_quiz_answer_matrix.music[0] = ""
+				_quiz_answer_matrix.music[1] = "gentleman"
+				_quiz_answer_matrix.music[2] = "rebel"
+				_quiz_answer_matrix.music[3] = "mansman"
+				_quiz_answer_matrix.music[4] = "hipster"
+				_quiz_answer_matrix.music[5] = "player"
+
+				# Friday Plans Points
+				_quiz_answer_matrix.friday_plans[0] = ""
+				_quiz_answer_matrix.friday_plans[1] = "rebel"
+				_quiz_answer_matrix.friday_plans[2] = "gentleman"
+				_quiz_answer_matrix.friday_plans[3] = "hipster"
+				_quiz_answer_matrix.friday_plans[4] = "mansman"
+				_quiz_answer_matrix.friday_plans[5] = "player"
+
+				# Drinking Points
+				_quiz_answer_matrix.drinking[0] = ""
+				_quiz_answer_matrix.drinking[1] = "rebel"
+				_quiz_answer_matrix.drinking[2] = "gentleman"
+				_quiz_answer_matrix.drinking[3] = "player"
+				_quiz_answer_matrix.drinking[4] = "hipster"
+				_quiz_answer_matrix.drinking[5] = "mansman"
+
+				# Girl Points
+				_quiz_answer_matrix.girl[0] = ""
+				_quiz_answer_matrix.girl[1] = "gentleman"
+				_quiz_answer_matrix.girl[2] = "mansman"
+				_quiz_answer_matrix.girl[3] = "hipster"
+				_quiz_answer_matrix.girl[4] = "rebel"
+				_quiz_answer_matrix.girl[5] = "player"
+
+				_set_category_points 'clothes'
+				_set_category_points 'music'
+				_set_category_points 'friday_plans'
+				_set_category_points 'drinking'
+				_set_category_points 'girl'
+				# _set_category_points 'hair'
+				
+				debug _points_matrix
+
+				max_points = 0
+				highest_category = ''
+				tied_categories = new Array
+				for type,answer of _points_matrix
+					if answer > max_points	
+						highest_category = type
+						tied_categories = new Array
+						max_points = answer
+
+					if answer == max_points
+						tied_categories.push type
+						highest_category = 'renaissance.php'
+
+				# debug highest_category
+				# debug tied_categories
+
+				# if highest_category == 'tied'
+
+				# 	randInt = (Math.floor(Math.random() * (tied_categories.length)));
+				# 	debug "random int:"+randInt
+				# 	highest_category = tied_categories[randInt]
+				# 	debug "highest_category:"+highest_category
+				# 	
+				
+
+				# points_matrix
+				$me.attr("action",highest_category+".php")
+				$me.get(0).submit()
+
 	
 			_init = () ->
 				listen_to $.Events.ANSWER_CLICK, config.myName, _question_was_answered
@@ -402,71 +487,6 @@ $ ->
 	
 			_init = () ->
 				listen_to $.Events.SLIDE_CHANGE, config.myName, _on_slide_change
-	
-			_init()
-
-	
-
-	$.fn.BlogPostForm = (objectName,@settings) ->
-		$parent = $(this)
-	
-		if not config? then config = {}
-		config.myName = objectName
-		if @settings? then jQuery.extend(config, @settings)
-	
-		this.each (index) ->
-			$me = $(this)
-			_text_field = $me.find("textarea")
-			_cancel_button = $me.find(".cancel-button")
-	
-			_init = () ->
-				listen_to $.Events.SUBMIT, config.myName, _on_submit, $me
-				listen_to $.Events.CLICK, config.myName, _on_cancel_click, _cancel_button
-
-			_on_cancel_click = (evt) ->
-				evt.preventDefault()
-				_text_field.val ""
-
-			_add_new_post = (new_post) ->
-				el_to_add_to = $(".posts")
-				new_node = $(".post.dom-template").clone()
-				new_node.removeClass("dom-template")
-				new_node.find(".post-content").html(new_post.response_text)
-				new_node.find("a").attr("href",new_node.find("a").attr("href").replace("student_response_id",new_post.id))
-				new_node.css("display","none")
-				el_to_add_to.append(new_node)
-				_text_response_field.val ""
-				new_node.fadeIn(200)
-
-			_onSubmitError = () ->
-				debug "submit error"
-
-			_unlock_badges = (badges) ->
-
-
-			_onSubmitSuccess = (data) ->
-				debug data
-				unless data == "false"
-					reply = $.parseJSON(data)
-					debug reply.response
-					debug reply.badges
-					announce $.Events.BADGES_RECEIVED, reply.badges
-					_add_new_post reply.response
-				else
-					debug "there was a problem saving the response"
-
-			_on_submit = (evt) ->
-				evt.preventDefault()
-				data_obj = $me.serialize()
-				debug data_obj
-				_ajax_opts = 
-					type: "POST"
-					data: data_obj
-					url: $me.attr("action")
-					success: _onSubmitSuccess
-					error: _onSubmitError
-
-				$.ajax(_ajax_opts)
 	
 			_init()
 
