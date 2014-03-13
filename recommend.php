@@ -17,7 +17,7 @@ foreach ($post_fields as $field) {
 	$i++;
 }
 // var_dump($answers_arr);
-var_dump($_REQUEST);
+// var_dump($_REQUEST);
 ?>
 <!DOCTYPE html>
 <!--[if lte IE 9 ]>    <html lang="en" class="no-js ie ie8"> <![endif]-->

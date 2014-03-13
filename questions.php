@@ -594,6 +594,7 @@
         
         <script>
         	imagesLoaded( '#clothes', function() {
+        		console.log("imagesLoaded")
         		$('.load_wrap').addClass('hideloader');
         	});
         </script>

@@ -121,7 +121,7 @@ $ ->
 					if question_number < index
 						$(anchor).addClass("empty")
 
-				_anchors.eq(question_number).addClass("active")
+				_anchors.eq(question_number).addClass("active").removeClass("empty")
 
 			_question_was_answered = (evt,data) ->
 				question_number = data.question_index + 1
@@ -308,7 +308,6 @@ $ ->
 			_index = index + 1;
 	
 			_init = () ->
-				debug "init AnswerTile"
 				listen_to $.Events.CLICK, config.myName, _on_click, $me
 
 			_on_click = (evt) ->
@@ -317,7 +316,6 @@ $ ->
 					which: _index
 					question_id: config.question_id
 					question_index: config.question_index
-				debug "triggering answer click"
 				announce $.Events.ANSWER_CLICK, answer_obj
 				
 	

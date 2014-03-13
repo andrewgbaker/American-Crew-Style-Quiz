@@ -419,7 +419,7 @@
               return $(anchor).addClass("empty");
             }
           });
-          return _anchors.eq(question_number).addClass("active");
+          return _anchors.eq(question_number).addClass("active").removeClass("empty");
         };
         _question_was_answered = function(evt, data) {
           var answer_number, question_number;
@@ -624,7 +624,6 @@
         $me = $(this);
         _index = index + 1;
         _init = function() {
-          debug("init AnswerTile");
           return listen_to($.Events.CLICK, config.myName, _on_click, $me);
         };
         _on_click = function(evt) {
@@ -635,7 +634,6 @@
             question_id: config.question_id,
             question_index: config.question_index
           };
-          debug("triggering answer click");
           return announce($.Events.ANSWER_CLICK, answer_obj);
         };
         return _init();
