@@ -1160,7 +1160,7 @@ header {
   height: 100%;
   position: absolute;
   background: #333333;
-  z-index: 999999999;
+  z-index: 99999999999;
   opacity: 1; }
   .load_wrap p {
     position: absolute;

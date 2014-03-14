@@ -41,7 +41,7 @@
 							<span>–Paul Wilson,  American Crew Artistic Director & world–renowned stylist</span>
 						</aside>
 						<div>
-							<img src="/img/paul_wilson.jpg" alt="paul wilson" />
+							<img src="<?php echo $asset_root; ?>/img/paul_wilson.jpg" alt="paul wilson" />
 						</div>
 					</section>
 				</div>
