@@ -1,3 +1,4 @@
+<?php include('includes/settings.php'); ?>
 <!DOCTYPE html>
 <!--[if lte IE 9 ]>    <html lang="en" class="no-js ie ie8"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
@@ -26,7 +27,7 @@
 	<div class="slide clearfix" data-anchor="one">
 		<article>
 			<div class="look_wrap">
-				<div class="mobile_look_img"><img src="/img/looks/maverick1_mobile.jpg" alt="the single malt" /> </div>
+				<div class="mobile_look_img"><img src="<?php echo $asset_root; ?>/img/looks/maverick1_mobile.jpg" alt="the single malt" /> </div>
 				<h2>Maverick - <span>The Looks</span></h2>
 				<nav class="looks_nav clearfix">
 					<a href="#" class="active_look">
@@ -44,24 +45,24 @@
 				<p>-Paul Wilson, American Crew Artistic Director</p>
 				<div class="product clearfix">
 					<div class="wrap">
-						<img src="/img/product/groomingcream.jpg" />
+						<img src="<?php echo $asset_root; ?>/img/product/groomingcream.jpg" />
 					</div>
 					<div class="cta">
 						<div class="start_btn secondary"><a href="http://www.americancrew.com/salon-locator">Find a Stylist</a></div>
 						<div class="start_btn"><a href="#">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="#">American Crew Grooming Cream</a>, <a href="#">Daily Shampoo</a> and to <a href="img/maverick_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<p>To create this style, you'll need <a href="#">American Crew Grooming Cream</a>, <a href="#">Daily Shampoo</a> and to <a href="<?php echo $asset_root; ?>/img/maverick_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
-		<div class="look_img" style="background: url('/img/looks/maverick1.jpg') no-repeat top center"></div>
+		<div class="look_img" style="background: url('<?php echo $asset_root; ?>/img/looks/maverick1.jpg') no-repeat top center"></div>
 	</div>
 	<!-- END LOOK ONE -->
     <div class="slide" data-anchor="two"> 
     	<article>
 			<div class="look_wrap">
-				<div class="mobile_look_img"><img src="/img/looks/maverick2_mobile.jpg" alt="the single malt" /> </div>
+				<div class="mobile_look_img"><img src="<?php echo $asset_root; ?>/img/looks/maverick2_mobile.jpg" alt="the single malt" /> </div>
 				<h2>Maverick - <span>The Looks</span></h2>
 				<nav class="looks_nav clearfix">
 					<a href="#">
@@ -79,24 +80,24 @@
 				<p>-Paul Wilson, American Crew Artistic Director</p>
 				<div class="product clearfix">
 					<div class="wrap">
-						<img src="/img/product/formingcream.jpg" />
+						<img src="<?php echo $asset_root; ?>/img/product/formingcream.jpg" />
 					</div>
 					<div class="cta">
 						<div class="start_btn secondary"><a href="http://www.americancrew.com/salon-locator">Find a Stylist</a></div>
 						<div class="start_btn"><a href="#">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="#">American Crew Firm Hold Styling Gel</a>, <a href="#">Forming Cream</a> and to <a href="img/maverick_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<p>To create this style, you'll need <a href="#">American Crew Firm Hold Styling Gel</a>, <a href="#">Forming Cream</a> and to <a href="<?php echo $asset_root; ?>/img/maverick_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
 			</div>
 		</article>
-		<div class="look_img" style="background: url('/img/looks/maverick2.jpg') no-repeat top center"></div>
+		<div class="look_img" style="background: url('<?php echo $asset_root; ?>/img/looks/maverick2.jpg') no-repeat top center"></div>
     </div>
     <!-- END LOOK TWO -->
     <div class="slide" data-anchor="three">
     	<article>
 			<div class="look_wrap">
-				<div class="mobile_look_img"><img src="/img/looks/maverick3_mobile.jpg" alt="the single malt" /> </div>
+				<div class="mobile_look_img"><img src="<?php echo $asset_root; ?>/img/looks/maverick3_mobile.jpg" alt="the single malt" /> </div>
 				<h2>Maverick - <span>The Looks</span></h2>
 				<nav class="looks_nav clearfix">
 					<a href="#">
@@ -114,18 +115,18 @@
 				<p>- Paul Wilson, American Crew Artistic Director</p>
 				<div class="product clearfix">
 					<div class="wrap">
-						<img src="/img/product/superglue.jpg" />
+						<img src="<?php echo $asset_root; ?>/img/product/superglue.jpg" />
 					</div>
 					<div class="cta">
 						<div class="start_btn secondary"><a href="http://www.americancrew.com/salon-locator">Find a Stylist</a></div>
 						<div class="start_btn"><a href="#">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="#">American Crew Superglue</a>, <a href="#">Daily Shampoo</a> and to <a href="img/maverick_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<p>To create this style, you'll need <a href="#">American Crew Superglue</a>, <a href="#">Daily Shampoo</a> and to <a href="<?php echo $asset_root; ?>/img/maverick_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
 			</div>
 		</article>
-		<div class="look_img" style="background: url('/img/looks/maverick3.jpg') no-repeat top center"></div>
+		<div class="look_img" style="background: url('<?php echo $asset_root; ?>/img/looks/maverick3.jpg') no-repeat top center"></div>
     </div>
     <!-- END LOOK THREE -->
     
