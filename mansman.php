@@ -52,7 +52,7 @@
 					</div>
 				</div>
 				<p>To create this style, you'll need <a href="#">American Crew Fiber</a>, <a href="#">Daily Shampoo</a> and to <a href="img/mansman_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
-				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
+				<h6>Not Where you Thought You'd End Up? <a href="/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
 		<div class="look_img" style="background: url('/img/looks/mansman1.jpg') no-repeat top center"></div>
