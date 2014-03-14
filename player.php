@@ -27,16 +27,16 @@
 	<div class="slide clearfix" data-anchor="one">
 		<article>
 			<div class="look_wrap">
-				<div class="mobile_look_img"><img src="<?php echo $asset_root; ?>/img/looks/player1_mobile.jpg" alt="the single malt" /> </div>
+				<div class="mobile_look_img"><img src="<?php echo $asset_root; ?>/img/looks/player1_mobile.jpg" alt="Look 1" /> </div>
 				<h2>Player - <span>The Looks</span></h2>
 				<nav class="looks_nav clearfix">
 					<a href="#" class="active_look">
 						<div class="progress"><span></span></div>
 					</a>
-					<a href="#">
+					<a href="#looks/two">
 						<div class="progress"><span></span></div>
 					</a>
-					<a href="#">
+					<a href="#looks/three">
 						<div class="progress"><span></span></div>
 					</a>
 				</nav>
@@ -45,7 +45,7 @@
 				<p>-Paul Wilson, American Crew Artistic Director</p>
 				<div class="product clearfix">
 					<div class="wrap">
-						<img src="<?php echo $asset_root; ?>/img/product/boostpowder.jpg" />
+						<img src="<?php echo $asset_root; ?>/img/product/boostpowder.jpg" alt="American Crew Boost Powder" />
 					</div>
 					<div class="cta">
 						<div class="start_btn secondary"><a href="#">Find a Stylist</a></div>
@@ -62,16 +62,16 @@
     <div class="slide" data-anchor="two"> 
     	<article>
 			<div class="look_wrap">
-				<div class="mobile_look_img"><img src="<?php echo $asset_root; ?>/img/looks/player2_mobile.jpg" alt="the single malt" /> </div>
+				<div class="mobile_look_img"><img src="<?php echo $asset_root; ?>/img/looks/player2_mobile.jpg" alt="Look 2" /> </div>
 				<h2>Player - <span>The Looks</span></h2>
 				<nav class="looks_nav clearfix">
-					<a href="#">
+					<a href="#looks">
 						<div class="progress"><span></span></div>
 					</a>
-					<a href="#" class="active_look">
+					<a href="#looks/two" class="active_look">
 						<div class="progress"><span></span></div>
 					</a>
-					<a href="#">
+					<a href="#looks/three">
 						<div class="progress"><span></span></div>
 					</a>
 				</nav>
@@ -80,7 +80,7 @@
 				<p>-Paul Wilson, American Crew Artistic Director</p>
 				<div class="product clearfix">
 					<div class="wrap">
-						<img src="<?php echo $asset_root; ?>/img/product/alternator.jpg" />
+						<img src="<?php echo $asset_root; ?>/img/product/alternator.jpg" alt="American Crew Alternator" />
 					</div>
 					<div class="cta">
 						<div class="start_btn secondary"><a href="#">Find a Stylist</a></div>
@@ -97,16 +97,16 @@
     <div class="slide" data-anchor="three">
     	<article>
 			<div class="look_wrap">
-				<div class="mobile_look_img"><img src="<?php echo $asset_root; ?>/img/looks/player3_mobile.jpg" alt="the single malt" /> </div>
+				<div class="mobile_look_img"><img src="<?php echo $asset_root; ?>/img/looks/player3_mobile.jpg" alt="Look 3" /> </div>
 				<h2>Player - <span>The Looks</span></h2>
 				<nav class="looks_nav clearfix">
-					<a href="#">
+					<a href="#looks">
 						<div class="progress"><span></span></div>
 					</a>
-					<a href="#">
+					<a href="#looks/two">
 						<div class="progress"><span></span></div>
 					</a>
-					<a href="#" class="active_look">
+					<a href="#looks/three" class="active_look">
 						<div class="progress"><span></span></div>
 					</a>
 				</nav>
@@ -115,7 +115,7 @@
 				<p>- Paul Wilson, American Crew Artistic Director</p>
 				<div class="product clearfix">
 					<div class="wrap">
-						<img src="<?php echo $asset_root; ?>/img/product/pomade.jpg" />
+						<img src="<?php echo $asset_root; ?>/img/product/pomade.jpg" alt="American Crew Pomade" />
 					</div>
 					<div class="cta">
 						<div class="start_btn secondary"><a href="#">Find a Stylist</a></div>

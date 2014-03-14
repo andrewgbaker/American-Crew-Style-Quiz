@@ -23,7 +23,7 @@
 
 	<body class="home">
 	
-	<img class="bg_load" src="<?php echo $asset_root; ?>/img/home_bg.jpg" alt="home_bg"/>
+	<img class="bgLoad" src="<?php echo $asset_root; ?>/img/home_bg.jpg" alt="home_bg"/>
 	<div class="home_bg" style="opacity: 0"></div>
 	
 		<a href="#" class="logo"></a>
