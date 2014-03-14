@@ -346,9 +346,6 @@
         var $me, _init, _initialize_plugins, _on_scroll, _on_swipe, _resize;
         $me = $(this);
         _initialize_plugins = function() {
-          if ($.fn.fullpage) {
-            $.fn.fullpage(config.full_page_opts);
-          }
           return $.Window.swipe({
             swipe: _on_swipe,
             threshold: 0,
@@ -363,16 +360,11 @@
           }
         };
         _on_swipe = function(evt, direction, distance, duration, fingerCount) {
-          debug("direction" + direction);
-          debug("distance" + distance);
-          debug("duration" + duration);
           announce($.Events.HEADER_TOGGLE);
           return $.Window.swipe("destroy");
         };
         _init = function() {
           listen_to($.Events.RESIZE, config.myName, _resize);
-          listen_to($.Events.MOUSE_WHEEL, config.myName, _on_scroll);
-          listen_to($.Events.TOUCH_MOVE, config.myName, _on_swipe);
           _resize();
           announce($.Events.INITIALIZE_DATASCRIPTS);
           announce($.Events.SITE_INITIALIZED);
@@ -439,6 +431,9 @@
           return $(".section").attr("style", "");
         };
         _init = function() {
+          if ($.fn.fullpage) {
+            $.fn.fullpage(config.full_page_opts);
+          }
           $(window).bind('mousewheel DOMMouseScroll MozMousePixelScroll', _on_mouse_wheel);
           $('html').on('touchmove', _on_touch_move);
           $('.expand').on("click", _on_expand_click);
@@ -467,7 +462,6 @@
         _anchors = $me.find("a");
         _set_anchors = function(question_number) {
           var _this = this;
-          debug("_set_anchor:" + question_number);
           $me.find(".active").removeClass("active");
           _anchors.each(function(index, anchor) {
             if (question_number > index) {

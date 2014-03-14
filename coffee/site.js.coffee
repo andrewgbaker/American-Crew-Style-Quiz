@@ -43,9 +43,7 @@ $ ->
 		this.each (index) ->
 			$me = $(this)
 
-			_initialize_plugins = () ->
-				if $.fn.fullpage
-					$.fn.fullpage(config.full_page_opts);
+			_initialize_plugins = () ->				
 				# if $.Body.hasClass("")
 				$.Window.swipe( {
 					swipe:_on_swipe,
@@ -73,9 +71,9 @@ $ ->
 					announce $.Events.HEADER_TOGGLE
 
 			_on_swipe = (evt,direction,distance,duration,fingerCount) ->
-				debug "direction"+direction
-				debug "distance"+distance
-				debug "duration"+duration
+				# debug "direction"+direction
+				# debug "distance"+distance
+				# debug "duration"+duration
 				# if direction == 
 				announce $.Events.HEADER_TOGGLE
 				# Unbind the event so that the header 
@@ -84,8 +82,8 @@ $ ->
 			
 			_init = () ->
 				listen_to $.Events.RESIZE, config.myName, _resize
-				listen_to $.Events.MOUSE_WHEEL, config.myName, _on_scroll
-				listen_to $.Events.TOUCH_MOVE, config.myName, _on_swipe
+				# listen_to $.Events.MOUSE_WHEEL, config.myName, _on_scroll
+				# listen_to $.Events.TOUCH_MOVE, config.myName, _on_swipe
 				_resize()
 				announce $.Events.INITIALIZE_DATASCRIPTS
 				announce $.Events.SITE_INITIALIZED
@@ -142,6 +140,8 @@ $ ->
 				$(".section").attr("style","")
 	
 			_init = () ->
+				if $.fn.fullpage
+					$.fn.fullpage(config.full_page_opts);
 				$(window).bind 'mousewheel DOMMouseScroll MozMousePixelScroll', _on_mouse_wheel
 				$('html').on 'touchmove', _on_touch_move
 				$('.expand').on "click", _on_expand_click
@@ -163,7 +163,6 @@ $ ->
 			_anchors = $me.find("a")
 
 			_set_anchors = (question_number) ->
-				debug "_set_anchor:"+question_number
 				$me.find(".active").removeClass("active")
 				_anchors.each (index,anchor) =>
 					if question_number > index
@@ -430,7 +429,6 @@ $ ->
 				config.question_id = $me.attr("id")
 				config.question_index = _index
 				$me.find(".answer-tile").AnswerTile('AnswerTile',config)
-				
 	
 			_init()
 
@@ -450,6 +448,7 @@ $ ->
 
 			_on_click = (evt) ->
 				evt.preventDefault();
+
 				answer_obj = 
 					which: _index
 					question_id: config.question_id
