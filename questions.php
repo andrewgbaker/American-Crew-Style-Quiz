@@ -21,7 +21,7 @@
 			  <span class="b4"></span>
 			</div>
 		
-			<p>Fetching<br />your<br />style<br /><span class="dot_three">.&nbsp;</span><span class="dot_two">.&nbsp;</span><span class="dot_one">.&nbsp;</span></p>
+			<p>Loading<br />the<br />quiz<br /><span class="dot_three">.&nbsp;</span><span class="dot_two">.&nbsp;</span><span class="dot_one">.&nbsp;</span></p>
 			
   		</section>
   		<!-- END LOADING OVERLAY -->

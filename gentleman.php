@@ -27,7 +27,7 @@
 	<a href="#" class="logo"></a>
 	<article>
 		<h1>You Are a Gentleman</h1>
-		<p>Your drinks are stiff and so is your upper lip. You give women hope that chivalry might not be dead after all. And you're either dressed well or not at all. You need a look that has structure, order and plenty of confidence. <a href="#" class="share">Share +</a> </p>
+		<p>Your drinks are stiff and so is your upper lip. You give women hope that chivalry might not be dead after all. And you're either dressed well or not at all. You need a look that has structure, order and plenty of confidence. <a href="http://www.facebook.com/sharer/sharer.php?u=http://americancrew.com/mystyle" target="_blank" class="share">Share +</a> </p>
 	</article>
 	<a href="#" class="logo"></a>
 	<div class="expand"><div></div></div>
