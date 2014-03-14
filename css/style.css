@@ -1370,6 +1370,9 @@ header {
       font-weight: 100;
       vertical-align: middle;
       width: 300px; }
+  @media screen and (max-width: 600px) {
+    .grid .hair_blank {
+      display: none; } }
 
 nav {
   width: 300px;

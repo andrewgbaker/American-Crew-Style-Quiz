@@ -6,6 +6,11 @@
   <!--<![endif]-->
 <head>
 	<?php include('includes/standard_meta.php'); ?>
+	<meta property="og:title" content="American Crew My Style - The Player" />
+	<meta property="og:type" content="website" />
+  	<meta property="og:description" content="You Are a Player - You’re always on your game and your game is always on. Whether you’re lifting weights or picking up dates, you never take your eyes off the finish line. You need a look that’s casually confident and easy to maintain." />
+  	<meta property="og:site_name" content="American Crew My Style" />
+  	<meta property="og:image" content="http://americancrew.com/mystyle/looks/player1_mobile.jpg" />
 	<?php include('includes/header_scripts.php') ?>	
 </head>
 <body class="results">
@@ -14,7 +19,7 @@
 	<a href="<?php echo $asset_root; ?>/" class="logo"></a>
 	<article>
 		<h1>You are a Player.</h1>
-		<p>You’re always on your game and your game is always on. Whether you’re lifting weights or picking up dates, you never take your eyes off the finish line. You need a look that’s casually confident and easy to maintain. <a href="#" class="share">Share +</a> </p>
+		<p>You’re always on your game and your game is always on. Whether you’re lifting weights or picking up dates, you never take your eyes off the finish line. You need a look that’s casually confident and easy to maintain. <a href="http://www.facebook.com/sharer/sharer.php?u=http://americancrew.com/mystyle/player/" class="share">Share +</a> </p>
 	</article>
 	<a href="<?php echo $asset_root; ?>/" class="logo"></a>
 	<div class="expand"><div></div></div>

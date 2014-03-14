@@ -6,6 +6,11 @@
   <!--<![endif]-->
 <head>
 	<?php include('includes/standard_meta.php'); ?>
+	<meta property="og:title" content="American Crew My Style - The Maverick" />
+	<meta property="og:type" content="website" />
+  	<meta property="og:description" content="You Are a Maverick - Trouser socks. Cartoon character neckties. Khakis. For you, those are the things nightmares are made of. Your style has been cultivated from years of experience, not years of living up to expectations. And you know that the only road worth following is the one you forge. You need a look that’s unconventional and unmistakably masculine" />
+  	<meta property="og:site_name" content="American Crew My Style" />
+  	<meta property="og:image" content="http://americancrew.com/mystyle/looks/maverick1_mobile.jpg" />
 	<?php include('includes/header_scripts.php') ?>
 </head>
 <body class="results">
@@ -27,7 +32,7 @@
 	<a href="<?php echo $asset_root; ?>/" class="logo"></a>
 	<article>
 		<h1>You are a maverick.</h1>
-		<p>Trouser socks. Cartoon character neckties. Khakis. For you, those are the things nightmares are made of. Your style has been cultivated from years of experience, not years of living up to expectations. And you know that the only road worth following is the one you forge. You need a look that’s unconventional and unmistakably masculine. <a href="#" class="share">Share +</a> </p>
+		<p>Trouser socks. Cartoon character neckties. Khakis. For you, those are the things nightmares are made of. Your style has been cultivated from years of experience, not years of living up to expectations. And you know that the only road worth following is the one you forge. You need a look that’s unconventional and unmistakably masculine. <a href="http://www.facebook.com/sharer/sharer.php?u=http://americancrew.com/mystyle/maverick/" class="share">Share +</a> </p>
 	</article>
 	<a href="<?php echo $asset_root; ?>/" class="logo"></a>
 	<div class="expand"><div></div></div>

@@ -6,6 +6,11 @@
   <!--<![endif]-->
 <head>
 	<?php include('includes/standard_meta.php'); ?>
+	<meta property="og:title" content="American Crew My Style - The Revolutionary" />
+	<meta property="og:type" content="website" />
+  	<meta property="og:description" content="You Are a Revolutionary - You eat new trends for breakfast alongside your single source espresso. Dates refer to you as the man who's always taking them to places they’ve never been before. And your friends will always trust your restaurant recommendations above any online review. You need a hairstyle that has an unmistakable attitude and plenty of versatility." />
+  	<meta property="og:site_name" content="American Crew My Style" />
+  	<meta property="og:image" content="http://americancrew.com/mystyle/looks/revolutionary1_mobile.jpg" />
 	<?php include('includes/header_scripts.php') ?>	
 </head>
 <body class="results">
@@ -27,7 +32,7 @@
 	<a href="<?php echo $asset_root; ?>/" class="logo"></a>
 	<article>
 		<h1>You are a revolutionary.</h1>
-		<p>You eat new trends for breakfast alongside your single source espresso. Dates refer to you as the man who's always taking them to places they’ve never been before. And your friends will always trust your restaurant recommendations above any online review. You need a hairstyle that has an unmistakable attitude and plenty of versatility. <a href="#" class="share">Share +</a> </p>
+		<p>You eat new trends for breakfast alongside your single source espresso. Dates refer to you as the man who's always taking them to places they’ve never been before. And your friends will always trust your restaurant recommendations above any online review. You need a hairstyle that has an unmistakable attitude and plenty of versatility. <a href="http://www.facebook.com/sharer/sharer.php?u=http://americancrew.com/mystyle/revolutionary/" class="share">Share +</a> </p>
 	</article>
 	<a href="<?php echo $asset_root; ?>/" class="logo"></a>
 	<div class="expand"><div></div></div>
