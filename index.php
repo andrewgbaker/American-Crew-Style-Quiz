@@ -12,18 +12,18 @@
 	<meta name="author" content="Karsh Hagan">  	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-	<script type="text/javascript" src="js/libs/modernizr.js"></script>
+	<script type="text/javascript" src="<?php echo $asset_root; ?>/js/libs/modernizr.js"></script>
 	
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
   
-	<link rel="stylesheet" href="/css/style.css" />
+	<link rel="stylesheet" href="<?php echo $asset_root; ?>/css/style.css" />
   
 
 </head>
 
 	<body class="home">
 	
-	<img class="bg_load" src="/img/home_bg.jpg" alt="home_bg"/>
+	<img class="bg_load" src="<?php echo $asset_root; ?>/img/home_bg.jpg" alt="home_bg"/>
 	<div class="home_bg" style="opacity: 0"></div>
 	
 		<a href="#" class="logo"></a>
@@ -53,7 +53,7 @@
 	
 	<!-- jQuery if needed -->
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <script type="text/javascript" src="/js/libs/imagesloaded.min.js"></script>
+        <script type="text/javascript" src="<?php echo $asset_root; ?>/js/libs/imagesloaded.min.js"></script>
         
         <script>
         	imagesLoaded( '.bg_load', function() {
