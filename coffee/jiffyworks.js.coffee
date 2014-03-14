@@ -37,6 +37,8 @@ $.Events =
     SCROLL_COMPLETE: 'scrollComplete'
     CLICK: 'click'
     TOUCH_START: 'touchstart'
+    TOUCH_MOVE: "touchmove"
+    TOUCH_END: "touchend"
     CHANGE: 'change'
     SUBMIT: 'submit'
     FOCUS: 'focus'

@@ -1292,6 +1292,9 @@ header {
   animation-delay: 0.3s; }
 
 .question-page {
+  background-color: #333333; }
+
+.question-page-content {
   height: 100%; }
 
 .grid {

@@ -41,6 +41,8 @@
     SCROLL_COMPLETE: 'scrollComplete',
     CLICK: 'click',
     TOUCH_START: 'touchstart',
+    TOUCH_MOVE: "touchmove",
+    TOUCH_END: "touchend",
     CHANGE: 'change',
     SUBMIT: 'submit',
     FOCUS: 'focus',
@@ -299,7 +301,6 @@
     SLIDE_CHANGE: "SLIDE_CHANGE",
     MOUSE_WHEEL: "mousewheel",
     HEADER_TOGGLE: "HEADER_TOGGLE",
-    TOUCH_MOVE: "touchmove",
     ANSWER_CLICK: "ANSWER_CLICK",
     QUESTION_NAV_CLICKED: "QUESTION_NAV_CLICKED"
   };
@@ -619,8 +620,10 @@
             }
             if (answer === max_points) {
               tied_categories.push(type);
-              highest_category = 'wildcard';
             }
+          }
+          if (tied_categories.length > 1) {
+            highest_category = 'wildcard';
           }
           if (_quiz_answers.hair < 3) {
             look_slide = 'two';
@@ -632,6 +635,8 @@
               look_slide = 'three';
             }
           }
+          puts(tied_categories);
+          puts("final highest answer:" + highest_category);
           $me.attr("action", highest_category + "/#" + "looks/" + look_slide);
           return $me.get(0).submit();
         };
@@ -772,11 +777,26 @@
         jQuery.extend(config, this.settings);
       }
       return this.each(function(index) {
-        var $me, _index, _init, _on_click;
+        var $me, _index, _init, _on_click, _touch_end, _touch_in_progress, _touch_move, _touch_start;
         $me = $(this);
         _index = index + 1;
+        _touch_in_progress = false;
+        _touch_start = function() {
+          return _touch_in_progress = true;
+        };
+        _touch_move = function() {
+          return _touch_in_progress = false;
+        };
+        _touch_end = function(evt) {
+          if (_touch_in_progress) {
+            return _on_click(evt);
+          }
+        };
         _init = function() {
-          return listen_to($.Events.CLICK, config.myName, _on_click, $me.find(".back"));
+          listen_to($.Events.CLICK, config.myName, _on_click, $me.find(".back"));
+          listen_to($.Events.TOUCH_START, config.myName, _touch_start, $me.find(".back"));
+          listen_to($.Events.TOUCH_END, config.myName, _touch_end, $me.find(".back"));
+          return listen_to($.Events.TOUCH_MOVE, config.myName, _touch_move, $me.find(".back"));
         };
         _on_click = function(evt) {
           var answer_obj;

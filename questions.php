@@ -9,7 +9,7 @@
 	<?php include('includes/header_scripts.php') ?>	
 </head>
 
-	<body>
+	<body class="questions-page">
 	
 		<!-- BEGIN LOADING OVERLAY -->
 		<section class="load_wrap">
@@ -26,7 +26,7 @@
   		</section>
   		<!-- END LOADING OVERLAY -->
   		
-		<div class="question-page" data-script="QuestionPage">
+		<div class="question-page-content" data-script="QuestionPage">
 			<!-- BEGIN: Question 1 -->
 			<div class="grid clearfix question-group" id="clothes">
 				<div class="bgLoad">
