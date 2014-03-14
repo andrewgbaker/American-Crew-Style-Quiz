@@ -405,7 +405,8 @@ $ ->
 			_init = () -> 
 				# $.address.change _on_address_change
 				debug "init question page"
-				$.Body.animate({scrollTop:0})
+				# $.Body.animate({scrollTop:0})
+				TweenLite.to(window,0,{scrollTo:{y:0}})
 				listen_to $.Events.ANSWER_CLICK, config.myName, _on_answer_click
 				listen_to $.Events.QUESTION_NAV_CLICKED, config.myName, _on_answer_click
 				$(".question-group").Question("Question",config)
