@@ -11,12 +11,12 @@
 <body class="results">
 
 <header>
-	<a href="#" class="logo"></a>
+	<a href="<?php echo $asset_root; ?>/" class="logo"></a>
 	<article>
 		<h1>You are a Player.</h1>
 		<p>You’re always on your game and your game is always on. Whether you’re lifting weights or picking up dates, you never take your eyes off the finish line. You need a look that’s casually confident and easy to maintain. <a href="#" class="share">Share +</a> </p>
 	</article>
-	<a href="#" class="logo"></a>
+	<a href="<?php echo $asset_root; ?>/" class="logo"></a>
 	<div class="expand"><div></div></div>
 </header>
 
@@ -48,11 +48,11 @@
 						<img src="<?php echo $asset_root; ?>/img/product/boostpowder.jpg" alt="American Crew Boost Powder" />
 					</div>
 					<div class="cta">
-						<div class="start_btn secondary"><a href="#">Find a Stylist</a></div>
-						<div class="start_btn"><a href="#">Buy Product</a></div>
+						<div class="start_btn secondary"><a href="http://www.americancrew.com/salon-locator">Find a Stylist</a></div>
+						<div class="start_btn"><a href="http://www.americancrew.com/products">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="#">Ultramatte</a>, <a href="#">Boost Powder</a> and to <a href="<?php echo $asset_root; ?>/img/player_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/ultramatte">Ultramatte</a>, <a href="http://www.americancrew.com/products/style/boost-powder">Boost Powder</a> and to <a href="<?php echo $asset_root; ?>/img/player1_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
@@ -83,11 +83,11 @@
 						<img src="<?php echo $asset_root; ?>/img/product/alternator.jpg" alt="American Crew Alternator" />
 					</div>
 					<div class="cta">
-						<div class="start_btn secondary"><a href="#">Find a Stylist</a></div>
-						<div class="start_btn"><a href="#">Buy Product</a></div>
+						<div class="start_btn secondary"><a href="http://www.americancrew.com/salon-locator">Find a Stylist</a></div>
+						<div class="start_btn"><a href="http://www.americancrew.com/products">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="#">Alternator</a>, <a href="#">Daily Shampoo</a> and to <a href="<?php echo $asset_root; ?>/img/player_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/alternator">American Crew Alternator</a>, <a href="http://www.americancrew.com/products/hair-body-care/daily-moisturizing-shampoo">Daily Shampoo</a> and to <a href="<?php echo $asset_root; ?>/img/player2_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
@@ -118,11 +118,11 @@
 						<img src="<?php echo $asset_root; ?>/img/product/pomade.jpg" alt="American Crew Pomade" />
 					</div>
 					<div class="cta">
-						<div class="start_btn secondary"><a href="#">Find a Stylist</a></div>
-						<div class="start_btn"><a href="#">Buy Product</a></div>
+						<div class="start_btn secondary"><a href="http://www.americancrew.com/salon-locator">Find a Stylist</a></div>
+						<div class="start_btn"><a href="http://www.americancrew.com/products">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="#">Pomade</a>, <a href="#">Daily Shampoo</a> and to <a href="<?php echo $asset_root; ?>/img/player_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/pomade">Pomade</a>, <a href="http://www.americancrew.com/products/hair-body-care/daily-moisturizing-shampoo">Daily Shampoo</a> and to <a href="<?php echo $asset_root; ?>/img/player3_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>

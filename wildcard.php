@@ -24,12 +24,12 @@
 </section>
 <!-- END LOADING OVERLAY -->
 <header>
-	<a href="#" class="logo"></a>
+	<a href="<?php echo $asset_root; ?>/" class="logo"></a>
 	<article>
 		<h1>You are a wild card.</h1>
 		<p>You're a Renaissance man with a modern edge. You've seen a lot, learned a lot and can handle a lot. Your daily routine is anything but predictable. And your friends follow your status updates more closely than they do world politics. You need a look that has plenty of versatility and is always good to go. <a href="#" class="share">Share +</a> </p>
 	</article>
-	<a href="#" class="logo"></a>
+	<a href="<?php echo $asset_root; ?>/" class="logo"></a>
 	<div class="expand"><div></div></div>
 </header>
 
@@ -62,10 +62,10 @@
 					</div>
 					<div class="cta">
 						<div class="start_btn secondary"><a href="http://www.americancrew.com/salon-locator">Find a Stylist</a></div>
-						<div class="start_btn"><a href="#">Buy Product</a></div>
+						<div class="start_btn"><a href="http://www.americancrew.com/products">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="#">American Crew Alternator</a>, <a href="#">Daily Moisturizing Shampoo</a> and to <a href="<?php echo $asset_root; ?>/img/wildcard_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/alternator">American Crew Alternator</a>, <a href="http://www.americancrew.com/products/hair-body-care/daily-moisturizing-shampoo">Daily Moisturizing Shampoo</a> and to <a href="<?php echo $asset_root; ?>/img/wildcard1_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
@@ -97,10 +97,10 @@
 					</div>
 					<div class="cta">
 						<div class="start_btn secondary"><a href="http://www.americancrew.com/salon-locator">Find a Stylist</a></div>
-						<div class="start_btn"><a href="#">Buy Product</a></div>
+						<div class="start_btn"><a href="http://www.americancrew.com/products">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="#">American Crew Superglue</a>, <a href="#">Daily Moisturizing Shampoo</a> and to <a href="<?php echo $asset_root; ?>/img/wildcard_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/superglue">American Crew Superglue</a>, <a href="http://www.americancrew.com/products/hair-body-care/daily-moisturizing-shampoo">Daily Moisturizing Shampoo</a> and to <a href="<?php echo $asset_root; ?>/img/wildcard2_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
@@ -132,10 +132,10 @@
 					</div>
 					<div class="cta">
 						<div class="start_btn secondary"><a href="http://www.americancrew.com/salon-locator">Find a Stylist</a></div>
-						<div class="start_btn"><a href="#">Buy Product</a></div>
+						<div class="start_btn"><a href="http://www.americancrew.com/products">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="#">American Crew Daily Moisturizing Shampoo</a>, <a href="#">Boost Cream</a> and to <a href="<?php echo $asset_root; ?>/img/wildcard_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/hair-body-care/daily-moisturizing-shampoo">American Crew Daily Moisturizing Shampoo</a>, <a href="http://www.americancrew.com/products/style/boost-cream-0">Boost Cream</a> and to <a href="<?php echo $asset_root; ?>/img/wildcard3_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
