@@ -82,8 +82,8 @@ $ ->
 			
 			_init = () ->
 				listen_to $.Events.RESIZE, config.myName, _resize
-				# listen_to $.Events.MOUSE_WHEEL, config.myName, _on_scroll
-				# listen_to $.Events.TOUCH_MOVE, config.myName, _on_swipe
+				listen_to $.Events.MOUSE_WHEEL, config.myName, _on_scroll
+				listen_to $.Events.TOUCH_MOVE, config.myName, _on_swipe
 				_resize()
 				announce $.Events.INITIALIZE_DATASCRIPTS
 				announce $.Events.SITE_INITIALIZED
@@ -110,29 +110,28 @@ $ ->
 		this.each (index) ->
 			$me = $(this)
 
+			_expand_contract_header = () ->
+				timeout_function = () ->
+					debug "on expand click timeout"
+					debug $('.expand div')
+					$('.expand div').toggleClass('open')
+					$('.looks_logo').toggleClass('hidden')
+
+				$('#section1').toggleClass('look_down')
+				$('header').toggleClass('header_up')
+				setTimeout(timeout_function, 500)
+
 			_on_mouse_wheel = (event,delta) ->
 				if($('#section1').hasClass('look_down'))
-					$('#section1').toggleClass('look_down')
-					$('header').toggleClass('header_up')
-
-					timeout_function = () ->
-						$('.expand div').toggleClass('open')
-						$('.looks_logo').toggleClass('hidden')
-
-					setTimeout timeout_function, 500
+					_expand_contract_header()
 
 			_on_touch_move = () ->
-				if($('#section1').hasClass('look_down'))
-					$('#section1').toggleClass('look_down')
-					$('header').toggleClass('header_up')
+				_expand_contract_header()
 
 				$('html').unbind('touchmove');
 
 			_on_expand_click = (evt) ->
-				timeout_function = () ->
-					$('.expand div').toggleClass('open')
-					$('.looks_logo').toggleClass('hidden')
-				setTimeout timeout_function, 500
+				_expand_contract_header()
 
 			_set_for_mobile = () ->
 				debug "setting for mobile"
@@ -144,7 +143,7 @@ $ ->
 					$.fn.fullpage(config.full_page_opts);
 				$(window).bind 'mousewheel DOMMouseScroll MozMousePixelScroll', _on_mouse_wheel
 				$('html').on 'touchmove', _on_touch_move
-				$('.expand').on "click", _on_expand_click
+				$('.expand').on 'click', _on_expand_click
 				if $.Window.windowWidth < 767
 					_set_for_mobile()
 	

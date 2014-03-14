@@ -365,6 +365,8 @@
         };
         _init = function() {
           listen_to($.Events.RESIZE, config.myName, _resize);
+          listen_to($.Events.MOUSE_WHEEL, config.myName, _on_scroll);
+          listen_to($.Events.TOUCH_MOVE, config.myName, _on_swipe);
           _resize();
           announce($.Events.INITIALIZE_DATASCRIPTS);
           announce($.Events.SITE_INITIALIZED);
@@ -396,34 +398,31 @@
         jQuery.extend(config, this.settings);
       }
       return this.each(function(index) {
-        var $me, _init, _on_expand_click, _on_mouse_wheel, _on_touch_move, _set_for_mobile;
+        var $me, _expand_contract_header, _init, _on_expand_click, _on_mouse_wheel, _on_touch_move, _set_for_mobile;
         $me = $(this);
-        _on_mouse_wheel = function(event, delta) {
-          var timeout_function;
-          if ($('#section1').hasClass('look_down')) {
-            $('#section1').toggleClass('look_down');
-            $('header').toggleClass('header_up');
-            timeout_function = function() {
-              $('.expand div').toggleClass('open');
-              return $('.looks_logo').toggleClass('hidden');
-            };
-            return setTimeout(timeout_function, 500);
-          }
-        };
-        _on_touch_move = function() {
-          if ($('#section1').hasClass('look_down')) {
-            $('#section1').toggleClass('look_down');
-            $('header').toggleClass('header_up');
-          }
-          return $('html').unbind('touchmove');
-        };
-        _on_expand_click = function(evt) {
+        _expand_contract_header = function() {
           var timeout_function;
           timeout_function = function() {
+            debug("on expand click timeout");
+            debug($('.expand div'));
             $('.expand div').toggleClass('open');
             return $('.looks_logo').toggleClass('hidden');
           };
+          $('#section1').toggleClass('look_down');
+          $('header').toggleClass('header_up');
           return setTimeout(timeout_function, 500);
+        };
+        _on_mouse_wheel = function(event, delta) {
+          if ($('#section1').hasClass('look_down')) {
+            return _expand_contract_header();
+          }
+        };
+        _on_touch_move = function() {
+          _expand_contract_header();
+          return $('html').unbind('touchmove');
+        };
+        _on_expand_click = function(evt) {
+          return _expand_contract_header();
         };
         _set_for_mobile = function() {
           debug("setting for mobile");
@@ -436,7 +435,7 @@
           }
           $(window).bind('mousewheel DOMMouseScroll MozMousePixelScroll', _on_mouse_wheel);
           $('html').on('touchmove', _on_touch_move);
-          $('.expand').on("click", _on_expand_click);
+          $('.expand').on('click', _on_expand_click);
           if ($.Window.windowWidth < 767) {
             return _set_for_mobile();
           }
