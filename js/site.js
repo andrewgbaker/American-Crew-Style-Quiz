@@ -765,8 +765,7 @@
         $me = $(this);
         _index = index + 1;
         _init = function() {
-          listen_to($.Events.CLICK, config.myName, _on_click, $me.find(".back"));
-          return listen_to($.Events.TOUCH_START, config.myName, _on_click, $me.find(".back"));
+          return listen_to($.Events.CLICK, config.myName, _on_click, $me.find(".back"));
         };
         _on_click = function(evt) {
           var answer_obj;

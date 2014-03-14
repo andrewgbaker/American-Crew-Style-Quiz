@@ -449,7 +449,7 @@ $ ->
 	
 			_init = () ->
 				listen_to $.Events.CLICK, config.myName, _on_click, $me.find(".back")
-				listen_to $.Events.TOUCH_START, config.myName, _on_click, $me.find(".back")
+				# listen_to $.Events.TOUCH_START, config.myName, _on_click, $me.find(".back")
 
 			_on_click = (evt) ->
 				evt.preventDefault();
