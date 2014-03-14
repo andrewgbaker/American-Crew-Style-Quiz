@@ -45,7 +45,7 @@ $(document).ready(function() {
 		}, 500);
 	});
 	
-	$("body").on("keydown", function(e){
+	$("body.results").on("keydown", function(e){
 	
 	    if(e.keyCode === 40) {
 	
