@@ -760,7 +760,7 @@
         $me = $(this);
         _index = index + 1;
         _init = function() {
-          return listen_to($.Events.CLICK, config.myName, _on_click, $me);
+          return listen_to($.Events.CLICK, config.myName, _on_click, $me.find(".back"));
         };
         _on_click = function(evt) {
           var answer_obj;

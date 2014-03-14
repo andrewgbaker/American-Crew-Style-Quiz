@@ -443,7 +443,7 @@ $ ->
 			_index = index + 1;
 	
 			_init = () ->
-				listen_to $.Events.CLICK, config.myName, _on_click, $me
+				listen_to $.Events.CLICK, config.myName, _on_click, $me.find(".back")
 
 			_on_click = (evt) ->
 				evt.preventDefault();
