@@ -938,7 +938,9 @@ header {
           color: #a53e1f;
           line-height: 20px; }
         .slide article .look_wrap .quote:after, .slide .look_img .look_wrap .quote:after {
-          content: "\201D"; }
+          content: "\201D";
+          position: absolute;
+          bottom: 0; }
       .slide article .look_wrap .product, .slide .look_img .look_wrap .product {
         height: 220px; }
         .slide article .look_wrap .product .wrap, .slide .look_img .look_wrap .product .wrap {

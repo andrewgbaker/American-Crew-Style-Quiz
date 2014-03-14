@@ -52,7 +52,7 @@
 						<div class="start_btn"><a href="http://www.americancrew.com/products">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/ultramatte">Ultramatte</a>, <a href="http://www.americancrew.com/products/style/boost-powder">Boost Powder</a> and to <a href="<?php echo $asset_root; ?>/img/player1_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/ultramatte">Ultramatte</a>, <a href="http://www.americancrew.com/products/style/boost-powder">Boost Powder</a> and to <a href="<?php echo $asset_root; ?>/img/save/player1_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
@@ -87,7 +87,7 @@
 						<div class="start_btn"><a href="http://www.americancrew.com/products">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/alternator">American Crew Alternator</a>, <a href="http://www.americancrew.com/products/hair-body-care/daily-moisturizing-shampoo">Daily Shampoo</a> and to <a href="<?php echo $asset_root; ?>/img/player2_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/alternator">American Crew Alternator</a>, <a href="http://www.americancrew.com/products/hair-body-care/daily-moisturizing-shampoo">Daily Shampoo</a> and to <a href="<?php echo $asset_root; ?>/img/save/player2_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
@@ -122,7 +122,7 @@
 						<div class="start_btn"><a href="http://www.americancrew.com/products">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/pomade">Pomade</a>, <a href="http://www.americancrew.com/products/hair-body-care/daily-moisturizing-shampoo">Daily Shampoo</a> and to <a href="<?php echo $asset_root; ?>/img/player3_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/pomade">Pomade</a>, <a href="http://www.americancrew.com/products/hair-body-care/daily-moisturizing-shampoo">Daily Shampoo</a> and to <a href="<?php echo $asset_root; ?>/img/save/player3_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>

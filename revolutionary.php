@@ -65,7 +65,7 @@
 						<div class="start_btn"><a href="http://www.americancrew.com/products">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/firm-hold-styling-gel">American Crew Firm Hold Styling Gel</a>, <a href="http://www.americancrew.com/products/style/light-hold-texture-lotion">Light Hold Texture Lotion</a> and to <a href="<?php echo $asset_root; ?>/img/revolutionary1_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/firm-hold-styling-gel">American Crew Firm Hold Styling Gel</a>, <a href="http://www.americancrew.com/products/style/light-hold-texture-lotion">Light Hold Texture Lotion</a> and to <a href="<?php echo $asset_root; ?>/img/save/revolutionary1_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
@@ -100,7 +100,7 @@
 						<div class="start_btn"><a href="http://www.americancrew.com/products">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/boost-powder">American Crew Boost Powder</a>, <a href="http://www.americancrew.com/products/style/boost-cream-0">Boost Cream</a> and to <a href="<?php echo $asset_root; ?>/img/revolutionary2_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/boost-powder">American Crew Boost Powder</a>, <a href="http://www.americancrew.com/products/style/boost-cream-0">Boost Cream</a> and to <a href="<?php echo $asset_root; ?>/img/save/revolutionary2_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
@@ -135,7 +135,7 @@
 						<div class="start_btn"><a href="http://www.americancrew.com/products">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/light-hold-styling-gel">Light Hold Styling Gel</a>, <a href="http://www.americancrew.com/products/style/defining-paste">Defining Paste</a> and to <a href="<?php echo $asset_root; ?>/img/revolutionary3_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/light-hold-styling-gel">Light Hold Styling Gel</a>, <a href="http://www.americancrew.com/products/style/defining-paste">Defining Paste</a> and to <a href="<?php echo $asset_root; ?>/img/save/revolutionary3_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
