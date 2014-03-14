@@ -53,7 +53,7 @@
 					</div>
 				</div>
 				<p>To create this style, you'll need <a href="#">Ultramatte</a>, <a href="#">Boost Powder</a> and to <a href="<?php echo $asset_root; ?>/img/player_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
-				<h6>Not Where you Thought You'd End Up? <a href="/questions">Restart the Quiz </a></h6>
+				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
 		<div class="look_img" style="background: url('<?php echo $asset_root; ?>/img/looks/player1.jpg') no-repeat top center"></div>
@@ -88,7 +88,7 @@
 					</div>
 				</div>
 				<p>To create this style, you'll need <a href="#">Alternator</a>, <a href="#">Daily Shampoo</a> and to <a href="<?php echo $asset_root; ?>/img/player_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
-				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
+				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
 		<div class="look_img" style="background: url('<?php echo $asset_root; ?>/img/looks/player2.jpg') no-repeat top center"></div>
@@ -123,7 +123,7 @@
 					</div>
 				</div>
 				<p>To create this style, you'll need <a href="#">Pomade</a>, <a href="#">Daily Shampoo</a> and to <a href="<?php echo $asset_root; ?>/img/player_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
-				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
+				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
 		<div class="look_img" style="background: url('<?php echo $asset_root; ?>/img/looks/player3.jpg') no-repeat top center"></div>

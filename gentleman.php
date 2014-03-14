@@ -66,7 +66,7 @@
 					</div>
 				</div>
 				<p>To create this style, you'll need <a href="#">American Crew Light Hold Styling Gel</a>, <a href="#">Boost Powder</a> and to <a href="<?php echo $asset_root; ?>/img/gentleman_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
-				<h6>Not Where you Thought You'd End Up? <a href="/questions">Restart the Quiz </a></h6>
+				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
 		<div class="look_img" style="background: url('<?php echo $asset_root; ?>/img/looks/gentleman1.jpg') no-repeat top center"></div>
@@ -101,7 +101,7 @@
 					</div>
 				</div>
 				<p>To create this style, you'll need <a href="#">Light Hold Texture Lotion</a>, <a href="#">Forming Cream</a> and to <a href="<?php echo $asset_root; ?>/img/gentleman_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
-				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
+				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
 		<div class="look_img" style="background: url('<?php echo $asset_root; ?>/img/looks/gentleman2.jpg') no-repeat top center"></div>
@@ -136,7 +136,7 @@
 					</div>
 				</div>
 				<p>To create this style, you'll need <a href="#">Light Hold Styling Gel</a>, <a href="#">Pomade</a> and to <a href="<?php echo $asset_root; ?>/img/gentleman_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
-				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
+				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
 		<div class="look_img" style="background: url('<?php echo $asset_root; ?>/img/looks/gentleman3.jpg') no-repeat top center"></div>
