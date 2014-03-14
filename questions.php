@@ -35,11 +35,6 @@
 					<img src="<?php echo $asset_root; ?>/img/questions/suit_bg.jpg" alt="suit" />
 					<img src="<?php echo $asset_root; ?>/img/questions/leather_bg.jpg" alt="leader jacket" />
 					<img src="<?php echo $asset_root; ?>/img/questions/basict_bg.jpg" alt="basic t" />
-					<img src="<?php echo $asset_root; ?>/img/questions/jazz_bg.jpg" alt="basic t" />
-					<img src="<?php echo $asset_root; ?>/img/questions/punkrock_bg.jpg" alt="basic t" />
-					<img src="<?php echo $asset_root; ?>/img/questions/classicRock_bg.jpg" alt="basic t" />
-					<img src="<?php echo $asset_root; ?>/img/questions/havent_heard_bg.jpg" alt="basic t" />
-					<img src="<?php echo $asset_root; ?>/img/questions/beats_bg.jpg" alt="basic t" />
 				</div>
 				<section class="question">
 					<a class="logo q_logo"></a>
