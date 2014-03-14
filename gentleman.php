@@ -26,7 +26,7 @@
 	<div class="slide clearfix" data-anchor="one">
 		<article>
 			<div class="look_wrap">
-				<div class="mobile_look_img"><img src="/img/gentleman1_mobile.jpg" alt="the single malt" /> </div>
+				<div class="mobile_look_img"><img src="/img/looks/gentleman1_mobile.jpg" alt="the single malt" /> </div>
 				<h2>Gentleman - <span>The Looks</span></h2>
 				<nav class="looks_nav clearfix">
 					<a href="#" class="active_look">
@@ -61,7 +61,7 @@
     <div class="slide" data-anchor="two"> 
     	<article>
 			<div class="look_wrap">
-				<div class="mobile_look_img"><img src="/img/gentleman2_mobile.jpg" alt="the single malt" /> </div>
+				<div class="mobile_look_img"><img src="/img/looks/gentleman2_mobile.jpg" alt="the single malt" /> </div>
 				<h2>Gentleman - <span>The Looks</span></h2>
 				<nav class="looks_nav clearfix">
 					<a href="#">
@@ -96,7 +96,7 @@
     <div class="slide" data-anchor="three">
     	<article>
 			<div class="look_wrap">
-				<div class="mobile_look_img"><img src="/img/gentleman3_mobile.jpg" alt="the single malt" /> </div>
+				<div class="mobile_look_img"><img src="/img/looks/gentleman3_mobile.jpg" alt="the single malt" /> </div>
 				<h2>Gentleman - <span>The Looks</span></h2>
 				<nav class="looks_nav clearfix">
 					<a href="#">
