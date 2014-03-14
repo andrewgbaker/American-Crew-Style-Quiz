@@ -31,10 +31,10 @@
 			<div class="grid clearfix question-group" id="clothes">
 				<div class="bgLoad">
 					<img src="<?php echo $asset_root; ?>/img/questions/skinnyjeans_bg.jpg" alt="skinny jeans" />
-					<img src="<?php echo $asset_root; ?>/img/questions/polo_bg.jpg" alt="skinny jeans" />
-					<img src="<?php echo $asset_root; ?>/img/questions/suit_bg.jpg" alt="skinny jeans" />
-					<img src="<?php echo $asset_root; ?>/img/questions/leather_bg.jpg" alt="skinny jeans" />
-					<img src="<?php echo $asset_root; ?>/img/questions/basict_bg.jpg" alt="skinny jeans" />
+					<img src="<?php echo $asset_root; ?>/img/questions/polo_bg.jpg" alt="polo" />
+					<img src="<?php echo $asset_root; ?>/img/questions/suit_bg.jpg" alt="suit" />
+					<img src="<?php echo $asset_root; ?>/img/questions/leather_bg.jpg" alt="leader jacket" />
+					<img src="<?php echo $asset_root; ?>/img/questions/basict_bg.jpg" alt="basic t" />
 				</div>
 				<section class="question">
 					<a class="logo q_logo"></a>
@@ -46,7 +46,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/skinnyjeans_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/skinnyjeans.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/skinnyjeans.png" alt="Skinny Jeans" />
 								</div>
 							</div>
 						</div>
@@ -63,7 +63,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/polo_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/polo.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/polo.png" alt="A Polo Shirt" />
 								</div>
 							</div>
 						</div>
@@ -80,7 +80,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/suit_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/suit.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/suit.png" alt="A Nice Suit" />
 								</div>
 							</div>
 						</div>
@@ -97,7 +97,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/leather_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/leather.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/leather.png" alt="Leather Jacket" />
 								</div>
 							</div>
 						</div>
@@ -114,7 +114,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/basict_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/basict.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/basict.png" alt="Basic T Shirt" />
 								</div>
 							</div>
 						</div>
@@ -139,7 +139,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/jazz_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/jazz.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/jazz.png" alt="Jazz" />
 								</div>
 							</div>
 						</div>
@@ -156,7 +156,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/punkrock_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/punkrock.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/punkrock.png" alt="Old School Punk" />
 								</div>
 							</div>
 						</div>
@@ -173,7 +173,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/classicRock_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/classicRock.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/classicRock.png" alt="Rock Classics" />
 								</div>
 							</div>
 						</div>
@@ -190,7 +190,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/havent_heard_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/havent_heard.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/havent_heard.png" alt="You Haven't Heard" />
 								</div>
 							</div>
 						</div>
@@ -207,7 +207,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/beats_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/beats.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/beats.png" alt="Beats" />
 								</div>
 							</div>
 						</div>
@@ -232,7 +232,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/divebar_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/divebar.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/divebar.png" alt="Hit Up A Dive Bar" />
 								</div>
 							</div>
 						</div>
@@ -249,7 +249,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/nicedinner_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/nicedinner.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/nicedinner.png" alt="A Nice Dinner" />
 								</div>
 							</div>
 						</div>
@@ -266,7 +266,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/underground_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/underground.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/underground.png" alt="Underground Show" />
 								</div>
 							</div>
 						</div>
@@ -283,7 +283,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/goingtogame_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/goingtogame.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/goingtogame.png" alt="Going to the game" />
 								</div>
 							</div>
 						</div>
@@ -300,7 +300,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/bottleservice_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/bottleservice.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/bottleservice.png" alt="Bottle Service" />
 								</div>
 							</div>
 						</div>
@@ -325,7 +325,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/bourbon_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/bourbon.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/bourbon.png" alt="Bourbon" />
 								</div>
 							</div>
 						</div>
@@ -342,7 +342,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/gin_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/gin.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/gin.png" alt="gin" />
 								</div>
 							</div>
 						</div>
@@ -359,7 +359,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/tequila_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/tequila.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/tequila.png" alt="Tequila" />
 								</div>
 							</div>
 						</div>
@@ -376,7 +376,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/newest_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/newest.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/newest.png" alt="Newest Thing" />
 								</div>
 							</div>
 						</div>
@@ -393,7 +393,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/beer_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/beer.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/beer.png" alt="Beer" />
 								</div>
 							</div>
 						</div>
@@ -418,7 +418,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/smartissexy_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/smartissexy.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/smartissexy.png" alt="Smart is Sexy" />
 								</div>
 							</div>
 						</div>
@@ -435,7 +435,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/senseofhumor_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/senseofhumor.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/senseofhumor.png" alt="Sense of Humor" />
 								</div>
 							</div>
 						</div>
@@ -452,7 +452,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/taste_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/taste.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/taste.png" alt="Taste" />
 								</div>
 							</div>
 						</div>
@@ -469,7 +469,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/keepup_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/keepup.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/keepup.png" alt="Keep up" />
 								</div>
 							</div>
 						</div>
@@ -486,7 +486,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/dontcare_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/dontcare.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/dontcare.png" alt="Good Time" />
 								</div>
 							</div>
 						</div>
@@ -511,7 +511,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/wavy_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/wavy.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/wavy.png" alt="Wavy" />
 								</div>
 							</div>
 						</div>
@@ -530,7 +530,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/curly_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/curly.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/curly.png" alt="Curly" />
 								</div>
 							</div>
 						</div>
@@ -549,7 +549,7 @@
 						<div style="background: url('<?php echo $asset_root; ?>/img/questions/straight_bg.jpg');" class="front">
 							<div class="answer">
 								<div>
-									<img src="<?php echo $asset_root; ?>/img/questions/straight.png" alt="bourbon" />
+									<img src="<?php echo $asset_root; ?>/img/questions/straight.png" alt="Straight" />
 								</div>
 							</div>
 						</div>

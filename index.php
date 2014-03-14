@@ -23,7 +23,7 @@
 
 	<body class="home">
 	
-	<img class="bg_load" src="<?php echo $asset_root; ?>/img/home_bg.jpg" alt="home_bg"/>
+	<img class="bgLoad" src="<?php echo $asset_root; ?>/img/home_bg.jpg" alt="home_bg"/>
 	<div class="home_bg" style="opacity: 0"></div>
 	
 		<a href="#" class="logo"></a>
@@ -41,7 +41,7 @@
 							<span>–Paul Wilson,  American Crew Artistic Director & world–renowned stylist</span>
 						</aside>
 						<div>
-							<img src="/img/paul_wilson.jpg" alt="paul wilson" />
+							<img src="<?php echo $asset_root; ?>/img/paul_wilson.jpg" alt="paul wilson" />
 						</div>
 					</section>
 				</div>

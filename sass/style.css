@@ -564,9 +564,6 @@ blockquote {
         background: url(../img/home_bg_mobile.jpg) top center no-repeat #474747; } }
   .home .show {
     opacity: 1; }
-  .home .bg_load {
-    position: absolute;
-    left: 9999999999px; }
   .home .logo {
     left: 0;
     position: absolute;
@@ -1160,7 +1157,7 @@ header {
   height: 100%;
   position: absolute;
   background: #333333;
-  z-index: 999999999;
+  z-index: 99999999999;
   opacity: 1; }
   .load_wrap p {
     position: absolute;
