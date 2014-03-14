@@ -40,6 +40,7 @@
     RESIZE_COMPLETE: 'resizeSiteComplete',
     SCROLL_COMPLETE: 'scrollComplete',
     CLICK: 'click',
+    TOUCH_START: 'touchstart',
     CHANGE: 'change',
     SUBMIT: 'submit',
     FOCUS: 'focus',
@@ -398,7 +399,7 @@
         jQuery.extend(config, this.settings);
       }
       return this.each(function(index) {
-        var $me, _expand_contract_header, _init, _on_expand_click, _on_mouse_wheel, _on_touch_move, _set_for_mobile;
+        var $me, _expand_contract_header, _hide_loader, _init, _on_expand_click, _on_mouse_wheel, _on_touch_move, _set_for_mobile;
         $me = $(this);
         _expand_contract_header = function() {
           var timeout_function;
@@ -429,6 +430,12 @@
           $('body').css("overflow-y", "visible");
           return $(".section").attr("style", "");
         };
+        _hide_loader = function() {
+          $('.load_wrap').addClass('hideloader');
+          if ($.Window.windowWidth < 767) {
+            return _set_for_mobile();
+          }
+        };
         _init = function() {
           if ($.fn.fullpage) {
             $.fn.fullpage(config.full_page_opts);
@@ -436,9 +443,7 @@
           $(window).bind('mousewheel DOMMouseScroll MozMousePixelScroll', _on_mouse_wheel);
           $('html').on('touchmove', _on_touch_move);
           $('.expand').on('click', _on_expand_click);
-          if ($.Window.windowWidth < 767) {
-            return _set_for_mobile();
-          }
+          return imagesLoaded('.results', _hide_loader);
         };
         return _init();
       });
@@ -760,7 +765,8 @@
         $me = $(this);
         _index = index + 1;
         _init = function() {
-          return listen_to($.Events.CLICK, config.myName, _on_click, $me.find(".back"));
+          listen_to($.Events.CLICK, config.myName, _on_click, $me.find(".back"));
+          return listen_to($.Events.TOUCH_START, config.myName, _on_click, $me.find(".back"));
         };
         _on_click = function(evt) {
           var answer_obj;

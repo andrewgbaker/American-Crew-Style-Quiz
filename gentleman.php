@@ -9,7 +9,20 @@
 	<?php include('includes/header_scripts.php') ?>
 </head>
 <body class="results">
+<!-- BEGIN LOADING OVERLAY -->
+<section class="load_wrap">
 
+<div class="logo loader">
+  <span class="b1"></span>
+  <span class="b2"></span>
+  <span class="b3"></span>
+  <span class="b4"></span>
+</div>
+
+<p>Fetching<br />your<br />style<br /><span class="dot_three">.&nbsp;</span><span class="dot_two">.&nbsp;</span><span class="dot_one">.&nbsp;</span></p>
+
+</section>
+<!-- END LOADING OVERLAY -->
 <header>
 	<a href="#" class="logo"></a>
 	<article>

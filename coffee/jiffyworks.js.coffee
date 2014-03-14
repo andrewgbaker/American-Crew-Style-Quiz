@@ -36,6 +36,7 @@ $.Events =
     RESIZE_COMPLETE: 'resizeSiteComplete'
     SCROLL_COMPLETE: 'scrollComplete'
     CLICK: 'click'
+    TOUCH_START: 'touchstart'
     CHANGE: 'change'
     SUBMIT: 'submit'
     FOCUS: 'focus'

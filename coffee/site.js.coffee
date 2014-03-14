@@ -137,6 +137,11 @@ $ ->
 				debug "setting for mobile"
 				$('body').css("overflow-y","visible")
 				$(".section").attr("style","")
+
+			_hide_loader = () ->
+				$('.load_wrap').addClass('hideloader')
+				if $.Window.windowWidth < 767
+					_set_for_mobile()
 	
 			_init = () ->
 				if $.fn.fullpage
@@ -144,8 +149,8 @@ $ ->
 				$(window).bind 'mousewheel DOMMouseScroll MozMousePixelScroll', _on_mouse_wheel
 				$('html').on 'touchmove', _on_touch_move
 				$('.expand').on 'click', _on_expand_click
-				if $.Window.windowWidth < 767
-					_set_for_mobile()
+
+				imagesLoaded( '.results', _hide_loader)
 	
 			_init()
 
@@ -444,6 +449,7 @@ $ ->
 	
 			_init = () ->
 				listen_to $.Events.CLICK, config.myName, _on_click, $me.find(".back")
+				listen_to $.Events.TOUCH_START, config.myName, _on_click, $me.find(".back")
 
 			_on_click = (evt) ->
 				evt.preventDefault();
