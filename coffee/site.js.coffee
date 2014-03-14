@@ -400,7 +400,11 @@ $ ->
 				timeline.resume()
 			
 			_hide_loader = () ->
-				$('.load_wrap').addClass('hideloader');
+				$('.load_wrap').addClass('hideloader')
+				_scroll_to_top()
+
+			_scroll_to_top = () ->
+				TweenLite.to(window,0,{scrollTo:{y:0}})
 
 			_init = () -> 
 				# $.address.change _on_address_change
@@ -416,6 +420,7 @@ $ ->
 				$me.find("nav").QuestionNav('QuestionNav',config)
 				puts "images load checking"
 				imagesLoaded( '#clothes', _hide_loader)
+				setTimeout _scroll_to_top, 500
 
 			_init()
 

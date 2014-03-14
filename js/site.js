@@ -653,7 +653,7 @@
         jQuery.extend(config, this.settings);
       }
       return this.each(function(index) {
-        var $me, _animate_in_tiles, _enable_tile_backs, _hide_loader, _init, _on_address_change, _on_answer_click, _scroll_to_question;
+        var $me, _animate_in_tiles, _enable_tile_backs, _hide_loader, _init, _on_address_change, _on_answer_click, _scroll_to_question, _scroll_to_top;
         $me = $(this);
         _scroll_to_question = function(which) {
           var _next_question_top;
@@ -709,7 +709,15 @@
           return timeline.resume();
         };
         _hide_loader = function() {
-          return $('.load_wrap').addClass('hideloader');
+          $('.load_wrap').addClass('hideloader');
+          return _scroll_to_top();
+        };
+        _scroll_to_top = function() {
+          return TweenLite.to(window, 0, {
+            scrollTo: {
+              y: 0
+            }
+          });
         };
         _init = function() {
           debug("init question page");
@@ -723,7 +731,8 @@
           $(".question-group").Question("Question", config);
           $me.find("nav").QuestionNav('QuestionNav', config);
           puts("images load checking");
-          return imagesLoaded('#clothes', _hide_loader);
+          imagesLoaded('#clothes', _hide_loader);
+          return setTimeout(_scroll_to_top, 500);
         };
         return _init();
       });
