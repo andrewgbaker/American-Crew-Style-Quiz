@@ -24,12 +24,12 @@
 </section>
 <!-- END LOADING OVERLAY -->
 <header>
-	<a href="#" class="logo"></a>
+	<a href="<?php echo $asset_root; ?>/" class="logo"></a>
 	<article>
 		<h1>You are a revolutionary.</h1>
 		<p>You eat new trends for breakfast alongside your single source espresso. Dates refer to you as the man who's always taking them to places they’ve never been before. And your friends will always trust your restaurant recommendations above any online review. You need a hairstyle that has an unmistakable attitude and plenty of versatility. <a href="#" class="share">Share +</a> </p>
 	</article>
-	<a href="#" class="logo"></a>
+	<a href="<?php echo $asset_root; ?>/" class="logo"></a>
 	<div class="expand"><div></div></div>
 </header>
 
@@ -62,11 +62,11 @@
 					</div>
 					<div class="cta">
 						<div class="start_btn secondary"><a href="http://www.americancrew.com/salon-locator">Find a Stylist</a></div>
-						<div class="start_btn"><a href="#">Buy Product</a></div>
+						<div class="start_btn"><a href="http://www.americancrew.com/products">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="#">Firm Hold Styling Gel</a>, <a href="#">Light Hold Texture Lotion</a> and to <a href="<?php echo $asset_root; ?>/img/revolutionary_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
-				<h6>Not Where you Thought You'd End Up? <a href="/questions">Restart the Quiz </a></h6>
+				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/firm-hold-styling-gel">American Crew Firm Hold Styling Gel</a>, <a href="http://www.americancrew.com/products/style/light-hold-texture-lotion">Light Hold Texture Lotion</a> and to <a href="<?php echo $asset_root; ?>/img/save/revolutionary1_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
 		<div class="look_img" style="background: url('<?php echo $asset_root; ?>/img/looks/revolutionary1.jpg') no-repeat top center"></div>
@@ -97,11 +97,11 @@
 					</div>
 					<div class="cta">
 						<div class="start_btn secondary"><a href="http://www.americancrew.com/salon-locator">Find a Stylist</a></div>
-						<div class="start_btn"><a href="#">Buy Product</a></div>
+						<div class="start_btn"><a href="http://www.americancrew.com/products">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="#">Boost Powder</a>, <a href="#">Boost Cream</a> and to <a href="<?php echo $asset_root; ?>/img/revolutionary_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
-				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
+				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/boost-powder">American Crew Boost Powder</a>, <a href="http://www.americancrew.com/products/style/boost-cream-0">Boost Cream</a> and to <a href="<?php echo $asset_root; ?>/img/save/revolutionary2_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
 		<div class="look_img" style="background: url('<?php echo $asset_root; ?>/img/looks/revolutionary2.jpg') no-repeat top center"></div>
@@ -132,11 +132,11 @@
 					</div>
 					<div class="cta">
 						<div class="start_btn secondary"><a href="http://www.americancrew.com/salon-locator">Find a Stylist</a></div>
-						<div class="start_btn"><a href="#">Buy Product</a></div>
+						<div class="start_btn"><a href="http://www.americancrew.com/products">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="#">Light Hold Styling Gel</a>, <a href="#">Defining Paste</a> and to <a href="<?php echo $asset_root; ?>/img/revolutionary_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
-				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
+				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/light-hold-styling-gel">Light Hold Styling Gel</a>, <a href="http://www.americancrew.com/products/style/defining-paste">Defining Paste</a> and to <a href="<?php echo $asset_root; ?>/img/save/revolutionary3_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
 		<div class="look_img" style="background: url('<?php echo $asset_root; ?>/img/looks/revolutionary3.jpg') no-repeat top center"></div>

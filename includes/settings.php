@@ -1,1 +1,1 @@
-<?php $asset_root = ''; ?>
+<?php $asset_root = '/colomer/style_select'; ?>

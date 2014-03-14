@@ -24,12 +24,12 @@
 </section>
 <!-- END LOADING OVERLAY -->
 <header>
-	<a href="#" class="logo"></a>
+	<a href="<?php echo $asset_root; ?>/" class="logo"></a>
 	<article>
 		<h1>You Are a Gentleman</h1>
 		<p>Your drinks are stiff and so is your upper lip. You give women hope that chivalry might not be dead after all. And you're either dressed well or not at all. You need a look that has structure, order and plenty of confidence. <a href="http://www.facebook.com/sharer/sharer.php?u=http://americancrew.com/mystyle" target="_blank" class="share">Share +</a> </p>
 	</article>
-	<a href="#" class="logo"></a>
+	<a href="<?php echo $asset_root; ?>/" class="logo"></a>
 	<div class="expand"><div></div></div>
 </header>
 
@@ -61,12 +61,12 @@
 						<img src="<?php echo $asset_root; ?>/img/product/boostpowder.jpg" alt="American Crew Boost Powder" />
 					</div>
 					<div class="cta">
-						<div class="start_btn secondary"><a href="#">Find a Stylist</a></div>
-						<div class="start_btn"><a href="#">Buy Product</a></div>
+						<div class="start_btn secondary"><a href="http://www.americancrew.com/salon-locator">Find a Stylist</a></div>
+						<div class="start_btn"><a href="http://www.americancrew.com/products">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="#">American Crew Light Hold Styling Gel</a>, <a href="#">Boost Powder</a> and to <a href="<?php echo $asset_root; ?>/img/gentleman_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
-				<h6>Not Where you Thought You'd End Up? <a href="/questions">Restart the Quiz </a></h6>
+				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/light-hold-styling-gel">American Crew Light Hold Styling Gel</a>, <a href="http://www.americancrew.com/products/style/boost-powder">Boost Powder</a> and to <a href="<?php echo $asset_root; ?>/img/save/gentleman1_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
 		<div class="look_img" style="background: url('<?php echo $asset_root; ?>/img/looks/gentleman1.jpg') no-repeat top center"></div>
@@ -96,12 +96,12 @@
 						<img src="<?php echo $asset_root; ?>/img/product/formingcream.jpg" alt="American Crew Forming Cream" />
 					</div>
 					<div class="cta">
-						<div class="start_btn secondary"><a href="#">Find a Stylist</a></div>
-						<div class="start_btn"><a href="#">Buy Product</a></div>
+						<div class="start_btn secondary"><a href="http://www.americancrew.com/salon-locator">Find a Stylist</a></div>
+						<div class="start_btn"><a href="http://www.americancrew.com/products">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="#">Light Hold Texture Lotion</a>, <a href="#">Forming Cream</a> and to <a href="<?php echo $asset_root; ?>/img/gentleman_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
-				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
+				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/light-hold-texture-lotion">Light Hold Texture Lotion</a>, <a href="http://www.americancrew.com/products/style/forming-cream">Forming Cream</a> and to <a href="<?php echo $asset_root; ?>/img/save/gentleman2_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
 		<div class="look_img" style="background: url('<?php echo $asset_root; ?>/img/looks/gentleman2.jpg') no-repeat top center"></div>
@@ -131,12 +131,12 @@
 						<img src="<?php echo $asset_root; ?>/img/product/pomade.jpg" alt="American Crew Pomade" />
 					</div>
 					<div class="cta">
-						<div class="start_btn secondary"><a href="#">Find a Stylist</a></div>
-						<div class="start_btn"><a href="#">Buy Product</a></div>
+						<div class="start_btn secondary"><a href="http://www.americancrew.com/salon-locator">Find a Stylist</a></div>
+						<div class="start_btn"><a href="http://www.americancrew.com/products">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="#">Light Hold Styling Gel</a>, <a href="#">Pomade</a> and to <a href="<?php echo $asset_root; ?>/img/gentleman_1_guide.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
-				<h6>Not Where you Thought You'd End Up? <a href="#">Restart the Quiz </a></h6>
+				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/light-hold-styling-gel">Light Hold Styling Gel</a>, <a href="http://www.americancrew.com/products/style/pomade">Pomade</a> and to <a href="<?php echo $asset_root; ?>/img/save/gentleman3_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>
 		<div class="look_img" style="background: url('<?php echo $asset_root; ?>/img/looks/gentleman3.jpg') no-repeat top center"></div>
