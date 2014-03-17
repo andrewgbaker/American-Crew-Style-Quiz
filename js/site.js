@@ -441,7 +441,8 @@
         _hide_loader = function() {
           $('.load_wrap').addClass('hideloader');
           if ($.Window.windowWidth < 767) {
-            return _set_for_mobile();
+            _set_for_mobile();
+            return setTimeout(_set_for_mobile, 1000);
           }
         };
         _init = function() {

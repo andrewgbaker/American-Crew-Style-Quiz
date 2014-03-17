@@ -152,6 +152,7 @@ $ ->
 				
 				if $.Window.windowWidth < 767
 					_set_for_mobile()
+					setTimeout _set_for_mobile,1000
 	
 			_init = () ->
 				if $.fn.fullpage
