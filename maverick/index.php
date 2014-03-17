@@ -38,7 +38,7 @@
 	<div class="expand"><div></div></div>
 </header>
 
-<div class="logo looks_logo hidden" data-script="LooksLogo"></div>
+<a href="<?php echo $asset_root; ?>/" class="logo looks_logo hidden" data-script="LooksLogo"></a>
 
 <div class="section look_down" id="section1">
 	<!-- START Look 1 -->

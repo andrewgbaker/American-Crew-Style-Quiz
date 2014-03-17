@@ -931,6 +931,7 @@ header {
       .slide article .look_wrap .quote, .slide .look_img .look_wrap .quote {
         margin: 18px 30px 5px;
         font-size: 12px;
+        line-height: 22px;
         position: relative; }
         .slide article .look_wrap .quote:before, .slide article .look_wrap .quote:after, .slide .look_img .look_wrap .quote:before, .slide .look_img .look_wrap .quote:after {
           content: "\201C";
@@ -1266,6 +1267,9 @@ header {
 .hideloader {
   top: -120%; }
 
+.ie8 .load_wrap {
+  display: none; }
+
 .dot_one, .dot_two, .dot_three {
   -webkit-animation-name: dot;
   -moz-animation-name: dot;
@@ -1526,16 +1530,27 @@ nav {
           color: #a53e1f;
           font-size: 18px;
           padding: 0 30px; }
-  .flip-container:hover .front {
+  .flip-container.hover .front {
     -webkit-transform: perspective(1000px) rotateY(-179.9deg);
     -moz-transform: perspective(1000px) rotateY(-179.9deg);
     -o-transform: perspective(1000px) rotateY(-179.9deg);
     transform: perspective(1000px) rotateY(-179.9deg); }
-  .flip-container:hover .back {
+  .flip-container.hover .back {
     -webkit-transform: perspective(1000px) rotateY(0);
     -moz-transform: perspective(1000px) rotateY(0);
     -o-transform: perspective(1000px) rotateY(0);
     transform: perspective(1000px) rotateY(0); }
+
+.no-touch .flipper:hover .front {
+  -webkit-transform: perspective(1000px) rotateY(-179.9deg);
+  -moz-transform: perspective(1000px) rotateY(-179.9deg);
+  -o-transform: perspective(1000px) rotateY(-179.9deg);
+  transform: perspective(1000px) rotateY(-179.9deg); }
+.no-touch .flipper:hover .back {
+  -webkit-transform: perspective(1000px) rotateY(0);
+  -moz-transform: perspective(1000px) rotateY(0);
+  -o-transform: perspective(1000px) rotateY(0);
+  transform: perspective(1000px) rotateY(0); }
 
 .touch .flip-container .flipper .back div p:after {
   content: "Continue >";

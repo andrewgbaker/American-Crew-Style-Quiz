@@ -931,6 +931,7 @@ header {
       .slide article .look_wrap .quote, .slide .look_img .look_wrap .quote {
         margin: 18px 30px 5px;
         font-size: 12px;
+        line-height: 22px;
         position: relative; }
         .slide article .look_wrap .quote:before, .slide article .look_wrap .quote:after, .slide .look_img .look_wrap .quote:before, .slide .look_img .look_wrap .quote:after {
           content: "\201C";
@@ -1265,6 +1266,9 @@ header {
 
 .hideloader {
   top: -120%; }
+
+.ie8 .load_wrap {
+  display: none; }
 
 .dot_one, .dot_two, .dot_three {
   -webkit-animation-name: dot;
