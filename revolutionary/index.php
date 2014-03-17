@@ -1,6 +1,6 @@
 <?php include('../includes/settings.php'); ?>
 <!DOCTYPE html>
-<!--[if lte IE 9 ]>    <html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if lt IE 9 ]>    <html lang="en" class="no-js ie ie8"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html class='no-js' lang='en'>
   <!--<![endif]-->
