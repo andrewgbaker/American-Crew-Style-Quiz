@@ -59,7 +59,7 @@
 					</a>
 				</nav>
 				<p>For the days when an impression is just one of the things you need to make, this is a look that will get the job done. With a short length and a loose texture, this style won’t get in the way.</p>
-				<p class="quote">Apply a generous amount of Fiber to your towel dried hair. Finger comb the front of your style off  your face and smooth the sides with the palm to maintain the natural imperfections that give this style its attitude.</p>
+				<p class="quote">Apply a generous amount of Fiber to your towel dried hair. Finger comb the front of your style off  your face and smooth the sides with your palm to maintain the natural imperfections that give this style its attitude.</p>
 				<p>-Paul Wilson, American Crew Artistic Director</p>
 				<div class="product clearfix">
 					<div class="wrap">
@@ -105,7 +105,7 @@
 						<div class="start_btn"><a href="http://www.americancrew.com/products">Buy Product</a></div>
 					</div>
 				</div>
-				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/medium-hold-spray-gel">American Crew Medium Hold Spray Gel</a>, <a href="http://www.americancrew.com/products/style/molding-clay">Molding Cream</a> and to <a href="/<?php echo $asset_root; ?>/img/save/mansman2_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
+				<p>To create this style, you'll need <a href="http://www.americancrew.com/products/style/medium-hold-spray-gel">American Crew Medium Hold Spray Gel</a>, <a href="http://www.americancrew.com/products/style/molding-clay">Molding Clay</a> and to <a href="/<?php echo $asset_root; ?>/img/save/mansman2_save.jpg" target="_blank">download this image</a> so your stylist can show you the step-by-step instructions.</p>
 				<h6>Not Where you Thought You'd End Up? <a href="<?php echo $asset_root; ?>/questions">Restart the Quiz </a></h6>
 			</div>
 		</article>

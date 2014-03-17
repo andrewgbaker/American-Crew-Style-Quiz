@@ -46,7 +46,7 @@
 					</a>
 				</nav>
 				<p>If you’re getting ready for a date, this is a great style. It makes you look polished without looking like you tried.</p>
-				<p class="quote">To finish this look, apply American Crew Boost Powder as needed after your hair has dried for added lift and texture.</p>
+				<p class="quote">Once your hair has dried, apply American Crew Boost Powder to give this style lift and texture.</p>
 				<p>-Paul Wilson, American Crew Artistic Director</p>
 				<div class="product clearfix">
 					<div class="wrap">
