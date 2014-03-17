@@ -407,7 +407,7 @@ img {
   margin: 0 auto;
   display: block; }
 
-h1, h2, h3 {
+h1, h2, h3, h6 {
   font-weight: bold;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
@@ -635,8 +635,10 @@ blockquote {
 
 .results h6 {
   margin-top: 20px;
-  font-family: "Oswald" sans-serif;
-  text-transform: uppercase; }
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #757575; }
 .results a.nav_icon {
   padding: 10px;
   border: 1px solid #a53e1f;
@@ -1457,6 +1459,12 @@ nav {
     top: 19px;
     margin: 0 10%;
     z-index: 5; }
+
+@media screen and (max-width: 600px) {
+  .question-group {
+    display: none; } }
+.question-group.next, .question-group.answered {
+  display: block; }
 
 .flip-container {
   background: black;
