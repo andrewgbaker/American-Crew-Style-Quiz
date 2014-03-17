@@ -217,7 +217,7 @@ nav
           color: $crew_orange
           font-size: 18px
           padding: 0 30px
-  &:hover
+  &.hover
     .front
       -webkit-transform: perspective(1000px) rotateY(-179.9deg)
       -moz-transform: perspective(1000px) rotateY(-179.9deg)
@@ -228,6 +228,18 @@ nav
       -moz-transform: perspective(1000px) rotateY(0)
       -o-transform: perspective(1000px) rotateY(0)
       transform: perspective(1000px) rotateY(0)
+
+.no-touch .flipper:hover
+  .front
+    -webkit-transform: perspective(1000px) rotateY(-179.9deg)
+    -moz-transform: perspective(1000px) rotateY(-179.9deg)
+    -o-transform: perspective(1000px) rotateY(-179.9deg)
+    transform: perspective(1000px) rotateY(-179.9deg)
+  .back
+    -webkit-transform: perspective(1000px) rotateY(0)
+    -moz-transform: perspective(1000px) rotateY(0)
+    -o-transform: perspective(1000px) rotateY(0)
+    transform: perspective(1000px) rotateY(0)
 
 .touch .flip-container .flipper .back div p
   &:after

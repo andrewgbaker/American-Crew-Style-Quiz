@@ -302,7 +302,8 @@
     MOUSE_WHEEL: "mousewheel",
     HEADER_TOGGLE: "HEADER_TOGGLE",
     ANSWER_CLICK: "ANSWER_CLICK",
-    QUESTION_NAV_CLICKED: "QUESTION_NAV_CLICKED"
+    QUESTION_NAV_CLICKED: "QUESTION_NAV_CLICKED",
+    HOVER: "hover"
   };
 
   $.PageName = '';
@@ -790,7 +791,7 @@
         jQuery.extend(config, this.settings);
       }
       return this.each(function(index) {
-        var $me, _index, _init, _on_click, _touch_end, _touch_in_progress, _touch_move, _touch_start;
+        var $me, _index, _init, _on_click, _on_front_click, _touch_end, _touch_in_progress, _touch_move, _touch_start;
         $me = $(this);
         _index = index + 1;
         _touch_in_progress = false;
@@ -805,11 +806,15 @@
             return _on_click(evt);
           }
         };
+        _on_front_click = function(evt) {
+          debug("on front click");
+          debug($me.find(".flipper"));
+          $(".hover").removeClass("hover");
+          return $me.addClass("hover");
+        };
         _init = function() {
-          listen_to($.Events.CLICK, config.myName, _on_click, $me.find(".back"));
-          listen_to($.Events.TOUCH_START, config.myName, _touch_start, $me.find(".back"));
-          listen_to($.Events.TOUCH_END, config.myName, _touch_end, $me.find(".back"));
-          return listen_to($.Events.TOUCH_MOVE, config.myName, _touch_move, $me.find(".back"));
+          listen_to($.Events.TOUCH_END, config.myName, _on_front_click, $me.find(".front"));
+          return listen_to($.Events.CLICK, config.myName, _on_click, $me.find(".back"));
         };
         _on_click = function(evt) {
           var answer_obj;

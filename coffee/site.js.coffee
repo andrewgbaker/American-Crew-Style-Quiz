@@ -7,6 +7,7 @@ $.CustomEvents =
 	HEADER_TOGGLE: "HEADER_TOGGLE"
 	ANSWER_CLICK: "ANSWER_CLICK"
 	QUESTION_NAV_CLICKED: "QUESTION_NAV_CLICKED"
+	HOVER: "hover"
 
 $.PageName = ''
 $.MobileSize = false
@@ -482,13 +483,21 @@ $ ->
 			_touch_end = (evt) ->
 				if _touch_in_progress
 					_on_click(evt)
+
+			_on_front_click = (evt) ->
+				debug "on front click"
+				debug $me.find(".flipper")
+				$(".hover").removeClass("hover")
+				$me.addClass("hover")
+
 	
 			_init = () ->
-				# listen_to $.Events.TOUCH_START, config.myName, _on_front_click, $me.find(".back")
+				listen_to $.Events.TOUCH_END, config.myName, _on_front_click, $me.find(".front")
+				# listen_to $.Events.CLICK, config.myName, _on_front_click, $me.find(".front")
 				listen_to $.Events.CLICK, config.myName, _on_click, $me.find(".back")
-				listen_to $.Events.TOUCH_START, config.myName, _touch_start, $me.find(".back")
-				listen_to $.Events.TOUCH_END, config.myName, _touch_end, $me.find(".back")
-				listen_to $.Events.TOUCH_MOVE, config.myName, _touch_move, $me.find(".back")
+				# listen_to $.Events.TOUCH_START, config.myName, _touch_start, $me.find(".back")
+				# listen_to $.Events.TOUCH_END, config.myName, _touch_end, $me.find(".back")
+				# listen_to $.Events.TOUCH_MOVE, config.myName, _touch_move, $me.find(".back")
 
 			_on_click = (evt) ->
 				evt.preventDefault()
