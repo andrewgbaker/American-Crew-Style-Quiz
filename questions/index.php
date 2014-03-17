@@ -28,7 +28,7 @@
   		
 		<div class="question-page-content" data-script="QuestionPage">
 			<!-- BEGIN: Question 1 -->
-			<div class="grid clearfix question-group" id="clothes">
+			<div class="grid clearfix question-group next" id="clothes">
 				<div class="bgLoad">
 					<img src="<?php echo $asset_root; ?>/img/questions/skinnyjeans_bg.jpg" alt="skinny jeans" />
 					<img src="<?php echo $asset_root; ?>/img/questions/polo_bg.jpg" alt="polo" />

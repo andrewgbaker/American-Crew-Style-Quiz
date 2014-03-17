@@ -676,6 +676,9 @@
         $me = $(this);
         _scroll_to_question = function(which) {
           var _next_question_top;
+          debug("adding next to:");
+          debug($(".question-group").eq(which));
+          $(".question-group").eq(which).addClass("next");
           _next_question_top = $(".question-group").eq(which).offset().top;
           return TweenLite.to(window, config.question_scroll_duration, {
             ease: Quint.easeInOut,
@@ -697,6 +700,7 @@
           answer_clicked = data.which;
           question_index_clicked = data.question_index;
           if (question_index_clicked < $(".question-group").length) {
+            $(".question-group").eq(parseInt(question_index_clicked)).addClass("answered");
             next_question_number = parseInt(question_index_clicked) + 1;
             if (next_question_number < 6) {
               return _scroll_to_question(next_question_number);

@@ -1454,6 +1454,12 @@ nav {
     margin: 0 10%;
     z-index: 5; }
 
+@media screen and (max-width: 600px) {
+  .question-group {
+    display: none; } }
+.question-group.next, .question-group.answered {
+  display: block; }
+
 .flip-container {
   background: black;
   cursor: pointer;

@@ -383,6 +383,9 @@ $ ->
 			$me = $(this)
 
 			_scroll_to_question = (which) ->
+				debug "adding next to:"
+				debug $(".question-group").eq(which)
+				$(".question-group").eq(which).addClass("next")
 				_next_question_top = $(".question-group").eq(which).offset().top
 				TweenLite.to(window,config.question_scroll_duration,{ease:Quint.easeInOut,scrollTo:{y:_next_question_top,ease:Quint.easeInOut}})
 
@@ -398,6 +401,7 @@ $ ->
 					# debug "scrolling"
 					# _next_question_top = $(".question-group").eq(question_index_clicked+1).offset().top
 					# TweenLite.to(window,config.question_scroll_duration,{ease:Quint.easeInOut,scrollTo:{y:_next_question_top,ease:Quint.easeInOut}})
+					$(".question-group").eq(parseInt(question_index_clicked)).addClass("answered")
 					next_question_number = parseInt(question_index_clicked)+1
 					if next_question_number < 6
 						_scroll_to_question next_question_number

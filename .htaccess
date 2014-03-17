@@ -1,3 +1,0 @@
-RewriteEngine On
-# RewriteRule ^colomer/style_select/([^/\.]+)/?$ /colomer/style_select/$1.php  [L,QSA]
-RewriteRule ^([^/\.]+)/?$ $1.php  [L,QSA]
