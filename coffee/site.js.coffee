@@ -361,7 +361,7 @@ $ ->
 				puts "final highest answer:"+highest_category
 
 				# points_matrix
-				$me.attr("action",highest_category+"/#"+"looks/"+look_slide)
+				$me.attr("action","/"+highest_category+"/#"+"looks/"+look_slide)
 				$me.get(0).submit()
 
 	
@@ -484,6 +484,7 @@ $ ->
 					_on_click(evt)
 	
 			_init = () ->
+				# listen_to $.Events.TOUCH_START, config.myName, _on_front_click, $me.find(".back")
 				listen_to $.Events.CLICK, config.myName, _on_click, $me.find(".back")
 				listen_to $.Events.TOUCH_START, config.myName, _touch_start, $me.find(".back")
 				listen_to $.Events.TOUCH_END, config.myName, _touch_end, $me.find(".back")

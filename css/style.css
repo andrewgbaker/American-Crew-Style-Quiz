@@ -1526,12 +1526,12 @@ nav {
           color: #a53e1f;
           font-size: 18px;
           padding: 0 30px; }
-  .flip-container:hover .flipper .front {
+  .flip-container:hover .front {
     -webkit-transform: perspective(1000px) rotateY(-179.9deg);
     -moz-transform: perspective(1000px) rotateY(-179.9deg);
     -o-transform: perspective(1000px) rotateY(-179.9deg);
     transform: perspective(1000px) rotateY(-179.9deg); }
-  .flip-container:hover .flipper .back {
+  .flip-container:hover .back {
     -webkit-transform: perspective(1000px) rotateY(0);
     -moz-transform: perspective(1000px) rotateY(0);
     -o-transform: perspective(1000px) rotateY(0);

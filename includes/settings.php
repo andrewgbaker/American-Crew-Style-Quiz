@@ -1,1 +1,1 @@
-<?php $asset_root = '/style_select'; ?>
+<?php $asset_root = ''; ?>
