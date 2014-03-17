@@ -383,7 +383,7 @@
 						<a href="#" class="back">
 							<div>
 								<h5>The newest thing on the menu</h5>
-								<p>You're looking for a lot more than a buzz when you order a cocktail. And to you, expected in uninspiring.</p>
+								<p>You're looking for a lot more than a buzz when you order a cocktail. And to you, expected is uninspiring.</p>
 							</div>
 						</a>
 					</div>

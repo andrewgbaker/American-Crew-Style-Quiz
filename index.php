@@ -26,7 +26,7 @@
 				 	<section class="clearfix">
 						<aside class="quote">
 							<p>“Great hair won’t just help you attract more women. It’ll help you attract better jobs too.”</p>
-							<span>–Paul Wilson,  American Crew Artistic Director & world–renowned stylist</span>
+							<span>–Paul Wilson,  American Crew Artistic Director</span>
 						</aside>
 						<div>
 							<img src="<?php echo $asset_root; ?>/img/paul_wilson.jpg" alt="paul wilson" />
