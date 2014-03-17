@@ -1,4 +1,4 @@
-window.debug_enabled = true
+window.debug_enabled = false
 
 $.CustomEvents =
 	SITE_INITIALIZED: "site_initialized"
