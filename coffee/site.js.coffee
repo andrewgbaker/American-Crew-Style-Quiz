@@ -124,27 +124,41 @@ $ ->
 				if($('#section1').hasClass('look_down'))
 					_expand_contract_header()
 
+			_on_later_touch_move = (evt) ->
+				# alert("later touch move")
+				# debug evt
+
 			_on_touch_move = () ->
 				_expand_contract_header()
 
 				$('html').unbind('touchmove');
+				register($.Events.TOUCH_MOVE,config.myName,_on_later_touch_move,$("html"))
 
 			_on_expand_click = (evt) ->
 				_expand_contract_header()
 
 			_set_for_mobile = () ->
-				debug "setting for mobile"
+				# debug "setting for mobile"
 				$('body').css("overflow-y","visible")
+				$('html').css("overflow-y","visible")
 				$(".section").attr("style","")
+				debug "set for mobile"
+				new_height = $.Window.windowHeight + "px"
+				$(".slimScrollDiv").css("height",new_height)
+				$(".slimScrollDiv .scrollable").css("height",new_height)
 
 			_hide_loader = () ->
 				$('.load_wrap').addClass('hideloader')
+				
 				if $.Window.windowWidth < 767
 					_set_for_mobile()
 	
 			_init = () ->
 				if $.fn.fullpage
-					$.fn.fullpage(config.full_page_opts);
+					full_page_opts = config.full_page_opts
+					if $.Window.windowWidth < 767
+						full_page_opts.scrollOverflow = true
+					$.fn.fullpage(full_page_opts);
 				$(window).bind 'mousewheel DOMMouseScroll MozMousePixelScroll', _on_mouse_wheel
 				$('html').on 'touchmove', _on_touch_move
 				$('.expand').on 'click', _on_expand_click

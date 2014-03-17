@@ -400,7 +400,7 @@
         jQuery.extend(config, this.settings);
       }
       return this.each(function(index) {
-        var $me, _expand_contract_header, _hide_loader, _init, _on_expand_click, _on_mouse_wheel, _on_touch_move, _set_for_mobile;
+        var $me, _expand_contract_header, _hide_loader, _init, _on_expand_click, _on_later_touch_move, _on_mouse_wheel, _on_touch_move, _set_for_mobile;
         $me = $(this);
         _expand_contract_header = function() {
           var timeout_function;
@@ -419,17 +419,24 @@
             return _expand_contract_header();
           }
         };
+        _on_later_touch_move = function(evt) {};
         _on_touch_move = function() {
           _expand_contract_header();
-          return $('html').unbind('touchmove');
+          $('html').unbind('touchmove');
+          return register($.Events.TOUCH_MOVE, config.myName, _on_later_touch_move, $("html"));
         };
         _on_expand_click = function(evt) {
           return _expand_contract_header();
         };
         _set_for_mobile = function() {
-          debug("setting for mobile");
+          var new_height;
           $('body').css("overflow-y", "visible");
-          return $(".section").attr("style", "");
+          $('html').css("overflow-y", "visible");
+          $(".section").attr("style", "");
+          debug("set for mobile");
+          new_height = $.Window.windowHeight + "px";
+          $(".slimScrollDiv").css("height", new_height);
+          return $(".slimScrollDiv .scrollable").css("height", new_height);
         };
         _hide_loader = function() {
           $('.load_wrap').addClass('hideloader');
@@ -438,8 +445,13 @@
           }
         };
         _init = function() {
+          var full_page_opts;
           if ($.fn.fullpage) {
-            $.fn.fullpage(config.full_page_opts);
+            full_page_opts = config.full_page_opts;
+            if ($.Window.windowWidth < 767) {
+              full_page_opts.scrollOverflow = true;
+            }
+            $.fn.fullpage(full_page_opts);
           }
           $(window).bind('mousewheel DOMMouseScroll MozMousePixelScroll', _on_mouse_wheel);
           $('html').on('touchmove', _on_touch_move);
