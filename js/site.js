@@ -650,7 +650,7 @@
           }
           puts(tied_categories);
           puts("final highest answer:" + highest_category);
-          $me.attr("action", "/" + highest_category + "/#" + "looks/" + look_slide);
+          $me.attr("action", "/mystyle/" + highest_category + "/#" + "looks/" + look_slide);
           return $me.get(0).submit();
         };
         _init = function() {

@@ -361,7 +361,7 @@ $ ->
 				puts "final highest answer:"+highest_category
 
 				# points_matrix
-				$me.attr("action","/"+highest_category+"/#"+"looks/"+look_slide)
+				$me.attr("action","/mystyle/"+highest_category+"/#"+"looks/"+look_slide)
 				$me.get(0).submit()
 
 	
