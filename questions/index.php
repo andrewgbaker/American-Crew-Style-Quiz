@@ -1,12 +1,12 @@
-<?php include('includes/settings.php'); ?>
+<?php include('../includes/settings.php'); ?>
 <!DOCTYPE html>
 <!--[if lte IE 9 ]>    <html lang="en" class="no-js ie ie8"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html class='no-js' lang='en'>
   <!--<![endif]-->
 <head>
-	<?php include('includes/standard_meta.php'); ?>
-	<?php include('includes/header_scripts.php') ?>	
+	<?php include('../includes/standard_meta.php'); ?>
+	<?php include('../includes/header_scripts.php') ?>	
 </head>
 
 	<body class="questions-page">
@@ -39,7 +39,7 @@
 				<section class="question">
 					<a class="logo q_logo"></a>
 					<h3>Walk into your closet. What's the first thing you see?</h3>
-					<?php include('includes/question_nav.php'); ?>
+					<?php include('../includes/question_nav.php'); ?>
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
@@ -132,7 +132,7 @@
 				<section class="question">
 					<a class="logo q_logo"></a>
 					<h3>What’s your favorite type of music?</h3>
-					<?php include('includes/question_nav.php'); ?>
+					<?php include('../includes/question_nav.php'); ?>
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
@@ -225,7 +225,7 @@
 				<section class="question">
 					<a class="logo q_logo"></a>
 					<h3>It's Friday night. What are your plans?</h3>
-					<?php include('includes/question_nav.php'); ?>
+					<?php include('../includes/question_nav.php'); ?>
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
@@ -318,7 +318,7 @@
 				<section class="question">
 					<a class="logo q_logo"></a>
 					<h3>What are you drinking?</h3>
-					<?php include('includes/question_nav.php'); ?>
+					<?php include('../includes/question_nav.php'); ?>
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
@@ -411,7 +411,7 @@
 				<section class="question">
 					<a class="logo q_logo"></a>
 					<h3>What are you looking for in a girl?</h3>
-					<?php include('includes/question_nav.php'); ?>
+					<?php include('../includes/question_nav.php'); ?>
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
@@ -504,7 +504,7 @@
 				<section class="question">
 					<a class="logo q_logo"></a>
 					<h3>Finally, tell us a little bit about your hair.</h3>
-					<?php include('includes/question_nav.php'); ?>
+					<?php include('../includes/question_nav.php'); ?>
 				</section>
 				<section class="flip-container answer-tile">
 					<div class="flipper">
@@ -587,6 +587,6 @@
   		<input type="hidden" name="girl" id="value-girl" value="">
   		<input type="hidden" name="hair" id="value-hair" value="">
   	</form>
-        <?php include('includes/footer_scripts.php'); ?>
+        <?php include('../includes/footer_scripts.php'); ?>
     </body>
 </html>

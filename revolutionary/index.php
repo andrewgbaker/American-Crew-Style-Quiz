@@ -1,17 +1,17 @@
-<?php include('includes/settings.php'); ?>
+<?php include('../includes/settings.php'); ?>
 <!DOCTYPE html>
 <!--[if lte IE 9 ]>    <html lang="en" class="no-js ie ie8"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html class='no-js' lang='en'>
   <!--<![endif]-->
 <head>
-	<?php include('includes/standard_meta.php'); ?>
+	<?php include('../includes/standard_meta.php'); ?>
 	<meta property="og:title" content="American Crew My Style - The Revolutionary" />
 	<meta property="og:type" content="website" />
   	<meta property="og:description" content="You Are a Revolutionary - You eat new trends for breakfast alongside your single source espresso. Dates refer to you as the man who's always taking them to places they’ve never been before. And your friends will always trust your restaurant recommendations above any online review. You need a hairstyle that has an unmistakable attitude and plenty of versatility." />
   	<meta property="og:site_name" content="American Crew My Style" />
   	<meta property="og:image" content="http://americancrew.com/mystyle/looks/revolutionary1_mobile.jpg" />
-	<?php include('includes/header_scripts.php') ?>	
+	<?php include('../includes/header_scripts.php') ?>	
 </head>
 <body class="results">
 <!-- BEGIN LOADING OVERLAY -->
@@ -163,6 +163,6 @@
 	</script>
     
 </div>
-<?php include('includes/footer_scripts.php'); ?>
+<?php include('../includes/footer_scripts.php'); ?>
 </body>
 </html>

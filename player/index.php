@@ -1,17 +1,17 @@
-<?php include('includes/settings.php'); ?>
+<?php include('../includes/settings.php'); ?>
 <!DOCTYPE html>
 <!--[if lte IE 9 ]>    <html lang="en" class="no-js ie ie8"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html class='no-js' lang='en'>
   <!--<![endif]-->
 <head>
-	<?php include('includes/standard_meta.php'); ?>
+	<?php include('../includes/standard_meta.php'); ?>
 	<meta property="og:title" content="American Crew My Style - The Player" />
 	<meta property="og:type" content="website" />
   	<meta property="og:description" content="You Are a Player - You’re always on your game and your game is always on. Whether you’re lifting weights or picking up dates, you never take your eyes off the finish line. You need a look that’s casually confident and easy to maintain." />
   	<meta property="og:site_name" content="American Crew My Style" />
   	<meta property="og:image" content="http://americancrew.com/mystyle/looks/player1_mobile.jpg" />
-	<?php include('includes/header_scripts.php') ?>	
+	<?php include('../includes/header_scripts.php') ?>	
 </head>
 <body class="results">
 
@@ -150,6 +150,6 @@
 	</script>
     
 </div>
-<?php include('includes/footer_scripts.php'); ?>
+<?php include('../includes/footer_scripts.php'); ?>
 </body>
 </html>
