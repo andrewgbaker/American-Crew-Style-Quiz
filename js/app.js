@@ -44,4 +44,24 @@ $(document).ready(function() {
 				$('.looks_logo').toggleClass('hidden');
 		}, 500);
 	});
+	
+	$("body.results").on("keydown", function(e){
+	
+	    if(e.keyCode === 40) {
+	
+	        if ($('#section1').hasClass('look_down')) {
+				$('#section1').toggleClass('look_down');
+				$('header').toggleClass('header_up');
+				setTimeout(function() {
+					$('.expand div').toggleClass('open');
+					$('.looks_logo').toggleClass('hidden');
+				}, 500);
+			}
+			return false;    
+	
+	    }
+		
+	});
+	
+
 });

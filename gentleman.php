@@ -6,6 +6,11 @@
   <!--<![endif]-->
 <head>
 	<?php include('includes/standard_meta.php'); ?>
+	<meta property="og:title" content="American Crew My Style - The Gentleman" />
+	<meta property="og:type" content="website" />
+  	<meta property="og:description" content="You Are a Gentleman - Your drinks are stiff and so is your upper lip. You give women hope that chivalry might not be dead after all. And you're either dressed well or not at all. You need a look that has structure, order and plenty of confidence" />
+  	<meta property="og:site_name" content="American Crew My Style" />
+  	<meta property="og:image" content="http://americancrew.com/mystyle/looks/gentleman1_mobile.jpg" />
 	<?php include('includes/header_scripts.php') ?>
 </head>
 <body class="results">
@@ -27,7 +32,7 @@
 	<a href="<?php echo $asset_root; ?>/" class="logo"></a>
 	<article>
 		<h1>You Are a Gentleman</h1>
-		<p>Your drinks are stiff and so is your upper lip. You give women hope that chivalry might not be dead after all. And you're either dressed well or not at all. You need a look that has structure, order and plenty of confidence. <a href="http://www.facebook.com/sharer/sharer.php?u=http://americancrew.com/mystyle" target="_blank" class="share">Share +</a> </p>
+		<p>Your drinks are stiff and so is your upper lip. You give women hope that chivalry might not be dead after all. And you're either dressed well or not at all. You need a look that has structure, order and plenty of confidence. <a href="http://www.facebook.com/sharer/sharer.php?u=http://americancrew.com/mystyle/gentleman/" target="_blank" class="share">Share +</a> </p>
 	</article>
 	<a href="<?php echo $asset_root; ?>/" class="logo"></a>
 	<div class="expand"><div></div></div>
@@ -142,6 +147,20 @@
 		<div class="look_img" style="background: url('<?php echo $asset_root; ?>/img/looks/gentleman3.jpg') no-repeat top center"></div>
     </div>
     <!-- END LOOK THREE -->
+    
+    <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-15564012-4']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
     
 </div>
 <?php include('includes/footer_scripts.php'); ?>

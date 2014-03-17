@@ -6,6 +6,11 @@
   <!--<![endif]-->
 <head>
 	<?php include('includes/standard_meta.php'); ?>
+	<meta property="og:title" content="American Crew My Style - The Man's Man" />
+	<meta property="og:type" content="website" />
+  	<meta property="og:description" content="You Are a Man's Man - Your wardrobe is simple. Your drinks are uncomplicated. And you’ll take a decent burger over foie gras any day. You don’t want to spend a lot of time on your hair, and you want the time you do spend to pay off. You need a look that’s as straightforward as you are." />
+  	<meta property="og:site_name" content="American Crew My Style" />
+  	<meta property="og:image" content="http://americancrew.com/mystyle/looks/mansman1_mobile.jpg" />
 	<?php include('includes/header_scripts.php') ?>
 </head>
 <body class="results">
@@ -27,7 +32,7 @@
 	<a href="<?php echo $asset_root; ?>/" class="logo"></a>
 	<article>
 		<h1>You are a man's man.</h1>
-		<p>Your wardrobe is simple. Your drinks are uncomplicated. And you’ll take a decent burger over foie gras any day. You don’t want to spend a lot of time on your hair, and you want the time you do spend to pay off. You need a look that’s as straightforward as you are. <a href="#" class="share">Share +</a> </p>
+		<p>Your wardrobe is simple. Your drinks are uncomplicated. And you’ll take a decent burger over foie gras any day. You don’t want to spend a lot of time on your hair, and you want the time you do spend to pay off. You need a look that’s as straightforward as you are. <a href="http://www.facebook.com/sharer/sharer.php?u=http://americancrew.com/mystyle/mansman/" class="share">Share +</a> </p>
 	</article>
 	<a href="<?php echo $asset_root; ?>/" class="logo"></a>
 	<div class="expand"><div></div></div>
@@ -142,6 +147,20 @@
 		<div class="look_img" style="background: url('<?php echo $asset_root; ?>/img/looks/mansman3.jpg') no-repeat top center"></div>
     </div>
     <!-- END LOOK THREE -->
+    
+    <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-15564012-4']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
     
 </div>
 <?php include('includes/footer_scripts.php'); ?>

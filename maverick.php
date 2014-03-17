@@ -6,6 +6,11 @@
   <!--<![endif]-->
 <head>
 	<?php include('includes/standard_meta.php'); ?>
+	<meta property="og:title" content="American Crew My Style - The Maverick" />
+	<meta property="og:type" content="website" />
+  	<meta property="og:description" content="You Are a Maverick - Trouser socks. Cartoon character neckties. Khakis. For you, those are the things nightmares are made of. Your style has been cultivated from years of experience, not years of living up to expectations. And you know that the only road worth following is the one you forge. You need a look that’s unconventional and unmistakably masculine" />
+  	<meta property="og:site_name" content="American Crew My Style" />
+  	<meta property="og:image" content="http://americancrew.com/mystyle/looks/maverick1_mobile.jpg" />
 	<?php include('includes/header_scripts.php') ?>
 </head>
 <body class="results">
@@ -27,7 +32,7 @@
 	<a href="<?php echo $asset_root; ?>/" class="logo"></a>
 	<article>
 		<h1>You are a maverick.</h1>
-		<p>Trouser socks. Cartoon character neckties. Khakis. For you, those are the things nightmares are made of. Your style has been cultivated from years of experience, not years of living up to expectations. And you know that the only road worth following is the one you forge. You need a look that’s unconventional and unmistakably masculine. <a href="#" class="share">Share +</a> </p>
+		<p>Trouser socks. Cartoon character neckties. Khakis. For you, those are the things nightmares are made of. Your style has been cultivated from years of experience, not years of living up to expectations. And you know that the only road worth following is the one you forge. You need a look that’s unconventional and unmistakably masculine. <a href="http://www.facebook.com/sharer/sharer.php?u=http://americancrew.com/mystyle/maverick/" class="share">Share +</a> </p>
 	</article>
 	<a href="<?php echo $asset_root; ?>/" class="logo"></a>
 	<div class="expand"><div></div></div>
@@ -142,6 +147,20 @@
 		<div class="look_img" style="background: url('<?php echo $asset_root; ?>/img/looks/maverick3.jpg') no-repeat top center"></div>
     </div>
     <!-- END LOOK THREE -->
+    
+    <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-15564012-4']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
     
 </div>
 <?php include('includes/footer_scripts.php'); ?>

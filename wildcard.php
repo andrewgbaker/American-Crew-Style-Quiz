@@ -6,6 +6,11 @@
   <!--<![endif]-->
 <head>
 	<?php include('includes/standard_meta.php'); ?>
+	<meta property="og:title" content="American Crew My Style - The Wild Card" />
+	<meta property="og:type" content="website" />
+  	<meta property="og:description" content="You Are a Wild card - You're a Renaissance man with a modern edge. You've seen a lot, learned a lot and can handle a lot. Your daily routine is anything but predictable. And your friends follow your status updates more closely than they do world politics. You need a look that has plenty of versatility and is always good to go." />
+  	<meta property="og:site_name" content="American Crew My Style" />
+  	<meta property="og:image" content="http://americancrew.com/mystyle/looks/wildcard1_mobile.jpg" />
 	<?php include('includes/header_scripts.php') ?>	
 </head>
 <body class="results">
@@ -27,7 +32,7 @@
 	<a href="<?php echo $asset_root; ?>/" class="logo"></a>
 	<article>
 		<h1>You are a wild card.</h1>
-		<p>You're a Renaissance man with a modern edge. You've seen a lot, learned a lot and can handle a lot. Your daily routine is anything but predictable. And your friends follow your status updates more closely than they do world politics. You need a look that has plenty of versatility and is always good to go. <a href="#" class="share">Share +</a> </p>
+		<p>You're a Renaissance man with a modern edge. You've seen a lot, learned a lot and can handle a lot. Your daily routine is anything but predictable. And your friends follow your status updates more closely than they do world politics. You need a look that has plenty of versatility and is always good to go. <a href="http://www.facebook.com/sharer/sharer.php?u=http://americancrew.com/mystyle/wildcard/" class="share">Share +</a> </p>
 	</article>
 	<a href="<?php echo $asset_root; ?>/" class="logo"></a>
 	<div class="expand"><div></div></div>
@@ -142,6 +147,20 @@
 		<div class="look_img" style="background: url('<?php echo $asset_root; ?>/img/looks/wildcard3.jpg') no-repeat top center"></div>
     </div>
     <!-- END LOOK THREE -->
+    
+    <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-15564012-4']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
     
 </div>
 <?php include('includes/footer_scripts.php'); ?>

@@ -1160,7 +1160,10 @@ header {
   position: absolute;
   background: #333333;
   z-index: 99999999999;
-  opacity: 1; }
+  top: 0%;
+  -webkit-transition: top 0.5s ease-in-out;
+  -moz-transition: top 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out; }
   .load_wrap p {
     position: absolute;
     width: 300px;
@@ -1261,8 +1264,7 @@ header {
   left: -9999999999999px; }
 
 .hideloader {
-  opacity: 0;
-  display: none; }
+  top: -120%; }
 
 .dot_one, .dot_two, .dot_three {
   -webkit-animation-name: dot;
@@ -1370,6 +1372,9 @@ header {
       font-weight: 100;
       vertical-align: middle;
       width: 300px; }
+  @media screen and (max-width: 600px) {
+    .grid .hair_blank {
+      display: none; } }
 
 nav {
   width: 300px;
