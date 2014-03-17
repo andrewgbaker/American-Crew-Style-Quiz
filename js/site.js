@@ -294,7 +294,7 @@
   */
 
 
-  window.debug_enabled = false;
+  window.debug_enabled = true;
 
   $.CustomEvents = {
     SITE_INITIALIZED: "site_initialized",
@@ -389,6 +389,29 @@
         return _init();
       });
     };
+    $.fn.HomePage = function(objectName, settings) {
+      var $parent, config;
+      this.settings = settings;
+      $parent = $(this);
+      if (typeof config === "undefined" || config === null) {
+        config = {};
+      }
+      config.myName = objectName;
+      if (this.settings != null) {
+        jQuery.extend(config, this.settings);
+      }
+      return this.each(function(index) {
+        var $me, _hide_loader, _init;
+        $me = $(this);
+        _hide_loader = function() {
+          return $('.home_bg').css('opacity', '1');
+        };
+        _init = function() {
+          return imagesLoaded('.bg_load', _hide_loader);
+        };
+        return _init();
+      });
+    };
     $.fn.ResultsPage = function(objectName, settings) {
       var $parent, config;
       this.settings = settings;
@@ -401,8 +424,10 @@
         jQuery.extend(config, this.settings);
       }
       return this.each(function(index) {
-        var $me, _expand_contract_header, _hide_loader, _init, _on_expand_click, _on_later_touch_move, _on_mouse_wheel, _on_touch_move, _set_for_mobile;
+        var $me, _expand_contract_header, _hide_loader, _images_loaded, _init, _minimum_load_time_passed, _on_expand_click, _on_key_down, _on_later_touch_move, _on_mouse_wheel, _on_touch_move, _set_for_mobile, _set_min_load_time;
         $me = $(this);
+        _minimum_load_time_passed = false;
+        _images_loaded = false;
         _expand_contract_header = function() {
           var timeout_function;
           timeout_function = function() {
@@ -414,6 +439,11 @@
           $('#section1').toggleClass('look_down');
           $('header').toggleClass('header_up');
           return setTimeout(timeout_function, 500);
+        };
+        _on_key_down = function(evt) {
+          if ((evt.keyCode === 40) && ($('#section1').hasClass('look_down'))) {
+            return _expand_contract_header();
+          }
         };
         _on_mouse_wheel = function(event, delta) {
           if ($('#section1').hasClass('look_down')) {
@@ -439,11 +469,21 @@
           $(".slimScrollDiv").css("height", new_height);
           return $(".slimScrollDiv .scrollable").css("height", new_height);
         };
+        _set_min_load_time = function() {
+          _minimum_load_time_passed = true;
+          return _hide_loader();
+        };
+        _images_loaded = function() {
+          _images_loaded = true;
+          return _hide_loader();
+        };
         _hide_loader = function() {
-          $('.load_wrap').addClass('hideloader');
-          if ($.Window.windowWidth < 767) {
-            _set_for_mobile();
-            return setTimeout(_set_for_mobile, 1000);
+          if (_minimum_load_time_passed && _images_loaded) {
+            $('.load_wrap').addClass('hideloader');
+            if ($.Window.windowWidth < 767) {
+              _set_for_mobile();
+              return setTimeout(_set_for_mobile, 1000);
+            }
           }
         };
         _init = function() {
@@ -457,8 +497,10 @@
           }
           $(window).bind('mousewheel DOMMouseScroll MozMousePixelScroll', _on_mouse_wheel);
           $('html').on('touchmove', _on_touch_move);
+          $("body.results").on("keydown", _on_key_down);
           $('.expand').on('click', _on_expand_click);
-          return imagesLoaded('.results', _hide_loader);
+          setTimeout(_set_min_load_time, 2000);
+          return imagesLoaded('.results', _images_loaded);
         };
         return _init();
       });
@@ -672,8 +714,18 @@
         jQuery.extend(config, this.settings);
       }
       return this.each(function(index) {
-        var $me, _animate_in_tiles, _enable_tile_backs, _hide_loader, _init, _on_address_change, _on_answer_click, _scroll_to_question, _scroll_to_top;
+        var $me, _animate_in_tiles, _enable_tile_backs, _hide_loader, _images_loaded, _init, _minimum_load_time_passed, _on_address_change, _on_answer_click, _scroll_to_question, _scroll_to_top, _set_min_load_time;
         $me = $(this);
+        _minimum_load_time_passed = false;
+        _images_loaded = false;
+        _set_min_load_time = function() {
+          _minimum_load_time_passed = true;
+          return _hide_loader();
+        };
+        _images_loaded = function() {
+          _images_loaded = true;
+          return _hide_loader();
+        };
         _scroll_to_question = function(which) {
           var _next_question_top;
           debug("adding next to:");
@@ -732,8 +784,10 @@
           return timeline.resume();
         };
         _hide_loader = function() {
-          $('.load_wrap').addClass('hideloader');
-          return _scroll_to_top();
+          if (_minimum_load_time_passed && _images_loaded) {
+            $('.load_wrap').addClass('hideloader');
+            return _scroll_to_top();
+          }
         };
         _scroll_to_top = function() {
           return TweenLite.to(window, 0, {
@@ -744,6 +798,7 @@
         };
         _init = function() {
           debug("init question page");
+          setTimeout(_set_min_load_time, 2000);
           TweenLite.to(window, 0, {
             scrollTo: {
               y: 0
@@ -754,7 +809,7 @@
           $(".question-group").Question("Question", config);
           $me.find("nav").QuestionNav('QuestionNav', config);
           puts("images load checking");
-          imagesLoaded('#clothes', _hide_loader);
+          imagesLoaded('#clothes', _images_loaded);
           return setTimeout(_scroll_to_top, 500);
         };
         return _init();

@@ -1,4 +1,4 @@
-window.debug_enabled = false
+window.debug_enabled = true
 
 $.CustomEvents =
 	SITE_INITIALIZED: "site_initialized"
@@ -100,6 +100,24 @@ $ ->
 						
 			_init()
 
+	$.fn.HomePage = (objectName,@settings) ->
+		$parent = $(this)
+	
+		if not config? then config = {}
+		config.myName = objectName
+		if @settings? then jQuery.extend(config, @settings)
+	
+		this.each (index) ->
+	  	$me = $(this)
+
+	  	_hide_loader = () ->
+  			$('.home_bg').css('opacity', '1')
+	
+	  	_init = () ->
+	  		imagesLoaded( '.bg_load', _hide_loader)
+	
+	  	_init()
+
 	$.fn.ResultsPage = (objectName,@settings) ->
 		$parent = $(this)
 	
@@ -109,6 +127,9 @@ $ ->
 	
 		this.each (index) ->
 			$me = $(this)
+
+			_minimum_load_time_passed = false
+			_images_loaded = false
 
 			_expand_contract_header = () ->
 				timeout_function = () ->
@@ -120,6 +141,10 @@ $ ->
 				$('#section1').toggleClass('look_down')
 				$('header').toggleClass('header_up')
 				setTimeout(timeout_function, 500)
+
+			_on_key_down = (evt) ->
+				if(evt.keyCode == 40) && ($('#section1').hasClass('look_down'))
+					_expand_contract_header()
 
 			_on_mouse_wheel = (event,delta) ->
 				if($('#section1').hasClass('look_down'))
@@ -148,12 +173,21 @@ $ ->
 				$(".slimScrollDiv").css("height",new_height)
 				$(".slimScrollDiv .scrollable").css("height",new_height)
 
+			_set_min_load_time = () ->
+				_minimum_load_time_passed = true
+				_hide_loader()
+
+			_images_loaded = () ->
+				_images_loaded = true
+				_hide_loader()
+
 			_hide_loader = () ->
-				$('.load_wrap').addClass('hideloader')
-				
-				if $.Window.windowWidth < 767
-					_set_for_mobile()
-					setTimeout _set_for_mobile,1000
+				if _minimum_load_time_passed and _images_loaded
+					$('.load_wrap').addClass('hideloader')
+					
+					if $.Window.windowWidth < 767
+						_set_for_mobile()
+						setTimeout _set_for_mobile,1000
 	
 			_init = () ->
 				if $.fn.fullpage
@@ -163,9 +197,12 @@ $ ->
 					$.fn.fullpage(full_page_opts);
 				$(window).bind 'mousewheel DOMMouseScroll MozMousePixelScroll', _on_mouse_wheel
 				$('html').on 'touchmove', _on_touch_move
+				$("body.results").on("keydown",_on_key_down)
 				$('.expand').on 'click', _on_expand_click
 
-				imagesLoaded( '.results', _hide_loader)
+				setTimeout _set_min_load_time, 2000
+
+				imagesLoaded( '.results', _images_loaded)
 	
 			_init()
 
@@ -381,6 +418,16 @@ $ ->
 	
 		this.each (index) ->
 			$me = $(this)
+			_minimum_load_time_passed = false
+			_images_loaded = false
+
+			_set_min_load_time = () ->
+				_minimum_load_time_passed = true
+				_hide_loader()
+
+			_images_loaded = () ->
+				_images_loaded = true
+				_hide_loader()
 
 			_scroll_to_question = (which) ->
 				debug "adding next to:"
@@ -424,8 +471,9 @@ $ ->
 				timeline.resume()
 			
 			_hide_loader = () ->
-				$('.load_wrap').addClass('hideloader')
-				_scroll_to_top()
+				if _minimum_load_time_passed and _images_loaded
+					$('.load_wrap').addClass('hideloader')
+					_scroll_to_top()
 
 			_scroll_to_top = () ->
 				TweenLite.to(window,0,{scrollTo:{y:0}})
@@ -433,6 +481,7 @@ $ ->
 			_init = () -> 
 				# $.address.change _on_address_change
 				debug "init question page"
+				setTimeout _set_min_load_time, 2000
 				# $.Body.animate({scrollTop:0})
 				TweenLite.to(window,0,{scrollTo:{y:0}})
 				listen_to $.Events.ANSWER_CLICK, config.myName, _on_answer_click
@@ -443,7 +492,7 @@ $ ->
 				# _animate_in_tiles
 				$me.find("nav").QuestionNav('QuestionNav',config)
 				puts "images load checking"
-				imagesLoaded( '#clothes', _hide_loader)
+				imagesLoaded( '#clothes', _images_loaded)
 				setTimeout _scroll_to_top, 500
 
 			_init()

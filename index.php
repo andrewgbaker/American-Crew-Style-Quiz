@@ -5,23 +5,11 @@
 <html class='no-js' lang='en'>
   <!--<![endif]-->
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>American Crew Style Select</title>
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<meta name="author" content="Karsh Hagan">  	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-
-	<script type="text/javascript" src="<?php echo $asset_root; ?>/js/libs/modernizr.js"></script>
-	
-	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-  
-	<link rel="stylesheet" href="<?php echo $asset_root; ?>/css/style.css" />
-  
-
+  <?php include('includes/standard_meta.php'); ?>
+  <?php include('includes/header_scripts.php'); ?>
 </head>
 
-	<body class="home">
+	<body class="home" data-script="HomePage">
 	
 	<img class="bgLoad" src="<?php echo $asset_root; ?>/img/home_bg.jpg" alt="home_bg"/>
 	<div class="home_bg" style="opacity: 0"></div>
@@ -63,15 +51,11 @@
 		</script>
 	
 	
-	<!-- jQuery if needed -->
+	<!-- jQuery if needed
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script type="text/javascript" src="<?php echo $asset_root; ?>/js/libs/imagesloaded.min.js"></script>
-        
-        <script>
-        	imagesLoaded( '.bg_load', function() {
-        		$('.home_bg').css('opacity', '1');
-        	});
-      	</script>
+        <script type="text/javascript" src="<?php echo $asset_root; ?>/js/site.js"></script>  -->
+        <?php include('includes/footer_scripts.php'); ?>
         
     </body>
 </html>
