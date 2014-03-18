@@ -6,6 +6,11 @@
   <!--<![endif]-->
 <head>
   <?php include('includes/standard_meta.php'); ?>
+  <meta property="og:title" content="American Crew - My Style" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="From the world of business to the realm of women, the most successful men are the ones who know who they are and look the part. Answer a few questions about the things you like, and American Crew expert, Paul Wilson, will show you the hairstyles you should be sporting and give you tips for creating them." />
+  <meta property="og:site_name" content="American Crew - My Style" />
+  <meta property="og:image" content="http://www.americancrew.com/mystyle/img/looks/revolutionary3.jpg" />
   <?php include('includes/header_scripts.php'); ?>
 </head>
 
