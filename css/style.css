@@ -901,15 +901,40 @@ header {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transition: padding 0.3s ease;
-  -moz-transition: padding 0.3s ease;
-  transition: padding 0.3s ease; }
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  transition: transform 0.3s ease; }
 
 .look_down {
-  padding-top: 240px; }
+  -webkit-transform: translateY(240px);
+  -moz-transform: translateY(240px);
+  -ms-transform: translateY(240px);
+  -o-transform: translateY(240px);
+  transform: translateY(240px); }
   @media screen and (max-width: 600px) {
     .look_down {
-      padding-top: 360px; } }
+      -webkit-transform: translateY(360px);
+      -moz-transform: translateY(360px);
+      -ms-transform: translateY(360px);
+      -o-transform: translateY(360px);
+      transform: translateY(360px); } }
+
+.no-csstransforms .look_down, .android .look_down {
+  top: 240px;
+  -webkit-transition: top 0.3s ease;
+  -moz-transition: top 0.3s ease;
+  transition: top 0.3s ease; }
+
+.no-csstransforms .section {
+  top: 0;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  transition: transform 0.3s ease; }
 
 .slide {
   float: left;

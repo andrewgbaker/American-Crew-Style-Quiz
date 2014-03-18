@@ -203,6 +203,7 @@ header
   &:before
     content: ""  
     border: 0
+
     
 #superContainer
   height: 100%
@@ -214,12 +215,20 @@ header
   -webkit-box-sizing: border-box
   -moz-box-sizing: border-box
   box-sizing: border-box
-  @include transition (padding .3s ease)
+  @include transform(translateY(0))
+  @include transition (transform .3s ease)
 
 .look_down
-  padding-top: 240px
+  @include transform(translateY(240px))
   @media screen and (max-width: 600px)
-    padding-top: 360px
+    @include transform(translateY(360px))
+    
+.no-csstransforms .look_down, .android .look_down
+  top: 240px
+  @include transition(top .3s ease)
+.no-csstransforms .section
+  top: 0
+  @include transition (transform .3s ease)
 
 .slide
   float: left
