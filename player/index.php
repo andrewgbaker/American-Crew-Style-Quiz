@@ -10,7 +10,7 @@
 	<meta property="og:type" content="website" />
   	<meta property="og:description" content="You Are a Player - You’re always on your game and your game is always on. Whether you’re lifting weights or picking up dates, you never take your eyes off the finish line. You need a look that’s casually confident and easy to maintain." />
   	<meta property="og:site_name" content="American Crew My Style" />
-  	<meta property="og:image" content="http://americancrew.com/mystyle/looks/player1_mobile.jpg" />
+  	<meta property="og:image" content="http://americancrew.com/mystyle/img/looks/player1_mobile.jpg" />
 	<?php include('../includes/header_scripts.php') ?>	
 </head>
 <body class="results">

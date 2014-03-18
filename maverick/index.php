@@ -10,7 +10,7 @@
 	<meta property="og:type" content="website" />
   	<meta property="og:description" content="You Are a Maverick - Trouser socks. Cartoon character neckties. Khakis. For you, those are the things nightmares are made of. Your style has been cultivated from years of experience, not years of living up to expectations. And you know that the only road worth following is the one you forge. You need a look that’s unconventional and unmistakably masculine" />
   	<meta property="og:site_name" content="American Crew My Style" />
-  	<meta property="og:image" content="http://americancrew.com/mystyle/looks/maverick1_mobile.jpg" />
+  	<meta property="og:image" content="http://americancrew.com/mystyle/img/looks/maverick1_mobile.jpg" />
 	<?php include('../includes/header_scripts.php') ?>
 </head>
 <body class="results">

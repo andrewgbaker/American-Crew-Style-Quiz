@@ -10,7 +10,7 @@
 	<meta property="og:type" content="website" />
   	<meta property="og:description" content="You Are a Gentleman - Your drinks are stiff and so is your upper lip. You give women hope that chivalry might not be dead after all. And you're either dressed well or not at all. You need a look that has structure, order and plenty of confidence" />
   	<meta property="og:site_name" content="American Crew My Style" />
-  	<meta property="og:image" content="http://americancrew.com/mystyle/looks/gentleman1_mobile.jpg" />
+  	<meta property="og:image" content="http://americancrew.com/mystyle/img/looks/gentleman1_mobile.jpg" />
 	<?php include('../includes/header_scripts.php') ?>
 </head>
 <body class="results">

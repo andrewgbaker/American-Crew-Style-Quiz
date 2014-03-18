@@ -1,0 +1,7 @@
+AuthType Basic
+AuthUserFile /var/www/htauth/.htpasswd-mystyle
+AuthName "authentication required"
+Require valid-user
+Order allow,deny
+Satisfy any
+

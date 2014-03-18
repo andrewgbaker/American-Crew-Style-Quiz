@@ -10,7 +10,7 @@
 	<meta property="og:type" content="website" />
   	<meta property="og:description" content="You Are a Man's Man - Your wardrobe is simple. Your drinks are uncomplicated. And you’ll take a decent burger over foie gras any day. You don’t want to spend a lot of time on your hair, and you want the time you do spend to pay off. You need a look that’s as straightforward as you are." />
   	<meta property="og:site_name" content="American Crew My Style" />
-  	<meta property="og:image" content="http://americancrew.com/mystyle/looks/mansman1_mobile.jpg" />
+  	<meta property="og:image" content="http://americancrew.com/mystyle/img/looks/mansman1_mobile.jpg" />
 	<?php include('../includes/header_scripts.php') ?>
 </head>
 <body class="results">

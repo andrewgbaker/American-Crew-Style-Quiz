@@ -10,7 +10,7 @@
 	<meta property="og:type" content="website" />
   	<meta property="og:description" content="You Are a Wild card - You're a Renaissance man with a modern edge. You've seen a lot, learned a lot and can handle a lot. Your daily routine is anything but predictable. And your friends follow your status updates more closely than they do world politics. You need a look that has plenty of versatility and is always good to go." />
   	<meta property="og:site_name" content="American Crew My Style" />
-  	<meta property="og:image" content="http://americancrew.com/mystyle/looks/wildcard1_mobile.jpg" />
+  	<meta property="og:image" content="http://americancrew.com/mystyle/img/looks/wildcard1_mobile.jpg" />
 	<?php include('../includes/header_scripts.php') ?>	
 </head>
 <body class="results">

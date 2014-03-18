@@ -10,7 +10,7 @@
 	<meta property="og:type" content="website" />
   	<meta property="og:description" content="You Are a Revolutionary - You eat new trends for breakfast alongside your single source espresso. Dates refer to you as the man who's always taking them to places they’ve never been before. And your friends will always trust your restaurant recommendations above any online review. You need a hairstyle that has an unmistakable attitude and plenty of versatility." />
   	<meta property="og:site_name" content="American Crew My Style" />
-  	<meta property="og:image" content="http://americancrew.com/mystyle/looks/revolutionary1_mobile.jpg" />
+  	<meta property="og:image" content="http://americancrew.com/mystyle/img/looks/revolutionary1_mobile.jpg" />
 	<?php include('../includes/header_scripts.php') ?>	
 </head>
 <body class="results">
